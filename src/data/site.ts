@@ -16,6 +16,9 @@ export const SITE = {
     youtube: 'https://www.youtube.com/@thelifelink8998',
   },
   tagline: 'The Life Link is committed to improving individual and community health through breaking cycles of chronic homelessness, mental illness, trauma, exploitation, and addiction.',
+  // Separate program pages (/programs/housing, /programs/ccss, ...). Content: src/data/program-pages.json.
+  // Set to false to turn them all off: the pages stop being built, and the menu and Programs page go back to the single-page version.
+  programPages: true,
 };
 
 export type NavSub = { label: string; href: string; external?: boolean };
@@ -31,7 +34,17 @@ export const NAV: NavItem[] = [
     { label: 'Testimonials', href: '/about#testimonials' },
   ] },
   { label: 'Our Impact', href: '/impact', key: 'impact' },
-  { label: 'Programs & Services', href: '/programs', key: 'programs', subs: [
+  { label: 'Programs & Services', href: '/programs', key: 'programs', subs: SITE.programPages ? [
+    { label: 'All Programs', href: '/programs' },
+    { label: 'Housing', href: '/programs/housing' },
+    { label: 'Community Support (CCSS)', href: '/programs/ccss' },
+    { label: 'Treatment', href: '/programs/treatment' },
+    { label: 'Outreach', href: '/programs/outreach' },
+    { label: 'Clubhouse', href: '/programs/clubhouse' },
+    { label: 'Human Trafficking Aftercare', href: '/programs/human-trafficking' },
+    { label: 'Employment', href: '/programs#employment' },
+    { label: 'New Clients', href: '/programs#get-help' },
+  ] : [
     { label: 'Mental Health', href: '/programs#g1' },
     { label: 'Housing', href: '/programs#housing' },
     { label: 'Employment', href: '/programs#employment' },

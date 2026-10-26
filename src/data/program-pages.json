@@ -1,0 +1,272 @@
+{
+  "_help": "One entry per program page (/programs/<slug>). Edit the words freely. 'stats' should stay at 2-3 choice numbers, each from the Agency DNA or the FY2026 QI report. 'services' items with an 'id' can be linked to from the Programs overview (for example /programs/treatment#iop). To turn every program page off at once, set programPages to false in src/data/site.ts.",
+  "pages": [
+    {
+      "slug": "housing",
+      "order": 1,
+      "short": "Housing",
+      "menuLabel": "Housing",
+      "tag": "Housing",
+      "color": "#f5b829",
+      "title": "Housing Services | The Life Link",
+      "description": "Permanent supportive housing, rapid rehousing, eviction prevention and move-in help for people who are unhoused or about to lose their home in Santa Fe and northern New Mexico.",
+      "h1a": "A home is where",
+      "h1b": "recovery takes hold.",
+      "lead": "It is hard to heal from anything while living on the street. The Life Link helps people who are unhoused find a safe place to live, and helps people on the edge keep the home they have.",
+      "img": "/assets/photos/04_housing_success.jpg",
+      "alt": "A man holding up the keys to his new home",
+      "phone": { "label": "Housing Department", "display": "(505) 395-2531", "tel": "5053952531" },
+      "stats": [
+        { "num": "462", "txt": "households housed or kept from losing their home in FY2026" },
+        { "num": "88%", "txt": "of people in our permanent supportive housing stay housed" },
+        { "num": "#1", "txt": "provider of permanent supportive housing in northern New Mexico" }
+      ],
+      "introHead": "Housing First, and never housing alone.",
+      "intro": [
+        "We follow Housing First: a person does not have to earn a home by getting sober or finishing treatment first. A stable home comes first, because everything else is easier from there.",
+        "We often house the people with the highest need on the community waitlist, the ones other programs pass over. And because housing sits inside The Life Link, a new tenant is already linked to therapy, psychiatry, peer support and case management down the hall."
+      ],
+      "servicesHead": "How we help",
+      "services": [
+        { "title": "Permanent supportive housing", "body": "Long-term rental help for adults with disabilities who have been homeless, paired with support to stay housed. Tenants pay about 30% of their income toward rent." },
+        { "title": "Rapid rehousing", "body": "Short-term rental help that moves people from the street into a home quickly, with regular check-ins along the way." },
+        { "title": "Homeless and eviction prevention", "body": "Help with back rent, utilities and forward rent so a household facing eviction can stay where they are." },
+        { "title": "Move-in assistance", "body": "Deposits, application fees and first month's rent: the costs that keep people stuck even when they have found a place." },
+        { "title": "Affordable set-aside units", "body": "Reduced-rent apartments at partner properties across Santa Fe and Los Alamos, held for people we serve." },
+        { "title": "Housing for survivors", "body": "Transitional and emergency housing for survivors of human trafficking, linked to our aftercare team." }
+      ],
+      "approachHead": "What makes it work",
+      "approach": [
+        { "title": "No hoops first", "body": "Services are always offered and never required to get or keep a home." },
+        { "title": "The hardest cases", "body": "We take referrals for the most vulnerable people on the waitlist, not the easiest to place." },
+        { "title": "Care next door", "body": "Housing staff work hand in hand with our clinical, outreach and peer teams." }
+      ],
+      "statement": "A stable home is the first link. Health, work and family all get easier from there.",
+      "rentHelp": true,
+      "where": "Housing Department, Saint Michael's Building, 2000 St. Michael's Drive"
+    },
+    {
+      "slug": "ccss",
+      "order": 2,
+      "short": "CCSS",
+      "menuLabel": "Community Support (CCSS)",
+      "tag": "Comprehensive Community Support Services",
+      "color": "#3a8fd4",
+      "title": "Community Support Services (CCSS) | The Life Link",
+      "description": "Comprehensive Community Support Services (CCSS) at The Life Link: case management, skills training, benefits help and peer support delivered in homes and neighborhoods across Santa Fe.",
+      "h1a": "Support that comes",
+      "h1b": "to where you live.",
+      "lead": "Comprehensive Community Support Services (CCSS) help adults living with serious mental illness build stable, independent lives. Most of the work happens outside the office: in homes, neighborhoods and the places people spend their days.",
+      "img": "/assets/photos/05_wellness_group.jpg",
+      "alt": "A staff member leading a wellness skills group",
+      "phone": { "label": "Main / Intake", "display": "(505) 438-0010", "tel": "5054380010" },
+      "stats": [
+        { "num": "935", "txt": "people supported by CCSS in FY2026" },
+        { "num": "1 in 2", "txt": "CCSS services delivered in clients' homes and communities, not the office" }
+      ],
+      "introHead": "One person, one plan, every part of life.",
+      "intro": [
+        "Recovery is not only about symptoms. It is about paying rent, getting to appointments, keeping benefits, and having people in your corner. CCSS brings all of that into a single plan built around the person's own goals.",
+        "Our community support workers coordinate housing, finances, health care and community resources, and many clients also work with a Certified Peer Support Worker who has walked their own road to recovery."
+      ],
+      "servicesHead": "What CCSS includes",
+      "services": [
+        { "title": "Case management and planning", "body": "An individual plan that ties housing, health care, benefits and personal goals together." },
+        { "title": "Daily living skills", "body": "Practical help with self-care, managing a household and budgeting." },
+        { "title": "Benefits and paperwork", "body": "Help with Medicaid, Social Security disability (SOAR) and housing vouchers." },
+        { "title": "Community connection", "body": "Links to transportation, social activities and the resources that make independence possible." },
+        { "title": "Peer support", "body": "Certified Peer Support Workers who bring lived experience to every step of recovery." },
+        { "title": "Crisis support and follow-up", "body": "Stabilization in the community when things get hard, and steady follow-up so progress lasts." }
+      ],
+      "approachHead": "How we work",
+      "approach": [
+        { "title": "Meet people where they are", "body": "In homes, neighborhoods and community settings, wherever the person is." },
+        { "title": "Lived experience", "body": "Peer workers show what recovery can look like, because they have lived it." },
+        { "title": "Warm handoffs", "body": "CCSS connects people directly to our housing, treatment and employment teams." }
+      ],
+      "statement": "Trauma and poverty do not happen in silos, and healing cannot happen in silos either.",
+      "rentHelp": false,
+      "where": "Saint Michael's Building, 2000 St. Michael's Drive, and in the community"
+    },
+    {
+      "slug": "treatment",
+      "order": 3,
+      "short": "Treatment",
+      "menuLabel": "Treatment",
+      "tag": "Treatment Services",
+      "color": "#3a8fd4",
+      "title": "Treatment Services | The Life Link",
+      "description": "Therapy, group counseling, intensive outpatient treatment, psychiatry and Suboxone care at The Life Link, a licensed Community Mental Health Center in Santa Fe. Walk-in Treat First access, in English and Spanish.",
+      "h1a": "Treatment that starts",
+      "h1b": "the day you walk in.",
+      "lead": "The Life Link is a licensed Community Mental Health Center. We treat mental illness, substance use disorders and trauma together, in English and Spanish, and we start care without long waits or red tape.",
+      "img": "/assets/photos/08_individual_counseling.jpg",
+      "alt": "A client smiling during a one-on-one counseling session",
+      "phone": { "label": "Therapy Services", "display": "(505) 395-2551", "tel": "5053952551" },
+      "stats": [
+        { "num": "1,405", "txt": "people received behavioral health care in FY2026" },
+        { "num": "4.68", "suffix": " / 5", "txt": "average client satisfaction" }
+      ],
+      "introHead": "Treat first. Paperwork second.",
+      "intro": [
+        "Through our Treat First model, people can walk in without an appointment and begin care the same day. The moment someone asks for help is the moment that matters most, and we do not want to lose it to a waiting list.",
+        "Half of the people we treat live with mental illness and substance use at the same time. We treat both together, using approaches with strong research behind them, and coordinate with housing and case management so treatment does not stop at the clinic door."
+      ],
+      "servicesHead": "Our treatment services",
+      "services": [
+        { "id": "individual-therapy", "title": "Individual therapy", "body": "One-on-one care for depression, anxiety, trauma, grief and substance use, offered in English and Spanish." },
+        { "id": "group-therapy", "title": "Group therapy", "body": "Skills and support groups such as recovery skills, healing trauma, managing depression and anxiety, and anger management." },
+        { "id": "iop", "title": "Intensive Outpatient Program (IOP)", "body": "A structured, several-days-a-week program for people recovering from substance use and co-occurring mental health conditions." },
+        { "id": "psychiatry", "title": "Psychiatric services", "body": "Psychiatric evaluation and medication management from our prescribing team." },
+        { "id": "mat", "title": "Suboxone and medication-assisted treatment", "body": "Medication-assisted treatment for opioid use disorder, combined with counseling and support." },
+        { "id": "families", "title": "Help for families", "body": "CRAFT, an evidence-based, non-confrontational approach for family members and friends of someone struggling with substance use." }
+      ],
+      "approachHead": "Grounded in evidence",
+      "approach": [
+        { "title": "Proven methods", "body": "CBT, DBT skills, Motivational Interviewing, EMDR and Integrated Dual Diagnosis Treatment." },
+        { "title": "Trauma-informed", "body": "Every staff member is trained in trauma-informed care, our agency-wide model since 2005." },
+        { "title": "Evenings and Spanish", "body": "Individual and group therapy after 5pm, and services in Spanish. Se habla español." }
+      ],
+      "statement": "The moment someone asks for help is the moment that matters most.",
+      "rentHelp": false,
+      "where": "Las Alas Building, 1331 Declovina Street (therapy and IOP), and Saint Michael's Building, 2000 St. Michael's Drive (psychiatry and Suboxone)"
+    },
+    {
+      "slug": "outreach",
+      "order": 4,
+      "short": "Outreach",
+      "menuLabel": "Outreach",
+      "tag": "Community Outreach & Navigation",
+      "color": "#f5b829",
+      "title": "Outreach & Reentry | The Life Link",
+      "description": "Street outreach, community navigation, reentry support, the R.I.S.E. program and micro-community shelter from The Life Link in Santa Fe.",
+      "h1a": "We go to people",
+      "h1b": "who can't come to us.",
+      "lead": "Our outreach team is The Life Link on the street: in encampments and arroyos, at libraries and resource days, and at the jail door on the day someone is released.",
+      "img": "/assets/photos/11_lifelink_arrival.jpg",
+      "alt": "A person arriving at The Life Link with her belongings",
+      "phone": { "label": "Main / Intake", "display": "(505) 438-0010", "tel": "5054380010" },
+      "stats": [
+        { "num": "30+", "txt": "years of street outreach in Santa Fe" },
+        { "num": "37%", "txt": "return to incarceration among R.I.S.E. residents, against a national average near 70%" }
+      ],
+      "introHead": "Relationship first. Always a way back.",
+      "intro": [
+        "Most people living on the street have been let down by systems before. Outreach starts with trust: showing up, again and again, and offering something useful (a meal, a ride, a document replaced) before asking for anything.",
+        "People who relapse, lose housing or return to jail know they can call our outreach team again, without judgment. That open door is the point."
+      ],
+      "servicesHead": "What outreach includes",
+      "services": [
+        { "title": "Street outreach", "body": "Teams visit encampments, arroyos and downtown to build relationships and connect people to shelter, medical care and benefits." },
+        { "title": "City and county navigation", "body": "Navigators at libraries and community sites help people find their way into services across Santa Fe." },
+        { "title": "Support on release", "body": "We meet people leaving the county detention center with a first meal, clothing, hygiene supplies and a ride." },
+        { "title": "R.I.S.E. (Reintegrating into Society Equally)", "body": "Sober transitional homes for men coming home from incarceration, with intensive case management, help finding work, and savings goals." },
+        { "title": "Micro-community shelter", "body": "A low-barrier community of small shelter units for people who have been homeless for years, with meals, groups and on-site support." },
+        { "title": "Overdose prevention", "body": "A community coalition working to reduce overdose deaths and the stigma that keeps people from getting care." }
+      ],
+      "approachHead": "Three principles",
+      "approach": [
+        { "title": "Low-barrier", "body": "No paperwork or sobriety test stands between a person and help." },
+        { "title": "Relationship-first", "body": "Trust comes before treatment plans." },
+        { "title": "Continuity", "body": "We stay with people through setbacks, not just successes." }
+      ],
+      "statement": "No one is too far gone to be worth finding.",
+      "rentHelp": false,
+      "where": "Supportive Employment & Outreach, 1318 Luana Street, Suite A, and across Santa Fe"
+    },
+    {
+      "slug": "clubhouse",
+      "order": 5,
+      "short": "Clubhouse",
+      "menuLabel": "Clubhouse",
+      "tag": "Santa Fe Clubhouse & Wellness Center",
+      "color": "#2ab5a0",
+      "title": "The Clubhouse | The Life Link",
+      "description": "The Santa Fe Clubhouse & Wellness Center: a place of belonging, meaningful work, daily meals and community for adults in mental health recovery.",
+      "h1a": "A place to belong,",
+      "h1b": "and a place to contribute.",
+      "lead": "At the Clubhouse, people are members, not patients. Members run the place alongside staff: cooking meals, answering phones, leading groups and looking out for each other.",
+      "img": "/assets/photos/06_clubhouse_meal.jpg",
+      "alt": "Clubhouse members sharing a meal",
+      "phone": { "label": "The Clubhouse", "display": "(505) 395-2503", "tel": "5053952503" },
+      "stats": [
+        { "num": "247", "txt": "Clubhouse members in FY2026" },
+        { "num": "128", "txt": "new members joined in FY2026" }
+      ],
+      "introHead": "Built on the Clubhouse Model.",
+      "intro": [
+        "The Santa Fe Clubhouse follows the internationally recognized Clubhouse Model, which began at Fountain House in New York City in 1948. Its core idea is simple: everyone has something to contribute, and meaningful work and friendship are part of recovery.",
+        "Isolation is one of the heaviest parts of mental illness. The Clubhouse answers it with a daily routine, real responsibilities and a community that notices when you are not there."
+      ],
+      "servicesHead": "A day at the Clubhouse",
+      "services": [
+        { "title": "The work-ordered day", "body": "Members share in running the Clubhouse, from the kitchen to the front desk, building confidence and skills." },
+        { "title": "Meals every day", "body": "Members prepare and share a meal together each day." },
+        { "title": "Groups and classes", "body": "Job skills, creative writing, money management, yoga, GED preparation and member-run groups." },
+        { "title": "A path to work", "body": "Kitchen and job skills training, with links to transitional and supported employment." },
+        { "title": "Friendship and community", "body": "A welcoming space to build relationships, try new things and grow." }
+      ],
+      "approachHead": "What members find here",
+      "approach": [
+        { "title": "Purpose", "body": "Real jobs that keep the Clubhouse running." },
+        { "title": "Belonging", "body": "Members are colleagues and friends, not cases." },
+        { "title": "Growth", "body": "Clubhouse members report the strongest social functioning of any service we offer." }
+      ],
+      "statement": "Everyone has something to contribute.",
+      "rentHelp": false,
+      "hours": "Monday through Friday, 9am to 3pm",
+      "where": "The Clubhouse, 1318 Luana Street, Suite B"
+    },
+    {
+      "slug": "human-trafficking",
+      "order": 6,
+      "short": "Human Trafficking Aftercare",
+      "menuLabel": "Human Trafficking Aftercare",
+      "tag": "Human Trafficking Outreach & Aftercare",
+      "color": "#2ab5a0",
+      "title": "Human Trafficking Aftercare | The Life Link",
+      "description": "New Mexico's only comprehensive aftercare program for survivors of sex and labor trafficking. Rights-based, trauma-informed care since 2009, and the 505-GET-FREE hotline and textline.",
+      "h1a": "Freedom is the beginning.",
+      "h1b": "Healing takes time.",
+      "lead": "Since 2009, The Life Link has run New Mexico's only comprehensive aftercare program for survivors of sex and labor trafficking. We meet survivors quickly, keep them safe, and stay with them for as long as they need us.",
+      "img": "/assets/photos/09_peer_support_outdoors.jpg",
+      "alt": "Two women with arms around each other, looking at the mountains",
+      "phone": { "label": "Hotline & Textline · Call or text", "display": "(505) GET-FREE", "tel": "5054383733" },
+      "stats": [
+        { "num": "2009", "txt": "the year we began serving trafficking survivors, with the NM Attorney General's Office" },
+        { "num": "64", "txt": "survivor households housed in FY2026" },
+        { "num": "1st", "txt": "textline for trafficking victims in the nation: 505-GET-FREE, launched in 2012" }
+      ],
+      "introHead": "Survivor-driven, with no time limit.",
+      "intro": [
+        "Survivors decide the pace and direction of their own recovery. There is no set discharge date, and services do not depend on cooperating with law enforcement. That freedom is what makes it safe to come forward.",
+        "Our advocates include Certified Peer Support Workers, one of them a survivor. They work alongside therapists, prescribers, housing staff and legal partners across the state so that a survivor can find a full circle of support in one place."
+      ],
+      "servicesHead": "A full circle of support",
+      "services": [
+        { "title": "Crisis response and safety planning", "body": "Fast response, safety planning and stabilization when a survivor first reaches out." },
+        { "title": "Advocacy", "body": "Help navigating courts, agencies and benefits, including court accompaniment." },
+        { "title": "Counseling and trauma therapy", "body": "Individual and group counseling, plus psychiatric and substance use treatment." },
+        { "title": "Safe housing", "body": "Transitional and emergency housing dedicated to survivors, with ongoing housing support." },
+        { "title": "Legal and practical help", "body": "Connections to civil legal services, food, clothing, emergency supplies and benefits." },
+        { "title": "Work and life skills", "body": "Job readiness, employment support and life skills for a new start." },
+        { "title": "Sojourners Advocacy Café", "body": "A drop-in space where survivors can connect with advocates and with each other." }
+      ],
+      "approachHead": "Rights-based care",
+      "approach": [
+        { "title": "No conditions", "body": "Help never depends on talking to police or pressing charges." },
+        { "title": "No deadline", "body": "Survivors stay in care as long as they need it." },
+        { "title": "Statewide partners", "body": "Close coordination with law enforcement, legal and health partners across New Mexico." }
+      ],
+      "statement": "A text sent in a moment of privacy can be the difference between help and continued exploitation.",
+      "hotline": {
+        "head": "If you or someone you know needs help",
+        "body": "Call or text 505-GET-FREE (505-438-3733). Survivors, family members, and professionals can all reach out.",
+        "site": "https://505getfree.org",
+        "siteLabel": "Visit 505getfree.org"
+      },
+      "rentHelp": false,
+      "where": "Saint Michael's Building, 2000 St. Michael's Drive, with services statewide"
+    }
+  ]
+}

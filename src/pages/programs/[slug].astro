@@ -1,0 +1,206 @@
+---
+// One page per program: /programs/housing, /programs/ccss, ...
+// Words live in src/data/program-pages.json. Turn all of these pages off with programPages in src/data/site.ts.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import data from '../../data/program-pages.json';
+import { SITE } from '../../data/site';
+
+export function getStaticPaths() {
+  if (!SITE.programPages) return [];
+  return data.pages.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const others = data.pages.filter((o) => o.slug !== p.slug).sort((a, b) => a.order - b.order);
+const fyNote = p.stats.some((s) => s.txt.includes('FY2026'));
+const isText = p.slug === 'human-trafficking';
+---
+<Base image={`/assets/og/program-${p.slug}.jpg`} title={p.title} description={p.description} path={`/programs/${p.slug}`}>
+
+<div style="font-family:'Inter',sans-serif;color:#1a2236;background:#ffffff;overflow-x:hidden;">
+<Header active="programs" />
+<main id="main">
+
+<section style="background:#141f4d;color:#fff;position:relative;overflow:hidden;">
+<svg width="760" height="760" viewBox="0 0 760 760" fill="none" aria-hidden="true" style="position:absolute;right:-220px;top:-160px;opacity:0.06;pointer-events:none;"><circle cx="380" cy="380" r="340" stroke="#fff" stroke-width="40"></circle><circle cx="380" cy="380" r="200" stroke="#fff" stroke-width="40"></circle></svg>
+<div style="max-width:1200px;margin:0 auto;padding:64px 24px 80px;display:flex;flex-wrap:wrap;gap:56px;align-items:center;position:relative;">
+<div style="flex:1 1 460px;min-width:300px;" data-reveal>
+<nav aria-label="Breadcrumb" style="font-size:13.5px;margin-bottom:26px;color:#a9b7e0;">
+<a href="/programs" style="color:#c9d2ea;text-decoration:underline;text-underline-offset:3px;">Programs &amp; Services</a>
+<span aria-hidden="true" style="margin:0 8px;">/</span>
+<span aria-current="page" style="color:#ffffff;font-weight:600;">{p.short}</span>
+</nav>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:20px;">
+<span style={`width:22px;height:3px;background:${p.color};border-radius:2px;`}></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#a9b7e0;font-weight:700;">{p.tag}</span>
+</div>
+<h1 style="font-family:'DM Serif Display',serif;font-size:clamp(40px,5.2vw,62px);line-height:1.06;margin:0 0 24px;font-weight:400;">{p.h1a}<br /><span style="color:#f5b829;font-style:italic;">{p.h1b}</span></h1>
+<p style="font-size:17.5px;line-height:1.7;color:#c9d2ea;max-width:540px;margin:0 0 34px;">{p.lead}</p>
+<div style="display:flex;flex-wrap:wrap;gap:13px;">
+<a href={`tel:${p.phone.tel}`} style="background:#2ab5a0;color:#141f4d;font-weight:600;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:4px;">{isText ? 'Call or text' : 'Call'} {p.phone.display}</a>
+<a href={SITE.donateUrl} target="_blank" rel="noopener" style="background:transparent;color:#fff;font-weight:600;font-size:16px;text-decoration:none;padding:14px 26px;border-radius:4px;border:1px solid rgba(255,255,255,0.35);">Support this work</a>
+</div>
+</div>
+<div style="flex:1 1 400px;min-width:300px;position:relative;" data-reveal>
+<svg width="190" height="190" viewBox="0 0 190 190" fill="none" aria-hidden="true" style="position:absolute;left:-46px;bottom:-46px;"><circle cx="95" cy="95" r="80" stroke={p.color} stroke-width="14" opacity="0.55"></circle></svg>
+<div role="img" aria-label={p.alt} style={`position:relative;width:100%;aspect-ratio:4/3;border-radius:18px;background-color:#1e3278;background-image:url('${p.img}');background-size:cover;background-position:center 30%;box-shadow:0 30px 60px -26px rgba(0,0,0,0.6);border-bottom:6px solid ${p.color};`}></div>
+</div>
+</div>
+</section>
+
+<section style="background:#f4f7fb;" aria-labelledby="glance">
+<h2 id="glance" class="tll-sr">At a glance</h2>
+<div style="max-width:1100px;margin:0 auto;padding:48px 24px;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px;">
+{p.stats.map((s) => (
+<div data-reveal style="display:flex;gap:16px;align-items:flex-start;">
+<svg width="36" height="36" viewBox="0 0 44 44" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:4px;"><circle cx="22" cy="22" r="19" stroke={p.color} stroke-width="3.5"></circle><circle cx="22" cy="22" r="8" fill={p.color} opacity="0.3"></circle></svg>
+<div>
+<div style="font-family:'DM Serif Display',serif;font-size:clamp(36px,3.6vw,46px);line-height:1;color:#141f4d;margin-bottom:8px;">{s.num}{s.suffix && <span style="font-size:0.5em;color:#5b647a;">{s.suffix}</span>}</div>
+<div style="font-size:14.5px;line-height:1.5;color:#3a4256;">{s.txt}</div>
+</div>
+</div>
+))}
+</div>
+{fyNote && <p style="font-size:12.5px;color:#5b647a;margin:24px 0 0;">FY2026 is July 1, 2025 through June 30, 2026.</p>}
+</div>
+</section>
+
+<section style="max-width:1200px;margin:0 auto;padding:84px 24px 40px;">
+<div style="display:flex;flex-wrap:wrap;gap:28px 64px;align-items:flex-start;" data-reveal>
+<div style="flex:1 1 340px;">
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+<span style={`width:22px;height:3px;background:${p.color};border-radius:2px;`}></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">Our approach</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,44px);line-height:1.12;margin:0;color:#141f4d;font-weight:400;">{p.introHead}</h2>
+</div>
+<div style="flex:1.4 1 440px;">
+{p.intro.map((t) => (<p style="font-size:17px;line-height:1.75;color:#3a4256;margin:0 0 18px;">{t}</p>))}
+</div>
+</div>
+</section>
+
+<section style="max-width:1200px;margin:0 auto;padding:40px 24px 84px;">
+<h2 data-reveal style="font-family:'DM Serif Display',serif;font-size:clamp(28px,3.4vw,38px);line-height:1.15;margin:0 0 28px;color:#141f4d;font-weight:400;">{p.servicesHead}</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;">
+{p.services.map((s) => (
+<article id={s.id} data-reveal style={`scroll-margin-top:140px;background:#fff;border:1px solid #e4ebf4;border-top:4px solid ${p.color};border-radius:14px;padding:26px 24px 28px;box-shadow:0 18px 40px -32px rgba(30,50,120,0.45);`}>
+<svg width="34" height="34" viewBox="0 0 44 44" fill="none" aria-hidden="true" style="display:block;margin-bottom:14px;"><circle cx="22" cy="22" r="15" stroke={p.color} stroke-width="3.5"></circle><circle cx="22" cy="22" r="5" fill={p.color}></circle></svg>
+<h3 style="font-family:'DM Serif Display',serif;font-size:22px;line-height:1.2;margin:0 0 10px;color:#141f4d;font-weight:400;">{s.title}</h3>
+<p style="font-size:15px;line-height:1.65;color:#5b647a;margin:0;">{s.body}</p>
+</article>
+))}
+</div>
+{p.rentHelp && (
+<div data-reveal style="margin-top:22px;background:#141f4d;color:#fff;border-radius:16px;padding:32px 34px;display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between;position:relative;overflow:hidden;">
+<svg width="280" height="280" viewBox="0 0 280 280" fill="none" aria-hidden="true" style="position:absolute;right:-80px;top:-90px;opacity:0.08;"><circle cx="140" cy="140" r="120" stroke="#f5b829" stroke-width="26"></circle><circle cx="140" cy="140" r="56" stroke="#f5b829" stroke-width="26"></circle></svg>
+<div style="flex:1 1 360px;position:relative;">
+<h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#fff;line-height:1.2;margin:0 0 10px;font-weight:400;">Behind on rent or utilities?<br /><span style="color:#f5b829;font-style:italic;">Need help with a deposit?</span></h3>
+<p style="font-size:15px;color:#c9d2ea;margin:0 0 4px;line-height:1.55;">Short-term assistance may be available. Call The Life Link Housing Department at (505) 395-2531 to get screened.</p>
+<p style="font-size:12.5px;color:#a9b7e0;margin:0;">Help depends on available funding and eligibility.</p>
+</div>
+<a href="tel:5053952531" style="position:relative;background:#f5b829;color:#141f4d;font-weight:700;font-size:15px;text-decoration:none;padding:14px 24px;border-radius:4px;white-space:nowrap;">Call (505) 395-2531</a>
+</div>
+)}
+</section>
+
+<section style="background:#1e3278;color:#fff;position:relative;overflow:hidden;">
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" aria-hidden="true" style="position:absolute;left:-220px;bottom:-280px;opacity:0.07;pointer-events:none;"><circle cx="320" cy="320" r="280" stroke="#fff" stroke-width="40"></circle><circle cx="320" cy="320" r="150" stroke="#fff" stroke-width="40"></circle></svg>
+<div style="max-width:1200px;margin:0 auto;padding:84px 24px;position:relative;">
+<p data-reveal style="font-family:'DM Serif Display',serif;font-size:clamp(28px,3.4vw,40px);line-height:1.3;margin:0 auto 56px;font-weight:400;text-align:center;max-width:860px;">{p.statement}</p>
+<h2 data-reveal style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#f5b829;font-weight:700;margin:0 0 22px;text-align:center;">{p.approachHead}</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;">
+{p.approach.map((a) => (
+<div data-reveal style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:26px 24px;">
+<h3 style="font-family:'DM Serif Display',serif;font-size:23px;line-height:1.2;margin:0 0 8px;color:#fff;font-weight:400;">{a.title}</h3>
+<p style="font-size:15px;line-height:1.6;color:#c9d2ea;margin:0;">{a.body}</p>
+</div>
+))}
+</div>
+</div>
+</section>
+
+{p.hotline && (
+<section style="max-width:1200px;margin:0 auto;padding:72px 24px 0;">
+<div data-reveal style="background:#f5b829;color:#141f4d;border-radius:18px;padding:36px 36px;display:flex;flex-wrap:wrap;gap:20px 36px;align-items:center;justify-content:space-between;">
+<div style="flex:1 1 420px;">
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0 0 10px;font-weight:400;">{p.hotline.head}</h2>
+<p style="font-size:16px;line-height:1.6;margin:0;">{p.hotline.body}</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+<a href={`tel:${p.phone.tel}`} style="background:#141f4d;color:#fff;font-weight:700;font-size:15px;text-decoration:none;padding:14px 22px;border-radius:4px;">Call (505) GET-FREE</a>
+<a href={`sms:${p.phone.tel}`} style="background:#141f4d;color:#fff;font-weight:700;font-size:15px;text-decoration:none;padding:14px 22px;border-radius:4px;">Text (505) GET-FREE</a>
+<a href={p.hotline.site} target="_blank" rel="noopener" style="background:transparent;color:#141f4d;font-weight:700;font-size:15px;text-decoration:none;padding:13px 22px;border-radius:4px;border:2px solid #141f4d;">{p.hotline.siteLabel}</a>
+</div>
+</div>
+</section>
+)}
+
+<section style="max-width:1200px;margin:0 auto;padding:84px 24px;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:22px;">
+<div data-reveal style={`background:#fff;border:1px solid #e4ebf4;border-top:6px solid ${p.color};border-radius:18px;padding:34px 32px;`}>
+<h2 style="font-family:'DM Serif Display',serif;font-size:32px;line-height:1.15;margin:0 0 16px;color:#141f4d;font-weight:400;">Get started</h2>
+<div style="font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#5b647a;font-weight:700;margin-bottom:6px;">{p.phone.label}</div>
+<a href={`tel:${p.phone.tel}`} style="font-family:'DM Serif Display',serif;font-size:30px;color:#1e3278;text-decoration:none;line-height:1.1;display:inline-block;margin-bottom:18px;">{p.phone.display}</a>
+{p.hours && <p style="font-size:15px;line-height:1.6;color:#3a4256;margin:0 0 8px;"><strong>Hours:</strong> {p.hours}</p>}
+<p style="font-size:15px;line-height:1.6;color:#3a4256;margin:0 0 18px;"><strong>Where:</strong> {p.where}</p>
+<p style="font-size:15px;line-height:1.6;color:#3a4256;margin:0 0 20px;">New to The Life Link? You can walk in for Treat First onboarding, no appointment needed.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px 20px;">
+<a href="/programs#get-help" class="tll-more" style={`border-color:${p.color};`}>Walk-in hours <span aria-hidden="true">&rarr;</span></a>
+<a href="/programs#locations" class="tll-more" style={`border-color:${p.color};`}>All locations <span aria-hidden="true">&rarr;</span></a>
+</div>
+<p style="font-size:13.5px;color:#5b647a;margin:22px 0 0;">In crisis? Call <a href="tel:988" style="color:#1e3278;font-weight:700;">988</a> (mental health) or <a href="tel:911" style="color:#1e3278;font-weight:700;">911</a> (medical).</p>
+</div>
+<div data-reveal style="background:#141f4d;color:#fff;border-radius:18px;padding:34px 32px;position:relative;overflow:hidden;">
+<svg width="300" height="300" viewBox="0 0 280 280" fill="none" aria-hidden="true" style="position:absolute;right:-90px;bottom:-110px;opacity:0.1;"><circle cx="140" cy="140" r="120" stroke="#f5b829" stroke-width="26"></circle><circle cx="140" cy="140" r="56" stroke="#f5b829" stroke-width="26"></circle></svg>
+<div style="position:relative;">
+<h2 style="font-family:'DM Serif Display',serif;font-size:32px;line-height:1.15;margin:0 0 16px;font-weight:400;">Help us <span style="color:#f5b829;font-style:italic;">forge the next link.</span></h2>
+<p style="font-size:16px;line-height:1.65;color:#c9d2ea;margin:0 0 26px;max-width:440px;">For nearly 40 years, The Life Link has reached the neighbors other systems miss. Your gift helps keep this work going.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+<a href={SITE.donateUrl} target="_blank" rel="noopener" style="background:#f5b829;color:#141f4d;font-weight:700;font-size:15px;text-decoration:none;padding:14px 24px;border-radius:4px;">Donate</a>
+<a href="/donate" style="background:transparent;color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:13px 22px;border-radius:4px;border:1px solid rgba(255,255,255,0.35);">Other ways to give</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:#f4f7fb;">
+<div style="max-width:1200px;margin:0 auto;padding:72px 24px 84px;">
+<div data-reveal style="margin-bottom:30px;">
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:12px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">Connected care</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(28px,3.4vw,38px);line-height:1.15;margin:0;color:#141f4d;font-weight:400;">One agency. Every link in the chain.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px;">
+{others.map((o) => (
+<a href={`/programs/${o.slug}`} data-reveal class="tll-card" style={`border-top:4px solid ${o.color};`}>
+<div aria-hidden="true" style={`aspect-ratio:16/10;background-color:#eef2f8;background-image:url('${o.img}');background-size:cover;background-position:center 30%;`}></div>
+<div style="padding:16px 18px 18px;">
+<div style="font-family:'DM Serif Display',serif;font-size:19px;line-height:1.25;color:#141f4d;">{o.menuLabel} <span aria-hidden="true" style="color:#1e3278;">&rarr;</span></div>
+</div>
+</a>
+))}
+</div>
+<p style="margin:26px 0 0;"><a href="/programs" class="tll-more" style="border-color:#f5b829;">See all programs and services <span aria-hidden="true">&rarr;</span></a></p>
+</div>
+</section>
+
+</main>
+<Footer />
+</div>
+
+</Base>
+<style is:global>
+.tll-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.tll-more{color:#1e3278;font-weight:700;font-size:14.5px;text-decoration:none;border-bottom:2px solid;line-height:1.5;}
+.tll-more:hover,.tll-more:focus{color:#141f4d;background:#eef2f8;}
+.tll-card{display:block;background:#fff;border:1px solid #e4ebf4;border-radius:14px;overflow:hidden;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease;}
+.tll-card:hover,.tll-card:focus{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(30,50,120,0.5);}
+@media (prefers-reduced-motion: reduce){.tll-card{transition:none;}.tll-card:hover{transform:none;}}
+</style>
