@@ -55,3 +55,7 @@ The site was audited to WCAG 2.1 AA with zero violations. When changing colors k
 - Facebook: https://www.facebook.com/thelifelinkorg is set in `src/data/site.ts`. Confirm it opens the public page when signed out.
 - Job Apply links: set `applyUrl` per job in `src/data/jobs.json` to the link for that single job on Indeed (not the company page). Empty means the button reads "Ask about this job" and opens an email to the HR address (`hrEmail` in site.ts, hr@thelifelink.org). Each posting also shows "Questions about this job? Email ...". This is the only published email on the site, by design.
 - Old-site URL redirects: add to `vercel.json` once the old URL list is known.
+
+## Edit mode (typing corrections on the page)
+
+Any page opened with `#edit` on the end of the address (for example `/about#edit`) lets Dr. DeBernardi click text and type. The "Copy all my changes" button copies a list of before/after text. When he pastes that list, apply it with `python3 ../_tools/apply_text_edits.py <repo folder> <file with the pasted list>` (add `--dry` first). Report which changes were applied, which were not found (text built from several fields, such as a headline with an accented word) and which were ambiguous (same words in several places). Handle those by hand. Then run `npm run build` if possible and remind him to commit and push in GitHub Desktop. The script is `public/edit-mode.js`; it does nothing without `#edit`.
