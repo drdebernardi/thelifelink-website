@@ -1,0 +1,43 @@
+{
+  "ways": [
+    {
+      "title": "Give",
+      "href": "/donate",
+      "color": "#f5b829",
+      "tint": "#fff4dc",
+      "cta": "Make a gift",
+      "iconPath": "M12 21s-7-4.6-9.2-8.4C1.3 10 2.6 6.2 6 6.2c2 0 3.2 1.2 4 2.4 0.8-1.2 2-2.4 4-2.4 3.4 0 4.7 3.8 3.2 6.4C19 16.4 12 21 12 21z",
+      "body": "Your gift links a real person to therapy, a safe home, and a way forward."
+    },
+    {
+      "title": "Careers",
+      "href": "#careers",
+      "color": "#3a8fd4",
+      "tint": "#eaf1fb",
+      "cta": "See open roles",
+      "iconPath": "M4 7h16v13H4zM8 7V5a2 2 0 012-2h4a2 2 0 012 2v2",
+      "body": "Do work that matters. Join a team of clinicians, case managers, and peers."
+    },
+    {
+      "title": "Show up",
+      "href": "#events",
+      "color": "#1e8374",
+      "tint": "#e9f6f3",
+      "cta": "View events",
+      "iconPath": "M4 6h16v14H4zM4 10h16M8 3v4M16 3v4",
+      "body": "Volunteer, attend, and stand with your neighbors at upcoming events."
+    }
+  ],
+  "internBullets": [
+    "Placements across counseling, case management, and housing",
+    "Supervision from licensed staff",
+    "Flexible terms for students and early-career professionals",
+    "A direct look at whole-person care"
+  ],
+  "media": [
+    "BBC",
+    "Esquire",
+    "Santa Fe New Mexican",
+    "KOB 4"
+  ]
+}

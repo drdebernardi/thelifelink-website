@@ -1,0 +1,695 @@
+{
+  "heroTiles": [
+    {
+      "c": "#2ab5a0",
+      "num": "1,405",
+      "suffix": "",
+      "txt": "people received behavioral health care"
+    },
+    {
+      "c": "#3a8fd4",
+      "num": "462",
+      "suffix": "",
+      "txt": "households housed or kept from losing their home"
+    },
+    {
+      "c": "#7dc242",
+      "num": "27,347",
+      "suffix": "",
+      "txt": "services delivered — about 111 every day our doors were open"
+    },
+    {
+      "c": "#f5b829",
+      "num": "4.68",
+      "suffix": " / 5",
+      "txt": "average client satisfaction across all programs"
+    }
+  ],
+  "chain": [
+    {
+      "c": "#3a8fd4",
+      "label": "Housing",
+      "link": true
+    },
+    {
+      "c": "#2ab5a0",
+      "label": "Mental Health",
+      "link": true
+    },
+    {
+      "c": "#7dc242",
+      "label": "Recovery",
+      "link": true
+    },
+    {
+      "c": "#f5b829",
+      "label": "Trafficking Aftercare",
+      "link": false
+    }
+  ],
+  "needs": [
+    {
+      "c": "#3a8fd4",
+      "dash": "207 314",
+      "big": "2 in 3",
+      "fs": 28,
+      "title": "were unhoused when they came to us",
+      "body": "713 people were homeless at the time they enrolled.*"
+    },
+    {
+      "c": "#2ab5a0",
+      "dash": "261 314",
+      "big": "83%",
+      "fs": 30,
+      "title": "live with a mental health condition",
+      "body": "Depression, anxiety, bipolar disorder, schizophrenia — treated here, not referred away."
+    },
+    {
+      "c": "#f5b829",
+      "dash": "200 314",
+      "big": "64%",
+      "fs": 30,
+      "title": "carry post-traumatic stress",
+      "body": "Trauma is the common thread. Our care has been trauma-informed agency-wide since 2005."
+    },
+    {
+      "c": "#7dc242",
+      "dash": "158 314",
+      "big": "1 in 2",
+      "fs": 28,
+      "title": "face mental illness and addiction together",
+      "body": "50% have co-occurring disorders — the hardest cases to treat, and the ones we are built for."
+    }
+  ],
+  "people": [
+    {
+      "num": "57%",
+      "txt": "Hispanic or Latino clients*"
+    },
+    {
+      "num": "1 in 10",
+      "txt": "American Indian or Alaska Native*"
+    },
+    {
+      "num": "1 in 5",
+      "txt": "age 60 or older; nearly half are 40–59"
+    },
+    {
+      "num": "4+",
+      "txt": "languages served — English, Spanish, Mandarin, and Native languages"
+    }
+  ],
+  "context": [
+    {
+      "c": "#3a8fd4",
+      "num": "26%",
+      "txt": "of New Mexicans live in rural areas — where the nearest services can be hours away."
+    },
+    {
+      "c": "#7dc242",
+      "num": "50%+",
+      "txt": "of New Mexico's 33 counties are designated High Intensity Drug Trafficking Areas."
+    },
+    {
+      "c": "#2ab5a0",
+      "num": "6.3",
+      "txt": "average Adverse Childhood Experiences score among trafficking survivors we serve — a score of 4 already sharply raises lifetime risk of depression, chronic illness, and suicide."
+    },
+    {
+      "c": "#f5b829",
+      "num": "8+",
+      "txt": "countries of origin among survivors in our care. Sex and labor trafficking occur statewide, with labor trafficking concentrated in oil, gas, mining, and cannabis agriculture."
+    }
+  ],
+  "where": [
+    {
+      "label": "Other community locations",
+      "pct": "35%",
+      "c": "#2ab5a0"
+    },
+    {
+      "label": "At our offices",
+      "pct": "31%",
+      "c": "#3a8fd4"
+    },
+    {
+      "label": "In the client's own home",
+      "pct": "18%",
+      "c": "#7dc242"
+    },
+    {
+      "label": "By phone or video",
+      "pct": "16%",
+      "c": "#f5b829"
+    }
+  ],
+  "programs": [
+    {
+      "n": "01",
+      "c": "#3a8fd4",
+      "title": "Housing",
+      "big": "215",
+      "sub": "households in permanent supportive housing",
+      "items": [
+        {
+          "b": "247 more households",
+          "t": "received rapid rehousing, move-in help, or eviction prevention"
+        },
+        {
+          "b": "127 people",
+          "t": "with serious mental illness housed through Linkages"
+        },
+        {
+          "b": "34 apartments",
+          "t": "at La Luz, in our historic main building"
+        },
+        {
+          "b": "3,102",
+          "t": "pre-tenancy and tenancy-support visits so people stay housed"
+        }
+      ]
+    },
+    {
+      "n": "02",
+      "c": "#2ab5a0",
+      "title": "Mental Health",
+      "big": "935",
+      "sub": "people enrolled in community support services",
+      "items": [
+        {
+          "b": "310 people",
+          "t": "in psychiatric care and medication management"
+        },
+        {
+          "b": "247 Clubhouse members",
+          "t": "and 6,728 drop-in visits at the Clubhouse and La Luz"
+        },
+        {
+          "b": "367 people",
+          "t": "in individual therapy; 263 in group"
+        },
+        {
+          "b": "Just 1",
+          "t": "staff-initiated psychiatric hospitalization or ER visit all year"
+        }
+      ]
+    },
+    {
+      "n": "03",
+      "c": "#5fa02f",
+      "title": "Recovery",
+      "big": "529",
+      "sub": "people in outpatient treatment programs",
+      "items": [
+        {
+          "b": "53 people",
+          "t": "in the Intensive Outpatient Program for substance use"
+        },
+        {
+          "b": "19 people",
+          "t": "on medication-assisted treatment for opioid use"
+        },
+        {
+          "b": "59 people",
+          "t": "in supported employment, with 547 employment sessions"
+        },
+        {
+          "b": "4.33 / 5",
+          "t": "— treatment clients' agreement that alcohol or drugs aren't causing problems in their lives"
+        }
+      ]
+    },
+    {
+      "n": "04",
+      "c": "#d99a0b",
+      "title": "Trafficking Aftercare",
+      "big": "82%",
+      "sub": "of survivors stably housed at 12 months (goal: 78%)",
+      "items": [
+        {
+          "b": "1,646 survivors reached",
+          "t": "in 2022–2024 — 251 enrolled clients and 1,395 anonymous and hotline contacts"
+        },
+        {
+          "b": "70%+",
+          "t": "saw measurable drops in PTSD or psychiatric symptoms"
+        },
+        {
+          "b": "100%",
+          "t": "of current clients in benefits, work, or school within a year (goal: 60%)"
+        },
+        {
+          "b": "3.4×",
+          "t": "growth in services — from 34,833 service units in 2019 to 118,567 in 2024"
+        }
+      ]
+    }
+  ],
+  "also": [
+    {
+      "num": "8",
+      "txt": "people coming home from incarceration housed at RISE House instead of released to the street"
+    },
+    {
+      "num": "2,343",
+      "txt": "individual treatment and recovery plans created or updated with clients"
+    },
+    {
+      "num": "998",
+      "txt": "clients who stayed with us from the prior year — relationships that last"
+    }
+  ],
+  "panels": [
+    {
+      "label": "Services Attended · FY2026",
+      "title": "Where 27,000+ visits went",
+      "body": "Community support and the Clubhouse carry the heaviest load — care that happens in daily life, not only in a therapist's office.",
+      "note": "",
+      "rows": [
+        {
+          "l": "Comprehensive Community Support Services (CCSS)",
+          "s": "",
+          "v": "11,559",
+          "w": "100.0%",
+          "c": "#2ab5a0"
+        },
+        {
+          "l": "Clubhouse & La Luz drop-in",
+          "s": "",
+          "v": "6,728",
+          "w": "58.2%",
+          "c": "#7dc242"
+        },
+        {
+          "l": "Individual therapy",
+          "s": "",
+          "v": "3,712",
+          "w": "32.1%",
+          "c": "#3a8fd4"
+        },
+        {
+          "l": "Group therapy",
+          "s": "",
+          "v": "1,909",
+          "w": "16.5%",
+          "c": "#3a8fd4"
+        },
+        {
+          "l": "Psychiatry visits",
+          "s": "",
+          "v": "1,350",
+          "w": "11.7%",
+          "c": "#f5b829"
+        },
+        {
+          "l": "Supported employment",
+          "s": "",
+          "v": "547",
+          "w": "4.7%",
+          "c": "#7dc242"
+        },
+        {
+          "l": "Comprehensive assessments",
+          "s": "",
+          "v": "491",
+          "w": "4.2%",
+          "c": "#2ab5a0"
+        },
+        {
+          "l": "Treat First walk-in assessments",
+          "s": "",
+          "v": "476",
+          "w": "4.1%",
+          "c": "#2ab5a0"
+        },
+        {
+          "l": "Intensive Outpatient",
+          "s": "Includes IOP assessments",
+          "v": "390",
+          "w": "3.4%",
+          "c": "#3a8fd4"
+        },
+        {
+          "l": "Medication-assisted treatment",
+          "s": "",
+          "v": "145",
+          "w": "1.5%",
+          "c": "#f5b829"
+        }
+      ]
+    },
+    {
+      "label": "Community Support · FY2026",
+      "title": "Many teams, one front door",
+      "body": "Community support workers are the connective tissue of The Life Link. Each team focuses on a different kind of need.",
+      "note": "935 unique clients across all teams — 548 of them new this year. Clients often move between teams as needs change.",
+      "rows": [
+        {
+          "l": "Comprehensive Community Support Services (CCSS)",
+          "s": "Case management & skills",
+          "v": "633",
+          "w": "100.0%",
+          "c": "#2ab5a0"
+        },
+        {
+          "l": "Treat First",
+          "s": "Walk-in, same day · served",
+          "v": "419",
+          "w": "66.2%",
+          "c": "#2ab5a0"
+        },
+        {
+          "l": "SOAR",
+          "s": "Disability benefits access",
+          "v": "295",
+          "w": "46.6%",
+          "c": "#f5b829"
+        },
+        {
+          "l": "Linkages",
+          "s": "Housing for serious mental illness",
+          "v": "128",
+          "w": "20.2%",
+          "c": "#3a8fd4"
+        },
+        {
+          "l": "Opening Doors",
+          "s": "",
+          "v": "31",
+          "w": "4.9%",
+          "c": "#7dc242"
+        },
+        {
+          "l": "La Luz",
+          "s": "Supportive housing residents",
+          "v": "23",
+          "w": "3.6%",
+          "c": "#3a8fd4"
+        },
+        {
+          "l": "Sojourners Café",
+          "s": "Unhoused women & families",
+          "v": "5",
+          "w": "1.5%",
+          "c": "#7dc242"
+        },
+        {
+          "l": "Assisted Outpatient",
+          "s": "Court-ordered community treatment",
+          "v": "3",
+          "w": "1.5%",
+          "c": "#f5b829"
+        }
+      ]
+    }
+  ],
+  "mix": [
+    {
+      "l": "Community support",
+      "note": "53% outside the office",
+      "segs": [
+        {
+          "w": "35%",
+          "c": "#2ab5a0"
+        },
+        {
+          "w": "18%",
+          "c": "#7dc242"
+        },
+        {
+          "w": "31%",
+          "c": "#3a8fd4"
+        },
+        {
+          "w": "16%",
+          "c": "#f5b829"
+        }
+      ]
+    },
+    {
+      "l": "Individual therapy",
+      "note": "89% in office",
+      "segs": [
+        {
+          "w": "89%",
+          "c": "#3a8fd4"
+        },
+        {
+          "w": "11%",
+          "c": "#f5b829"
+        }
+      ]
+    },
+    {
+      "l": "Psychiatry",
+      "note": "40% telehealth",
+      "segs": [
+        {
+          "w": "60%",
+          "c": "#3a8fd4"
+        },
+        {
+          "w": "40%",
+          "c": "#f5b829"
+        }
+      ]
+    },
+    {
+      "l": "Group therapy & IOP",
+      "note": "91% in office",
+      "segs": [
+        {
+          "w": "91%",
+          "c": "#3a8fd4"
+        },
+        {
+          "w": "9%",
+          "c": "#f5b829"
+        }
+      ]
+    },
+    {
+      "l": "Medication-assisted treatment",
+      "note": "90% in office",
+      "segs": [
+        {
+          "w": "90%",
+          "c": "#3a8fd4"
+        },
+        {
+          "w": "10%",
+          "c": "#f5b829"
+        }
+      ]
+    },
+    {
+      "l": "Clubhouse",
+      "note": "100% in person",
+      "segs": [
+        {
+          "w": "100%",
+          "c": "#3a8fd4"
+        }
+      ]
+    }
+  ],
+  "times": [
+    {
+      "c": "#7dc242",
+      "num": "160",
+      "unit": "min",
+      "txt": "average Clubhouse visit — more than two and a half hours of community"
+    },
+    {
+      "c": "#2ab5a0",
+      "num": "70",
+      "unit": "min",
+      "txt": "average community support and housing-support visit"
+    },
+    {
+      "c": "#3a8fd4",
+      "num": "62",
+      "unit": "min",
+      "txt": "average Treat First support session for new walk-in clients"
+    },
+    {
+      "c": "#f5b829",
+      "num": "526",
+      "unit": "",
+      "txt": "services attended in an average week, across every program"
+    }
+  ],
+  "sat": [
+    {
+      "l": "Community Support",
+      "v": "4.61",
+      "t": "\"I like the services I received\" · out of 5"
+    },
+    {
+      "l": "Outpatient Therapy",
+      "v": "4.61",
+      "t": "Plus the agency's top substance-use score: 4.33"
+    },
+    {
+      "l": "Clubhouse",
+      "v": "4.60",
+      "t": "Highest gains in social connection: 4.16 vs. 3.83 agency-wide"
+    },
+    {
+      "l": "Psychiatry & MAT",
+      "v": "4.89",
+      "t": "Highest satisfaction of any program (smaller sample)"
+    }
+  ],
+  "scores": [
+    {
+      "q": "I like the services I received here.",
+      "v": "4.68",
+      "w": "93.6%"
+    },
+    {
+      "q": "Staff respect my values, culture, and spiritual preferences.",
+      "v": "4.66",
+      "w": "93.2%"
+    },
+    {
+      "q": "I would recommend this program to a friend or family member.",
+      "v": "4.62",
+      "w": "92.4%"
+    },
+    {
+      "q": "I am able to recognize the signs of my illness.",
+      "v": "4.31",
+      "w": "86.2%"
+    },
+    {
+      "q": "I don't use alcohol or drugs in a way that causes problems in my life.",
+      "v": "4.20",
+      "w": "84%"
+    }
+  ],
+  "kpis": [
+    {
+      "c": "#2ab5a0",
+      "num": "94%",
+      "txt": "of our community support and Clubhouse staff bring lived experience to the work"
+    },
+    {
+      "c": "#3a8fd4",
+      "num": "88%",
+      "txt": "of all services delivered in person, face to face"
+    },
+    {
+      "c": "#7dc242",
+      "num": "90%",
+      "txt": "of client records include a personal crisis plan"
+    },
+    {
+      "c": "#f5b829",
+      "num": "89%",
+      "txt": "attendance for housing-support visits — people show up when the help is real"
+    }
+  ],
+  "survey": [
+    {
+      "num": "15 of 15",
+      "txt": "survivors in our 2018 survey strongly agreed our staff respect their background"
+    },
+    {
+      "num": "93%+",
+      "txt": "in that survey agreed our staff help them believe their lives can change for the better"
+    },
+    {
+      "num": "5.0",
+      "txt": "top score for \"I would recommend this program to a friend or family member\""
+    }
+  ],
+  "accred": [
+    "CARF Accredited",
+    "Licensed CMHC",
+    "HUD-Approved",
+    "Since 1987"
+  ],
+  "audits": [
+    "Independent annual financial audit",
+    "HUD site visit",
+    "U.S. Department of Justice site visit",
+    "Medicaid MCO & Medicare chart audits",
+    "NM Mortgage Finance Authority review",
+    "Linkages housing program audit",
+    "Federal Probation contract review",
+    "NM Board of Pharmacy inspection",
+    "IPS Supported Employment fidelity review"
+  ],
+  "events": [
+    {
+      "m": "Sept",
+      "y": "2025",
+      "t": "Rhythms of Recovery Danceathon"
+    },
+    {
+      "m": "Nov",
+      "y": "2025",
+      "t": "Keep Hope Alive Gala & Concert"
+    },
+    {
+      "m": "May",
+      "y": "2026",
+      "t": "Be Kind to Your Mind — Mental Health & Wellbeing Community Festival"
+    },
+    {
+      "m": "June",
+      "y": "2026",
+      "t": "Pride Parade & Festival"
+    }
+  ],
+  "partners": [
+    "NM Coalition to End Homelessness",
+    "Built for Zero",
+    "NM Behavioral Health Providers Association Board",
+    "Santa Fe County Behavioral Health Leadership Team",
+    "Housing Leadership Group of NM",
+    "Santa Fe Affordable Housing Action Coalition",
+    "City of Santa Fe Micro-Communities",
+    "Santa Fe County CONNECT",
+    "Partnerships for Success Coalition",
+    "Santa Fe Chamber of Commerce"
+  ],
+  "ahead": [
+    {
+      "n": "01",
+      "b": "A permanent home of our own",
+      "t": "After more than 25 years of renting, The Life Link purchased a new main building. Community support, housing, psychiatry, and Treat First services move under one roof in September 2026."
+    },
+    {
+      "n": "02",
+      "b": "Expanding micro-communities",
+      "t": "Growing our low-barrier micro-community shelter model so more people can move from the street to stability."
+    },
+    {
+      "n": "03",
+      "b": "Exploring CCBHC certification",
+      "t": "Planning for a potential application to become a Certified Community Behavioral Health Clinic — the national model for comprehensive community care."
+    }
+  ],
+  "linked": [
+    {
+      "c": "#3a8fd4",
+      "num": "11,559",
+      "txt": "community support visits — more than half outside the office",
+      "link": true
+    },
+    {
+      "c": "#2ab5a0",
+      "num": "476",
+      "txt": "walk-in, same-day assessments through Treat First — no appointment, no waitlist",
+      "link": true
+    },
+    {
+      "c": "#f5b829",
+      "num": "821",
+      "txt": "personal crisis and safety plans written or updated with clients",
+      "link": false
+    }
+  ]
+}

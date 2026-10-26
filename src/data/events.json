@@ -1,0 +1,114 @@
+{
+  "stories": [
+    {
+      "q": "The Life Link has helped me move forward when I didn't think it was possible.",
+      "who": "— The Life Link client",
+      "bg": "#1e3278",
+      "ink": "#ffffff",
+      "mark": "#f5b829",
+      "cap": "#a9b7e0"
+    },
+    {
+      "q": "The Life Link has helped me learn to love myself and live my life without fear.",
+      "who": "— The Life Link client",
+      "bg": "#2ab5a0",
+      "ink": "#ffffff",
+      "mark": "#141f4d",
+      "cap": "#e6fbf7"
+    },
+    {
+      "q": "Once they helped me solve one problem, they stayed with me through the next.",
+      "who": "— The Life Link client",
+      "bg": "#f5b829",
+      "ink": "#141f4d",
+      "mark": "#1e3278",
+      "cap": "#3a2f0a"
+    },
+    {
+      "q": "I really appreciate this program because it made me change my life for the better and made me feel like my life matters.",
+      "who": "— A survivor in our aftercare program",
+      "bg": "#ffffff",
+      "ink": "#1e3278",
+      "mark": "#7dc242",
+      "cap": "#5b647a"
+    }
+  ],
+  "staff": [
+    {
+      "dept": "Clinical",
+      "c": "#2f7abf",
+      "photo": "linear-gradient(150deg,#1e3278,#3a8fd4)",
+      "name": "Staff Name",
+      "role": "Licensed Therapist",
+      "why": "“Why I do this work” — a sentence in their own words."
+    },
+    {
+      "dept": "Housing",
+      "c": "#9e6c00",
+      "photo": "linear-gradient(150deg,#b8860b,#f5b829)",
+      "name": "Staff Name",
+      "role": "Case Manager",
+      "why": "“Why I do this work” — a sentence in their own words."
+    },
+    {
+      "dept": "Peer Support",
+      "c": "#1f8f7e",
+      "photo": "linear-gradient(150deg,#177a6b,#2ab5a0)",
+      "name": "Staff Name",
+      "role": "Certified Peer Support Specialist",
+      "why": "“Why I do this work” — a sentence in their own words."
+    },
+    {
+      "dept": "Outreach",
+      "c": "#4d8426",
+      "photo": "linear-gradient(150deg,#4a7d2c,#7dc242)",
+      "name": "Staff Name",
+      "role": "Outreach Specialist",
+      "why": "“Why I do this work” — a sentence in their own words."
+    }
+  ],
+  "board": [
+    {
+      "initials": "LF",
+      "name": "Laura Feldberg",
+      "role": "Board Member",
+      "c": "#2ab5a0",
+      "tint": "#e9f6f3"
+    },
+    {
+      "initials": "—",
+      "name": "Board Member",
+      "role": "Title",
+      "c": "#1e3278",
+      "tint": "#eef3fb"
+    },
+    {
+      "initials": "—",
+      "name": "Board Member",
+      "role": "Title",
+      "c": "#f5b829",
+      "tint": "#fff4dc"
+    },
+    {
+      "initials": "—",
+      "name": "Board Member",
+      "role": "Title",
+      "c": "#3a8fd4",
+      "tint": "#eaf3fb"
+    },
+    {
+      "initials": "—",
+      "name": "Board Member",
+      "role": "Title",
+      "c": "#7dc242",
+      "tint": "#eef7e6"
+    },
+    {
+      "initials": "—",
+      "name": "Board Member",
+      "role": "Title",
+      "c": "#2ab5a0",
+      "tint": "#e9f6f3"
+    }
+  ]
+}

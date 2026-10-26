@@ -1,0 +1,54 @@
+{
+  "tiers": [
+    {
+      "amount": "$50",
+      "impact": "Opens the door to a first counseling session for someone reaching out for help.",
+      "featured": "",
+      "border": "1px solid #e4ebf4",
+      "shadow": "none",
+      "btnBg": "#1e3278",
+      "btnColor": "#fff"
+    },
+    {
+      "amount": "$250",
+      "impact": "Provides a full week of wrap-around care — therapy, case management, and support.",
+      "featured": "",
+      "border": "2px solid #f5b829",
+      "shadow": "0 24px 48px -20px rgba(245,184,41,0.45)",
+      "btnBg": "#f5b829",
+      "btnColor": "#141f4d"
+    },
+    {
+      "amount": "$500",
+      "impact": "Helps keep a person stably housed — the foundation for lasting recovery.",
+      "featured": "",
+      "border": "1px solid #e4ebf4",
+      "shadow": "none",
+      "btnBg": "#1e3278",
+      "btnColor": "#fff"
+    }
+  ],
+  "moreWays": [
+    {
+      "title": "Monthly giving",
+      "tint": "#fff4dc",
+      "color": "#c98a00",
+      "iconPath": "M4 7h16v12H4zM4 11h16M8 15h4",
+      "body": "Sustain care year-round with a recurring gift of any size."
+    },
+    {
+      "title": "Employer matching",
+      "tint": "#eaf1fb",
+      "color": "#3a8fd4",
+      "iconPath": "M8 6h8v4H8zM4 14h16v6H4zM12 10v4",
+      "body": "Many employers double your gift — check if yours matches."
+    },
+    {
+      "title": "Planned giving",
+      "tint": "#e9f6f3",
+      "color": "#2ab5a0",
+      "iconPath": "M12 21s-7-4.6-9.2-8.4C1.3 10 2.6 6.2 6 6.2c2 0 3.2 1.2 4 2.4 0.8-1.2 2-2.4 4-2.4 3.4 0 4.7 3.8 3.2 6.4C19 16.4 12 21 12 21z",
+      "body": "Leave a legacy of hope through a gift in your will or estate."
+    }
+  ]
+}

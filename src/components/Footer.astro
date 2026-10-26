@@ -1,0 +1,46 @@
+---
+import { SITE } from '../data/site';
+const year = new Date().getFullYear();
+const links = [['Home','/'],['About','/about'],['Our Impact','/impact'],['Programs','/programs'],['Join our Team','/get-involved'],['Contact','/contact']];
+---
+<footer class="tll-foot">
+  <div class="tll-foot-grid">
+    <div style="min-width:220px;grid-column:span 1;">
+      <div style="display:inline-flex;background:#ffffff;border-radius:10px;padding:10px 16px;margin-bottom:20px;"><img src="/assets/tll-logo.png" alt="The Life Link" width="104" height="52" style="height:52px;width:auto;display:block;"></div>
+      <p style="font-size:14.5px;line-height:1.65;color:#aab6da;max-width:280px;margin:0;">{SITE.tagline}</p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <nav style="display:flex;flex-direction:column;gap:12px;" aria-label="Footer">
+        {links.map(([label, href]) => (<a href={href} style="color:#c9d2ea;text-decoration:none;font-size:14.5px;">{label}</a>))}
+      </nav>
+    </div>
+    <div>
+      <h2>Get Help</h2>
+      <div style="display:flex;flex-direction:column;gap:13px;font-size:14.5px;line-height:1.5;">
+        <a href={`tel:${SITE.mainPhone.tel}`} style="color:#ffffff;text-decoration:none;font-weight:600;font-size:16px;">{SITE.mainPhone.display}</a>
+        <address style="font-style:normal;color:#c9d2ea;">{SITE.address.street}<br>{SITE.address.city}, {SITE.address.region} {SITE.address.zip}</address>
+        <a href="/contact#locations" style="color:#f5b829;font-weight:600;text-decoration:underline;text-underline-offset:3px;">Locations</a>
+        <div style="display:flex;gap:10px;margin-top:4px;">
+          {SITE.social.facebook && (<a href={SITE.social.facebook} target="_blank" rel="noopener" aria-label="Facebook" class="tll-soc"><svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.5-1.5H17V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5V13h2.8v8h3.2z"></path></svg></a>)}
+          <a href={SITE.social.instagram} target="_blank" rel="noopener" aria-label="Instagram" class="tll-soc"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"></circle></svg></a>
+          <a href={SITE.social.youtube} target="_blank" rel="noopener" aria-label="YouTube" class="tll-soc"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="3.5" fill="currentColor"></rect><path d="M10 9.2l5 2.8-5 2.8z" fill="#141f4d"></path></svg></a>
+        </div>
+        <span style="color:#aab6da;border-top:1px solid rgba(255,255,255,0.1);padding-top:12px;margin-top:2px;">Crisis: <a href="tel:988" style="color:#f5b829;font-weight:700;text-decoration:none;">988</a> · Medical: <a href="tel:911" style="color:#f5b829;font-weight:700;text-decoration:none;">911</a></span>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.12);">
+    <div style="max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center;font-size:12.5px;color:#8592c0;">
+      <span>© {year} The Life Link, Inc.</span>
+      <span style="text-align:right;">Licensed Community Mental Health Center · Core Service Agency · HUD-Approved · CARF Accredited</span>
+    </div>
+  </div>
+</footer>
+<style is:global>
+  .tll-foot{font-family:'Inter',sans-serif;background:#141f4d;color:#c9d2ea;}
+  .tll-foot-grid{max-width:1200px;margin:0 auto;padding:32px 24px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px 40px;}
+  .tll-foot h2{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#f5b829;font-weight:700;margin:0 0 18px;}
+  .tll-soc{width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;}
+  .tll-soc:hover,.tll-soc:focus{background:#f5b829;color:#141f4d;}
+</style>

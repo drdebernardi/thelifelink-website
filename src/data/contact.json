@@ -1,0 +1,137 @@
+{
+  "walkin": [
+    {
+      "day": "Mondays",
+      "time": "8am – 11am",
+      "dayColor": "#141f4d",
+      "timeColor": "#1e3278"
+    },
+    {
+      "day": "Tuesdays",
+      "time": "8am – 11am & 1pm – 4pm",
+      "dayColor": "#141f4d",
+      "timeColor": "#1e3278"
+    },
+    {
+      "day": "Wednesdays",
+      "time": "Closed",
+      "dayColor": "#6b768f",
+      "timeColor": "#6b768f"
+    },
+    {
+      "day": "Thursdays",
+      "time": "8am – 11am",
+      "dayColor": "#141f4d",
+      "timeColor": "#1e3278"
+    },
+    {
+      "day": "Fridays",
+      "time": "Closed",
+      "dayColor": "#6b768f",
+      "timeColor": "#6b768f"
+    }
+  ],
+  "locations": [
+    {
+      "name": "Saint Michael’s Building",
+      "addr": "2000 St. Michael’s Drive",
+      "c": "#1e3278",
+      "ink": "#ffffff",
+      "tint": "#eef3fb",
+      "dot": "#1e3278",
+      "services": [
+        "Onboarding and enrollment in services (Treat First)",
+        "Administrative offices",
+        "Comprehensive Community Support Services",
+        "Psychiatry and Suboxone Services",
+        "Housing Department",
+        "Human Trafficking Aftercare Program",
+        "Sojourners Advocacy Cafe"
+      ]
+    },
+    {
+      "name": "Las Alas Building",
+      "addr": "1331 Declovina Street",
+      "c": "#2f7abf",
+      "ink": "#ffffff",
+      "tint": "#eaf3fb",
+      "dot": "#2f7abf",
+      "services": [
+        "Onboarding and enrollment in services (Treat First)",
+        "Service registration for persons referred by courts or federal probation",
+        "Intake and Assessment",
+        "Individual and group counseling",
+        "Intensive Outpatient Services for Substance Abuse (IOP)",
+        "Assistance with social security applications (SOAR)",
+        "Urinalysis and breathalyzer screening services for federal probation clients"
+      ]
+    },
+    {
+      "name": "The Clubhouse",
+      "addr": "1318 Luana Street, suite B",
+      "c": "#1a7a6b",
+      "ink": "#ffffff",
+      "tint": "#e9f6f3",
+      "dot": "#1d8575",
+      "services": [
+        "A community space for The Life Link clients to build relationships, expand skills and grow"
+      ]
+    },
+    {
+      "name": "Supportive Employment and Outreach Services",
+      "addr": "1318 Luana Street, suite A",
+      "c": "#f5b829",
+      "ink": "#141f4d",
+      "tint": "#fff7e3",
+      "dot": "#c98a00",
+      "services": [
+        "Supportive Employment Services",
+        "Outreach Services"
+      ]
+    }
+  ],
+  "numbers": [
+    {
+      "label": "Therapy Services",
+      "num": "(505) 395-2551",
+      "href": "tel:5053952551",
+      "c": "#2f7abf",
+      "tint": "#eaf3fb"
+    },
+    {
+      "label": "Housing Services",
+      "num": "(505) 395-2531",
+      "href": "tel:5053952531",
+      "c": "#c98a00",
+      "tint": "#fff4dc"
+    },
+    {
+      "label": "Medical Staff & Clinic Office",
+      "num": "(505) 395-2533",
+      "href": "tel:5053952533",
+      "c": "#1d8575",
+      "tint": "#e9f6f3"
+    },
+    {
+      "label": "Sojourners Program",
+      "num": "(505) 983-4182",
+      "href": "tel:5059834182",
+      "c": "#5fa02f",
+      "tint": "#eef7e6"
+    },
+    {
+      "label": "The Clubhouse",
+      "num": "(505) 395-2503",
+      "href": "tel:5053952503",
+      "c": "#1e3278",
+      "tint": "#eef3fb"
+    },
+    {
+      "label": "Human Trafficking Hotline",
+      "num": "(505) GET-FREE / (505) 438-3733",
+      "href": "tel:5054383733",
+      "c": "#b8452a",
+      "tint": "#fdeee8"
+    }
+  ]
+}

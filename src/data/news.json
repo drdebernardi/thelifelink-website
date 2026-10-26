@@ -1,0 +1,33 @@
+{
+  "_help": "Press items on the Events & News page. To add one, copy an item from { to } and change the words. color can be navy, gold, green or blue. image is optional (a file in public/assets/news/).",
+  "items": [
+    {
+      "outlet": "Santa Fe New Mexican",
+      "title": "A leap of faith: Santa Fe's The Life Link set to move, expand services",
+      "url": "https://www.santafenewmexican.com/news/local_news/a-leap-of-faith-santa-fes-the-life-link-set-to-move-expand-services/article_02ff497a-6464-4df6-8235-1ba48729be8d.html",
+      "color": "navy",
+      "image": ""
+    },
+    {
+      "outlet": "Santa Fe Reporter · Cover Story",
+      "title": "Won't You Be Their Neighbor?",
+      "url": "https://sfreporter.com/coverstories/wont-you-be-their-neighbor/",
+      "color": "gold",
+      "image": ""
+    },
+    {
+      "outlet": "High Country News",
+      "title": "The Chinese immigrants trafficked on New Mexico's weed farms",
+      "url": "https://www.hcn.org/issues/58-7/the-chinese-immigrants-trafficked-on-new-mexicos-weed-farms/",
+      "color": "green",
+      "image": ""
+    },
+    {
+      "outlet": "Santa Fe New Mexican",
+      "title": "Santa Fe pallet shelter village for homeless celebrates 2 years",
+      "url": "https://www.santafenewmexican.com/news/local_news/santa-fe-pallet-shelter-village-for-homeless-celebrates-2-years/article_ecfdaec9-ce72-4316-8eb2-db44a33dda44.html",
+      "color": "blue",
+      "image": ""
+    }
+  ]
+}

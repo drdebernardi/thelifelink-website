@@ -1,0 +1,22 @@
+{
+  "_help": "The newsletter section on the Events & News page. Put new newsletter page images in public/assets/newsletters/ and change the file names below. Set show to false to hide the whole section.",
+  "show": true,
+  "label": "Program Newsletter · October 2026",
+  "headline": "News from the",
+  "headlineAccent": "Arroyo Chamiso Micro Community.",
+  "paragraphs": [
+    "Arroyo Chamiso is Santa Fe's first non-congregate transitional housing village, run in partnership with The Life Link. Since April 2024 it has given 59 residents a locked door of their own, and 22 have moved on to permanent housing.",
+    "This month's issue covers the village's story, resident artwork, a field trip, partner programs, and how to donate."
+  ],
+  "button": "Read the newsletter",
+  "front": {
+    "file": "/assets/newsletters/acmc-oct-2026-front.jpg",
+    "alt": "ACMC newsletter, October 2026, front page",
+    "download": "ACMC-Newsletter-Oct-2026-Front.jpg"
+  },
+  "back": {
+    "file": "/assets/newsletters/acmc-oct-2026-back.jpg",
+    "alt": "ACMC newsletter, October 2026, back page",
+    "download": "ACMC-Newsletter-Oct-2026-Back.jpg"
+  }
+}

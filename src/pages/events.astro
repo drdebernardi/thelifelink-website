@@ -1,0 +1,162 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import data from '../data/events.json';
+import newsData from '../data/news.json';
+import nl from '../data/newsletter.json';
+const { stories, staff, board } = data;
+const news = newsData.items;
+const colors = { navy: ['#1e3278', '#1e3278'], gold: ['#9e6c00', '#c98a00'], green: ['#4d8426', '#5a9a2c'], blue: ['#2f7abf', '#2f7abf'] };
+---
+<Base image="/assets/og/events.jpg" title="Events & News | The Life Link" description="Events, newsletters, and news from The Life Link in Santa Fe, including updates on Arroyo Chamiso and community gatherings." path="/events">
+
+<div style="font-family:'Inter',sans-serif;color:#1a2236;background:#ffffff;overflow-x:hidden;">
+<Header active="events" />
+<main id="main">
+
+<section style="background:#141f4d;color:#ffffff;position:relative;overflow:hidden;">
+<svg width="700" height="700" viewBox="0 0 700 700" fill="none" aria-hidden="true" style="position:absolute;right:-220px;top:-240px;opacity:0.06;pointer-events:none;"><circle cx="350" cy="350" r="310" stroke="#fff" stroke-width="44"></circle><circle cx="350" cy="350" r="170" stroke="#fff" stroke-width="44"></circle></svg>
+<div style="max-width:1200px;margin:0 auto;padding:72px 24px;position:relative;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#a9b7e0;font-weight:700;">Events &amp; News</span>
+</div>
+<h1 style="font-family:'DM Serif Display',serif;font-size:clamp(40px,5.5vw,62px);line-height:1.05;margin:0;font-weight:400;">What's happening at <span style="color:#f5b829;font-style:italic;">The Life Link.</span></h1>
+</div>
+</section>
+
+<section id="events" style="max-width:1200px;margin:0 auto;padding:76px 24px 40px;scroll-margin-top:120px;">
+<div style="margin-bottom:36px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">Past Events</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,44px);margin:0;color:#141f4d;font-weight:400;">Moments from our community.</h2>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;">
+<div data-reveal style="border-radius:16px;overflow:hidden;background:#eef2f8 url('/assets/events/gala-dinner.jpg') center 50%/cover no-repeat;box-shadow:0 20px 44px -28px rgba(30,50,120,0.5);flex:1 1 300px;min-height:560px;" role="img" aria-label="Three smiling participants at the Rhythms of Recovery Dance-a-Thon photo frame"></div>
+<div style="flex:2 1 520px;display:flex;flex-direction:column;gap:18px;">
+<div data-reveal style="border-radius:16px;overflow:hidden;background:#eef2f8 url('/assets/events/community-table.jpg') center 40%/cover no-repeat;box-shadow:0 20px 44px -28px rgba(30,50,120,0.5);flex:1 1 auto;min-height:280px;" role="img" aria-label="Guests smiling at a benefit dinner for The Life Link"></div>
+<div style="display:flex;flex-wrap:wrap;gap:18px;flex:1 1 auto;">
+<div data-reveal style="border-radius:16px;overflow:hidden;background:#eef2f8 url('/assets/events/community-talk.jpg') center 40%/cover no-repeat;box-shadow:0 20px 44px -28px rgba(30,50,120,0.5);flex:1 1 240px;min-height:260px;" role="img" aria-label="An information table from The Life Link at a community event"></div>
+<div data-reveal style="border-radius:16px;overflow:hidden;background:#eef2f8 url('/assets/events/dance-a-thon.jpg') center 40%/cover no-repeat;box-shadow:0 20px 44px -28px rgba(30,50,120,0.5);flex:1 1 240px;min-height:260px;" role="img" aria-label="A community gathering listening to a speaker"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="max-width:1200px;margin:0 auto;padding:20px 24px 76px;">
+<div data-reveal style="background:#141f4d;color:#ffffff;border-radius:18px;padding:44px 40px;text-align:center;position:relative;overflow:hidden;">
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" aria-hidden="true" style="position:absolute;right:-90px;top:-110px;opacity:0.08;"><circle cx="160" cy="160" r="135" stroke="#ffffff" stroke-width="30"></circle><circle cx="160" cy="160" r="62" stroke="#ffffff" stroke-width="30"></circle></svg>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(30px,4vw,44px);margin:0;position:relative;">Stay tuned for <span style="color:#f5b829;font-style:italic;">upcoming events.</span></h2>
+</div>
+</section>
+
+{nl.show && (<Fragment>
+<section id="acmc-newsletter" style="background:#141f4d;color:#ffffff;position:relative;overflow:hidden;scroll-margin-top:120px;">
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" aria-hidden="true" style="position:absolute;left:-220px;bottom:-240px;opacity:0.06;pointer-events:none;"><circle cx="320" cy="320" r="280" stroke="#ffffff" stroke-width="40"></circle><circle cx="320" cy="320" r="150" stroke="#ffffff" stroke-width="40"></circle></svg>
+<div style="max-width:1200px;margin:0 auto;padding:76px 24px;display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center;position:relative;">
+<div style="flex:1 1 360px;min-width:0;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#a9b7e0;font-weight:700;">{nl.label}</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 18px;font-weight:400;">{nl.headline} <span style="color:#7dc242;font-style:italic;">{nl.headlineAccent}</span></h2>
+<p style="font-size:16.5px;line-height:1.65;color:#c9d2ea;margin:0 0 14px;">{nl.paragraphs[0]}</p>
+<p style="font-size:16.5px;line-height:1.65;color:#c9d2ea;margin:0 0 26px;">{nl.paragraphs[1]}</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+<button data-nl-open="front" style="background:#f5b829;color:#141f4d;font-family:inherit;font-weight:700;font-size:15px;border:none;cursor:pointer;padding:13px 22px;border-radius:4px;">{nl.button}</button>
+<a href={nl.front.file} download={nl.front.download} style="background:none;border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-weight:600;font-size:14.5px;text-decoration:none;padding:12px 18px;border-radius:4px;">Download front</a>
+<a href={nl.back.file} download={nl.back.download} style="background:none;border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-weight:600;font-size:14.5px;text-decoration:none;padding:12px 18px;border-radius:4px;">Download back</a>
+</div>
+</div>
+<div style="flex:1 1 460px;min-width:0;display:flex;gap:18px;" data-reveal>
+<button data-nl-open="front" aria-label="Enlarge newsletter front page" style="flex:1 1 0;min-width:0;padding:0;border:none;background:none;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;align-items:stretch;">
+<img src={nl.front.file} alt={nl.front.alt} style="display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 24px 48px -18px rgba(0,0,0,0.6);transform:rotate(-1.5deg);" />
+<span style="font-size:12.5px;color:#a9b7e0;font-weight:600;font-family:'Inter',sans-serif;">Front · click to enlarge</span>
+</button>
+<button data-nl-open="back" aria-label="Enlarge newsletter back page" style="flex:1 1 0;min-width:0;padding:0;border:none;background:none;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;align-items:stretch;margin-top:28px;">
+<img src={nl.back.file} alt={nl.back.alt} style="display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 24px 48px -18px rgba(0,0,0,0.6);transform:rotate(1.5deg);" />
+<span style="font-size:12.5px;color:#a9b7e0;font-weight:600;font-family:'Inter',sans-serif;">Back · click to enlarge</span>
+</button>
+</div>
+</div>
+</section>
+<div id="nl-zoom" data-nl={JSON.stringify({ front: nl.front, back: nl.back })} data-nl-close hidden style="position:fixed;inset:0;z-index:1000;background:rgba(10,16,40,0.92);overflow:auto;flex-direction:column;align-items:center;padding:20px 16px 40px;">
+<div data-nl-stop style="position:sticky;top:0;z-index:2;width:100%;max-width:1000px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:10px 0 16px;">
+<div style="display:flex;gap:8px;">
+<button type="button" class="nl-tab" data-nl-tab="front">Front</button>
+<button type="button" class="nl-tab" data-nl-tab="back">Back</button>
+</div>
+<div style="display:flex;gap:8px;">
+<a id="nl-download" href={nl.front.file} download={nl.front.download} style="background:#f5b829;color:#141f4d;font-weight:700;font-size:14px;text-decoration:none;padding:10px 16px;border-radius:4px;">Download</a>
+<button type="button" data-nl-close aria-label="Close" style="background:#ffffff;color:#141f4d;font-family:inherit;font-weight:700;font-size:14px;border:none;cursor:pointer;padding:10px 16px;border-radius:4px;">Close ✕</button>
+</div>
+</div>
+<div id="nl-page" data-nl-stop role="img" aria-label={nl.front.alt} style="width:100%;max-width:1000px;aspect-ratio:1545/2000;flex-shrink:0;background-color:#f3efe8;background-size:contain;background-repeat:no-repeat;background-position:center top;border-radius:6px;box-shadow:0 30px 60px rgba(0,0,0,0.5);"></div>
+</div>
+
+</Fragment>)}
+<section id="news" style="background:#f4f7fb;scroll-margin-top:120px;">
+<div style="max-width:1200px;margin:0 auto;padding:76px 24px;">
+<div style="margin-bottom:36px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">In the News</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,44px);margin:0;color:#141f4d;font-weight:400;">The Life Link in the press.</h2>
+</div>
+<div style="display:grid;gap:20px;" class="r-newsCols">
+{news.map((n, n_i) => { const [c, fill] = colors[n.color] ?? colors.navy; const bgImg = n.image ? `url('${n.image}')` : 'none'; return (<Fragment>
+<a data-reveal href={n.url} target="_blank" rel="noopener" style="background:#ffffff;border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;box-shadow:0 16px 36px -28px rgba(30,50,120,0.45);">
+<div role="img" aria-label={n.title} style={`width:100%;aspect-ratio:16/9;background-color:${fill};background-image:${bgImg};background-size:cover;background-position:center;border-bottom:4px solid ${fill};`}></div>
+<div style="padding:24px 26px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:22px;flex:1;">
+<div>
+<div style={`font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:${c};font-weight:800;margin-bottom:12px;`}>{n.outlet}</div>
+<h3 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:23px;line-height:1.25;color:#141f4d;margin:0;">{n.title}</h3>
+</div>
+<span style="font-size:14px;font-weight:700;color:#1e3278;">Read the article →</span>
+</div>
+</a>
+</Fragment>); })}
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</div>
+
+</Base>
+<script>
+  const root = document.getElementById('nl-zoom') as HTMLElement | null;
+  const page = document.getElementById('nl-page') as HTMLElement | null;
+  const dl = document.getElementById('nl-download') as HTMLAnchorElement | null;
+  const d = JSON.parse(root?.dataset.nl ?? '{"front":{},"back":{}}');
+  const info = {
+    front: { src: d.front.file, file: d.front.download, alt: d.front.alt },
+    back: { src: d.back.file, file: d.back.download, alt: d.back.alt },
+  } as const;
+  function show(which: 'front' | 'back') {
+    if (!root || !page || !dl) return;
+    const i = info[which];
+    page.style.backgroundImage = `url('${i.src}')`;
+    page.setAttribute('aria-label', i.alt);
+    dl.href = i.src; dl.setAttribute('download', i.file);
+    root.querySelectorAll<HTMLElement>('[data-nl-tab]').forEach((b) => b.classList.toggle('on', b.dataset.nlTab === which));
+    root.hidden = false; root.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function close() { if (!root) return; root.hidden = true; root.style.display = ''; document.body.style.overflow = ''; }
+  document.querySelectorAll<HTMLElement>('[data-nl-open]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); show(b.dataset.nlOpen as 'front' | 'back'); }));
+  root?.querySelectorAll<HTMLElement>('[data-nl-tab]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); show(b.dataset.nlTab as 'front' | 'back'); }));
+  root?.addEventListener('click', (e) => { const t = e.target as HTMLElement; if (t.closest('[data-nl-close]') && !t.closest('[data-nl-stop]') || t.closest('button[data-nl-close]')) close(); });
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && root && !root.hidden) close(); });
+</script>
+<style is:global>
+.nl-tab{background:rgba(255,255,255,0.12);color:#fff;font-family:inherit;font-weight:700;font-size:14px;border:none;cursor:pointer;padding:10px 16px;border-radius:4px;}
+.nl-tab.on{background:#fff;color:#141f4d;}
+.r-newsCols{grid-template-columns:repeat(1,minmax(0,1fr))}
+@media (min-width:640px){.r-newsCols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1100px){.r-newsCols{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>

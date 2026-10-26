@@ -1,0 +1,141 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import data from '../data/getinvolved.json';
+import { SITE } from '../data/site';
+import jobsData from '../data/jobs.json';
+const { ways, internBullets, media } = data;
+const activeJobs = jobsData.jobs.filter((j) => j.active !== false);
+const dots = { teal: '#2ab5a0', gold: '#f5b829', blue: '#3a8fd4', navy: '#1e3278' };
+const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const bold = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<strong style="color:#141f4d;">$1</strong>');
+---
+<Base image="/assets/og/get-involved.jpg" title="Join Our Team | The Life Link" description="Careers and internships at The Life Link. Meaningful work with a team that has your back, in Santa Fe, NM." path="/get-involved">
+
+<div style="font-family:'Inter',sans-serif;color:#1a2236;background:#ffffff;overflow-x:hidden;">
+<Header active="involved" />
+<main id="main">
+
+<section id="careers" style="background:#f4f7fb;scroll-margin-top:120px;">
+<div style="max-width:1000px;margin:0 auto;padding:76px 24px;">
+<div style="margin-bottom:36px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">Careers</span>
+</div>
+<h1 style="font-family:'DM Serif Display',serif;font-size:clamp(38px,5vw,56px);line-height:1.06;margin:0 0 12px;color:#141f4d;font-weight:400;">Join our team.</h1>
+<p style="font-size:16.5px;color:#5b647a;margin:0;">Meaningful work, real impact, and a team that has your back.</p>
+</div>
+{activeJobs.length === 0 && (
+<p data-reveal style="font-size:17px;line-height:1.6;color:#3a4256;background:#ffffff;border:1px solid #e4ebf4;border-radius:16px;padding:28px 32px;margin:0;">{jobsData.emptyMessage}</p>
+)}
+{activeJobs.map((job, ji) => (
+<article data-reveal data-job style="background:#ffffff;border:1px solid #e4ebf4;border-top:4px solid #2ab5a0;border-radius:16px;overflow:hidden;box-shadow:0 20px 44px -30px rgba(30,50,120,0.45);" class="job-card">
+<div style="padding:30px 32px;display:flex;flex-wrap:wrap;gap:22px 32px;align-items:flex-start;justify-content:space-between;">
+<div style="flex:1 1 440px;min-width:260px;">
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);line-height:1.2;color:#141f4d;margin:0 0 10px;">{job.title}</h2>
+{job.note && (<p style="font-size:13.5px;line-height:1.55;color:#1d8575;font-weight:600;margin:0 0 16px;">{job.note}</p>)}
+<div style="display:flex;flex-wrap:wrap;gap:8px;">
+{(job.tags ?? []).map((t, i) => (<span style={i === 0 ? 'font-size:12.5px;font-weight:700;color:#141f4d;background:#fff4dc;border:1px solid #f3dc9e;border-radius:999px;padding:6px 13px;' : 'font-size:12.5px;font-weight:600;color:#5b647a;background:#f4f7fb;border:1px solid #e4ebf4;border-radius:999px;padding:6px 13px;'}>{t}</span>))}
+</div>
+<p style="font-size:14px;line-height:1.5;color:#5b647a;margin:14px 0 0;">Questions about this job? Email <a href={`mailto:${SITE.hrEmail}?subject=${encodeURIComponent('Question about: ' + job.title)}`} style="color:#1e3278;font-weight:700;">{SITE.hrEmail}</a>.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;">
+<a href={job.applyUrl || `mailto:${SITE.hrEmail}?subject=${encodeURIComponent('Question about: ' + job.title)}`} {...(job.applyUrl ? { target: '_blank', rel: 'noopener' } : {})} style="background:#1e3278;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:13px 30px;border-radius:4px;text-align:center;">{job.applyUrl ? 'Apply' : 'Ask about this job'}</a>
+<button type="button" data-job-toggle aria-expanded="false" aria-controls={`job-${job.id}`} style="background:none;border:1px solid #d9e2ee;color:#1e3278;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;padding:11px 18px;border-radius:4px;"><span data-job-label>View full description ↓</span></button>
+</div>
+</div>
+{job.showWellbeing && (
+<div style="background:#141f4d;color:#ffffff;padding:22px 32px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;">
+<div style="font-family:'DM Serif Display',serif;font-size:21px;line-height:1.3;flex:1 1 320px;">{jobsData.wellbeing.title} <span style="color:#f5b829;font-style:italic;">{jobsData.wellbeing.accent}</span></div>
+<div style="flex:2 1 420px;font-size:14px;line-height:1.6;color:#c9d2ea;">{jobsData.wellbeing.text}</div>
+</div>
+)}
+<div id={`job-${job.id}`} data-job-detail hidden>
+<div style="padding:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:30px 40px;border-top:1px solid #e4ebf4;">
+{job.columns.map((col) => (
+<div>
+{col.map((blk, bi) => (<Fragment>
+{bi > 0 && (<div style="height:14px;"></div>)}
+<h3 style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#1e3278;font-weight:800;margin:0 0 12px;">{blk.heading}</h3>
+{(blk.paragraphs ?? []).map((pg) => typeof pg === 'string'
+  ? (<p style="font-size:14.5px;line-height:1.65;color:#3a4256;margin:0 0 12px;" set:html={bold(pg)}></p>)
+  : (<p style="font-size:15px;line-height:1.55;color:#1d8575;font-weight:700;margin:4px 0 12px;">{pg.text}</p>))}
+{blk.bullets && (
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;">
+{blk.bullets.map((it) => { const o = typeof it === 'string' ? { t: it, sub: false } : it; return (
+<li style={`display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.55;color:#3a4256;padding-left:${o.sub ? '20px' : '0'};`}><span style={`flex-shrink:0;width:7px;height:7px;border-radius:50%;background:${o.sub ? '#a9b7e0' : dots[blk.dot ?? 'teal']};margin-top:8px;`}></span><span>{o.t}</span></li>
+); })}
+</ul>
+)}
+</Fragment>))}
+</div>
+))}
+</div>
+<div style="padding:0 32px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 40px;">
+{job.questions && (
+<div style="background:#f4f7fb;border-radius:12px;padding:22px 24px;">
+<h3 style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#1e3278;font-weight:800;margin:0 0 12px;">{job.questions.heading}</h3>
+{job.questions.items.map((q) => typeof q === 'string'
+  ? (<p style="font-size:14.5px;line-height:1.65;color:#3a4256;margin:0 0 12px;">{q}</p>)
+  : (<p style="font-size:13.5px;line-height:1.6;color:#5b647a;margin:0 0 14px;font-style:italic;">{q.text}</p>))}
+</div>
+)}
+<div style="font-size:12.5px;line-height:1.65;color:#5b647a;">
+{jobsData.legal.map((t) => (<p style="margin:0 0 10px;">{t}</p>))}
+</div>
+</div>
+<div style="padding:0 32px 32px;display:flex;flex-wrap:wrap;gap:12px;">
+<a href={job.applyUrl || `mailto:${SITE.hrEmail}?subject=${encodeURIComponent('Question about: ' + job.title)}`} {...(job.applyUrl ? { target: '_blank', rel: 'noopener' } : {})} style="background:#1e3278;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:13px 30px;border-radius:4px;">{job.applyUrl ? 'Apply' : 'Ask about this job'}</a>
+<button type="button" data-job-toggle aria-controls={`job-${job.id}`} style="background:none;border:1px solid #d9e2ee;color:#1e3278;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;padding:11px 18px;border-radius:4px;">Hide full description ↑</button>
+</div>
+</div>
+</article>
+))}
+<div style="height:1px;background:#e4ebf4;margin:48px 0;"></div>
+
+<div id="internships" style="display:flex;flex-wrap:wrap;gap:36px 44px;align-items:center;scroll-margin-top:140px;background:#ffffff;border:1px solid #e4ebf4;border-top:4px solid #2ab5a0;border-radius:16px;padding:clamp(24px,4vw,44px);box-shadow:0 20px 44px -30px rgba(30,50,120,0.45);" data-reveal>
+<div style="flex:1 1 340px;min-width:0;">
+<div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#1e8374;font-weight:700;margin-bottom:12px;">Internships</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(26px,3.2vw,36px);margin:0 0 14px;color:#141f4d;font-weight:400;">Start your career in human services.</h2>
+<ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:11px;">
+{internBullets.map((b, b_i) => (<Fragment>
+<li style="display:flex;gap:11px;align-items:flex-start;font-size:15px;line-height:1.5;color:#3a4256;">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#eafaf6"></circle><path d="M17 8.5L10.5 15 7 11.5" stroke="#2ab5a0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span>{b}</span>
+</li>
+</Fragment>))}
+</ul>
+<a href="/contact" style="display:inline-block;background:#2ab5a0;color:#141f4d;font-weight:600;font-size:15px;text-decoration:none;padding:13px 24px;border-radius:4px;">Ask about internships</a>
+</div>
+<div style="flex:1 1 300px;min-width:0;">
+<img src="/assets/photos/05_wellness_group.jpg" alt="A staff member from The Life Link leading a wellness skills session" style="display:block;width:100%;aspect-ratio:4/3.2;object-fit:cover;object-position:center 30%;border-radius:16px;box-shadow:0 24px 48px -24px rgba(30,50,120,0.4);" />
+</div>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</div>
+
+</Base>
+<script>
+  document.querySelectorAll('[data-job]').forEach((card) => {
+    const detail = card.querySelector('[data-job-detail]');
+    const label = card.querySelector('[data-job-label]');
+    card.querySelectorAll('[data-job-toggle]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (!detail) return;
+        const open = detail.hasAttribute('hidden');
+        if (open) detail.removeAttribute('hidden'); else detail.setAttribute('hidden', '');
+        card.querySelectorAll('[data-job-toggle][aria-expanded]').forEach((b) => b.setAttribute('aria-expanded', String(open)));
+        if (label) label.textContent = open ? 'Hide full description ↑' : 'View full description ↓';
+      });
+    });
+  });
+</script>
+<style is:global>
+.job-card + .job-card{margin-top:24px;}
+
+</style>

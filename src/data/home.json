@@ -1,0 +1,211 @@
+{
+  "chain": [
+    {
+      "c": "#3a8fd4",
+      "label": "Housing",
+      "link": true
+    },
+    {
+      "c": "#1e7f70",
+      "label": "Mental Health",
+      "link": true
+    },
+    {
+      "c": "#7dc242",
+      "label": "Recovery",
+      "link": true
+    },
+    {
+      "c": "#f5b829",
+      "label": "Trafficking Aftercare",
+      "link": false
+    }
+  ],
+  "trustTiles": [
+    {
+      "c": "#9e6c00",
+      "kicker": "Established",
+      "big": "Since 1987",
+      "txt": "Serving New Mexico for nearly four decades",
+      "icon": "M4 6h16v14H4zM4 10h16M8 3v4M16 3v4",
+      "fill": "#c98a00"
+    },
+    {
+      "c": "#1d8575",
+      "kicker": "Federal",
+      "big": "HUD-Authorized",
+      "txt": "Housing Agency",
+      "icon": "M3.5 11L12 4l8.5 7M6 9.5V20h12V9.5M10 20v-5h4v5",
+      "fill": "#1d8575"
+    },
+    {
+      "c": "#2f7abf",
+      "kicker": "State of New Mexico",
+      "big": "Licensed CMHC",
+      "txt": "Community Mental Health Center & Core Service Agency",
+      "icon": "M12 3l7 2.5v6c0 4-3 7.2-7 8.5-4-1.3-7-4.5-7-8.5v-6zM9.2 12l2 2 3.6-3.8",
+      "fill": "#2f7abf"
+    }
+  ],
+  "services": [
+    {
+      "c": "#1e3278",
+      "label": "Housing",
+      "icon": "M3.5 11L12 4l8.5 7M6 9.5V20h12V9.5M10 20v-5h4v5"
+    },
+    {
+      "c": "#1f6f8b",
+      "label": "Mental Health",
+      "icon": "M9 21v-3H6.5A2.5 2.5 0 014 15.5V13l-1.5-.5L4 9a7 7 0 0114 1c0 2-1 3.5-2 4.5V21M11 9.5a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0"
+    },
+    {
+      "c": "#3f6b1f",
+      "label": "Addiction Recovery",
+      "icon": "M12 8a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM5 10c1.5 4 4 6 7 6s5.5-2 7-6M12 16v5M8 21h8"
+    },
+    {
+      "c": "#e8a412",
+      "label": "Employment Assistance",
+      "icon": "M3 8h18v12H3zM8 8V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V8M3 13h18M11 12v2h2v-2"
+    },
+    {
+      "c": "#ee6424",
+      "label": "Human Trafficking Aftercare",
+      "icon": "M12 7a2 2 0 100-4 2 2 0 000 4zM4 11l4 2 4 3 4-3 4-2M8 13v8M16 13v8"
+    },
+    {
+      "c": "#5b2d82",
+      "label": "Community Support",
+      "icon": "M12 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM5.5 11a2 2 0 100-4 2 2 0 000 4zM18.5 11a2 2 0 100-4 2 2 0 000 4zM7.5 19a4.5 4.5 0 019 0zM2 18a3.5 3.5 0 015-3M22 18a3.5 3.5 0 00-5-3"
+    },
+    {
+      "c": "#0f5a4f",
+      "label": "Life Skills",
+      "icon": "M12 21V11M12 11C12 7 9 5 5 5c0 4 3 6 7 6zM12 13c0-4 3-6 7-6 0 4-3 6-7 6zM7 21h10"
+    }
+  ],
+  "perYear": [
+    {
+      "c": "#1e3278",
+      "num": "1,500",
+      "txt": "individuals make a link to rebuild their lives"
+    },
+    {
+      "c": "#3f6b1f",
+      "num": "237",
+      "txt": "human trafficking survivors from 19 states receive comprehensive after-care (NM's only dedicated program)"
+    },
+    {
+      "c": "#0f5a4f",
+      "num": "450",
+      "txt": "households find safety & stability through permanent housing"
+    },
+    {
+      "c": "#5b2d82",
+      "num": "650",
+      "txt": "clients engage in counseling, psychiatry, and recovery services"
+    }
+  ],
+  "clientQuotes": [
+    {
+      "t": "Once they helped me solve one problem, they stayed with me through the next."
+    },
+    {
+      "t": "They give me hope and support to not give up."
+    }
+  ],
+  "trusted": [
+    "Serving NM since 1987",
+    "CARF Accredited (Commission on Accreditation of Rehabilitation Facilities)",
+    "HUD-Authorized Housing Agency",
+    "2026 #1 Best Mental Health Provider by The Santa Fe Reporter"
+  ],
+  "trust": [
+    "Voted Best of Santa Fe",
+    "#1 Mental Health Provider",
+    "38 Years of Service"
+  ],
+  "focus": [
+    {
+      "title": "Mental Health",
+      "tint": "#eaf1fb",
+      "color": "#3a8fd4",
+      "iconPath": "M12 21s-7-4.6-9.2-8.4C1.3 10 2.6 6.2 6 6.2c2 0 3.2 1.2 4 2.4 0.8-1.2 2-2.4 4-2.4 3.4 0 4.7 3.8 3.2 6.4C19 16.4 12 21 12 21z",
+      "body": "Therapy, psychiatric services, and peer support. A Licensed Community Mental Health Center since 1987."
+    },
+    {
+      "title": "Substance Use & Recovery",
+      "tint": "#e9f6f3",
+      "color": "#1e7f70",
+      "iconPath": "M11 21C6 19 3.5 14 4.5 7.5c6.5-0.8 11 2.5 12 9-3.8 0.8-6.5 2.6-5.5 4.5M11 21c0-5 1.5-9 4-12",
+      "body": "Outpatient treatment using MI, CRA, and CRAFT — meeting each client where they are."
+    },
+    {
+      "title": "Housing Support",
+      "tint": "#fff4dc",
+      "color": "#d99a00",
+      "iconPath": "M4 11l8-6 8 6M6 10v9h12v-9M10 19v-5h4v5",
+      "body": "Permanent supportive housing that breaks the cycle of chronic homelessness."
+    },
+    {
+      "title": "Human Trafficking Aftercare",
+      "tint": "#eef7e6",
+      "color": "#5fa02f",
+      "iconPath": "M12 3l7 2.5v6c0 4-3 7.2-7 8.5-4-1.3-7-4.5-7-8.5v-6zM9.2 12l2 2 3.6-3.8",
+      "body": "Safety, advocacy, and recovery for survivors — care that meets people where they are."
+    }
+  ],
+  "stats": [
+    {
+      "num": "15,000",
+      "label": "Client Encounters / Year",
+      "body": "Encounters from our support, housing & employment staff."
+    },
+    {
+      "num": "1,400+",
+      "label": "Support & Service / Year",
+      "body": "Depression & PTSD screenings provided last year."
+    },
+    {
+      "num": "650",
+      "label": "MH Contacts / Month",
+      "body": "Mental health encounters provided every single month."
+    }
+  ],
+  "media": [
+    "BBC",
+    "Esquire",
+    "Santa Fe New Mexican",
+    "KOB 4"
+  ],
+  "recognition": [
+    {
+      "mark": "★",
+      "tint": "#fff4dc",
+      "color": "#d99a00",
+      "title": "Voted Best of Santa Fe",
+      "sub": "#1 Mental Health Provider"
+    },
+    {
+      "mark": "✓",
+      "tint": "#eaf1fb",
+      "color": "#3a8fd4",
+      "title": "CARF Accredited",
+      "sub": "International standards"
+    },
+    {
+      "mark": "⌂",
+      "tint": "#e9f6f3",
+      "color": "#1e7f70",
+      "title": "HUD-Approved",
+      "sub": "Federal recognition"
+    },
+    {
+      "mark": "38",
+      "tint": "#eef7e6",
+      "color": "#5fa02f",
+      "title": "Years of Service",
+      "sub": "Trusted since 1987"
+    }
+  ]
+}

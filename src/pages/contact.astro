@@ -1,0 +1,201 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import { SITE } from '../data/site';
+import Footer from '../components/Footer.astro';
+import data from '../data/contact.json';
+const { walkin, locations, numbers } = data;
+---
+<Base image="/assets/og/contact.jpg" title="Contact The Life Link | Santa Fe, NM" description="Call, visit, or walk in at The Life Link. Find our locations, walk-in information, and phone numbers, or join our newsletter." path="/contact">
+
+<div style="font-family:'Inter',sans-serif;color:#1a2236;background:#ffffff;overflow-x:hidden;">
+<Header active="contact" />
+<main id="main">
+
+<section style="max-width:1100px;margin:0 auto;padding:72px 24px 20px;text-align:center;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;justify-content:center;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">Contact</span>
+</div>
+<h1 style="font-family:'DM Serif Display',serif;font-size:clamp(40px,5.5vw,64px);line-height:1.05;margin:0 0 16px;color:#141f4d;font-weight:400;">We're here, and we're glad you reached out.</h1>
+<p style="font-size:18px;line-height:1.6;color:#5b647a;max-width:600px;margin:0 auto;">{SITE.contactFormUrl ? 'Call, stop by, or send us a message. Someone on our team will help you.' : 'Call or stop by. Someone on our team will help you.'}</p>
+</section>
+<section style="max-width:1200px;margin:0 auto;padding:44px 24px 80px;display:flex;flex-wrap:wrap;gap:44px;align-items:flex-start;">
+
+<div style="flex:1 1 380px;min-width:300px;" data-reveal>
+<img src="/assets/photos/06_clubhouse_meal.jpg" alt="Clubhouse members sharing a meal together" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 35%;border-radius:16px;margin-bottom:26px;box-shadow:0 24px 48px -24px rgba(30,50,120,0.4);" />
+<div style="display:flex;flex-direction:column;gap:16px;">
+<div style="background:#1e3278;color:#ffffff;border-radius:16px;padding:28px 28px 26px;">
+<div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#a9b7e0;font-weight:700;margin-bottom:10px;">Main / Intake Questions</div>
+<a href="tel:5054380010" style="font-family:'DM Serif Display',serif;font-size:clamp(34px,4vw,44px);color:#f5b829;text-decoration:none;line-height:1;display:block;margin-bottom:10px;">(505) 438-0010</a>
+<div style="font-size:14.5px;color:#dce3f5;">Monday–Friday · 8:00am–5:00pm · Fax 505.438.6011</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;">
+{numbers.map((n, n_i) => (<Fragment>
+<a href={n.href} style={`display:flex;gap:13px;align-items:center;text-decoration:none;background:${n.tint};border-radius:12px;padding:15px 16px;`}>
+<span style={`width:40px;height:40px;flex-shrink:0;border-radius:50%;background:${n.c};display:flex;align-items:center;justify-content:center;`}>
+<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8 7 15 15 15l0-3-4-2-2 2c-3-1.5-5.5-4-7-7l2-2-2-4z"></path></svg>
+</span>
+<span style="display:flex;flex-direction:column;gap:2px;min-width:0;">
+<span style="font-size:12.5px;font-weight:700;color:#3a4256;line-height:1.3;">{n.label}</span>
+<span style="font-size:15.5px;font-weight:800;color:#141f4d;line-height:1.3;">{n.num}</span>
+</span>
+</a>
+</Fragment>))}
+</div>
+<div style="background:#fff4dc;border:1px solid #f5d98a;border-radius:12px;padding:16px 18px;font-size:14.5px;color:#3a4256;line-height:1.55;">
+<strong style="color:#141f4d;">In crisis?</strong> Call <a href="tel:988" style="color:#1e3278;font-weight:700;text-decoration:none;">988</a> for Mental Health &amp; Substance Abuse · <a href="tel:911" style="color:#1e3278;font-weight:700;text-decoration:none;">911</a> for Medical Emergencies.
+        </div>
+</div>
+</div>
+
+<div style="flex:1 1 420px;min-width:300px;" data-reveal>
+<div style="background:#fff;border:1px solid #e4ebf4;border-radius:16px;padding:32px;box-shadow:0 18px 40px -26px rgba(30,50,120,0.3);">
+<h2 style="font-family:'DM Serif Display',serif;font-size:26px;margin:0 0 8px;color:#141f4d;font-weight:400;">Call or walk in</h2>
+<p style="font-size:15.5px;line-height:1.6;color:#5b647a;margin:0 0 22px;">The quickest way to reach us is by phone. New to The Life Link? Stop by during walk-in hours. No appointment needed, just come as you are.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+<a href="tel:5054380010" style="background:#2ab5a0;color:#141f4d;font-weight:600;font-size:16px;text-decoration:none;padding:15px 22px;border-radius:4px;box-shadow:0 6px 20px rgba(42,181,160,0.28);">Call (505) 438-0010</a>
+<a href="#new-clients" style="background:none;border:1px solid #d9e2ee;color:#1e3278;font-weight:600;font-size:16px;text-decoration:none;padding:14px 20px;border-radius:4px;">Walk-in hours</a>
+<a href="#locations" style="background:none;border:1px solid #d9e2ee;color:#1e3278;font-weight:600;font-size:16px;text-decoration:none;padding:14px 20px;border-radius:4px;">Locations</a>
+</div>
+{SITE.contactFormUrl && (
+<div style="border-top:1px solid #e4ebf4;margin-top:28px;padding-top:26px;">
+<h3 style="font-family:'DM Serif Display',serif;font-size:22px;margin:0 0 6px;color:#141f4d;font-weight:400;">Or send us a message</h3>
+<p style="font-size:14.5px;line-height:1.55;color:#5b647a;margin:0 0 18px;">We read every message and reply by phone or email. Please do not include health or other private details. If you are in crisis, call <a href="tel:988" style="color:#1e3278;font-weight:700;">988</a>. In an emergency, call <a href="tel:911" style="color:#1e3278;font-weight:700;">911</a>.</p>
+<form id="contact-form" action={SITE.contactFormUrl} method="post" style="display:flex;flex-direction:column;gap:14px;">
+<div><label for="cf-name" style="display:block;font-size:14px;font-weight:600;color:#141f4d;margin-bottom:6px;">Your name</label><input id="cf-name" name="name" type="text" required autocomplete="name" style="font-family:inherit;font-size:16px;padding:13px 14px;border:1px solid #8f9bb5;border-radius:4px;background:#ffffff;color:#1a2236;width:100%;" /></div>
+<div><label for="cf-reach" style="display:block;font-size:14px;font-weight:600;color:#141f4d;margin-bottom:6px;">Phone or email, so we can reply</label><input id="cf-reach" name="reach" type="text" required autocomplete="email" style="font-family:inherit;font-size:16px;padding:13px 14px;border:1px solid #8f9bb5;border-radius:4px;background:#ffffff;color:#1a2236;width:100%;" /></div>
+<div><label for="cf-msg" style="display:block;font-size:14px;font-weight:600;color:#141f4d;margin-bottom:6px;">Your message</label><textarea id="cf-msg" name="message" required rows="5" style="font-family:inherit;font-size:16px;padding:13px 14px;border:1px solid #8f9bb5;border-radius:4px;background:#ffffff;color:#1a2236;width:100%;resize:vertical;"></textarea></div>
+<div aria-hidden="true" style="position:absolute;left:-5000px;"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
+<input type="hidden" name="_subject" value="New message from thelifelink.org" />
+<button type="submit" style="background:#141f4d;color:#ffffff;font-family:inherit;font-weight:700;font-size:16px;border:none;cursor:pointer;padding:15px 22px;border-radius:4px;align-self:flex-start;">Send message</button>
+<p id="cf-status" role="status" aria-live="polite" style="margin:0;font-size:15px;line-height:1.5;color:#141f4d;font-weight:600;"></p>
+</form>
+</div>
+)}
+</div>
+<div style="background:#f5b829;border-radius:16px;padding:28px 32px;margin-top:20px;">
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;">
+<span style="width:22px;height:3px;background:#141f4d;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#141f4d;font-weight:700;">Stay Connected</span>
+</div>
+<h3 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:24px;line-height:1.25;color:#141f4d;margin:0 0 18px;">Sign-Up for our Monthly Newsletter <span style="color:#1e3278;font-style:italic;">"THE LINK"</span> and other updates</h3>
+<form action="https://thelifelink.us3.list-manage.com/subscribe/post?u=f922da934b1e124584e3a0fea&amp;id=9c1fa0c52a&amp;f_id=00862be2f0" method="post" name="mc-embedded-subscribe-form" target="_blank" style="display:flex;flex-direction:column;gap:10px;position:relative;">
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+<input type="text" name="FNAME" placeholder="First name" aria-label="First name" style="flex:1 1 140px;width:100%;font-family:inherit;font-size:15px;padding:12px 14px;border:1px solid #d9a21f;border-radius:4px;background:#ffffff;color:#1a2236;" />
+<input type="text" name="LNAME" placeholder="Last name" aria-label="Last name" style="flex:1 1 140px;width:100%;font-family:inherit;font-size:15px;padding:12px 14px;border:1px solid #d9a21f;border-radius:4px;background:#ffffff;color:#1a2236;" />
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+<input type="email" name="EMAIL" required={true} placeholder="Email address *" aria-label="Email address (required)" style="flex:3 1 200px;width:100%;font-family:inherit;font-size:15px;padding:12px 14px;border:1px solid #d9a21f;border-radius:4px;background:#ffffff;color:#1a2236;" />
+<div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_f922da934b1e124584e3a0fea_9c1fa0c52a" tabIndex="-1" defaultValue /></div>
+<button type="submit" name="subscribe" style="flex:1 1 120px;background:#141f4d;color:#ffffff;font-family:inherit;font-weight:700;font-size:15px;border:none;cursor:pointer;padding:12px 20px;border-radius:4px;">Subscribe</button>
+</div>
+<span style="font-size:12px;color:#3a2f0a;">* indicates required</span>
+</form>
+</div>
+</div>
+</section>
+
+<section id="new-clients" style="background:#141f4d;color:#fff;scroll-margin-top:120px;position:relative;overflow:hidden;">
+<svg width="760" height="760" viewBox="0 0 760 760" fill="none" aria-hidden="true" style="position:absolute;left:-260px;top:-200px;opacity:0.06;pointer-events:none;"><circle cx="380" cy="380" r="340" stroke="#fff" stroke-width="40"></circle><circle cx="380" cy="380" r="200" stroke="#fff" stroke-width="40"></circle></svg>
+<div style="max-width:1200px;margin:0 auto;padding:84px 24px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;position:relative;">
+<div style="flex:1 1 440px;min-width:300px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:20px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#a9b7e0;font-weight:700;">Get Help Now</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(38px,5vw,58px);line-height:1.06;margin:0 0 22px;font-weight:400;">Reaching out is <span style="color:#f5b829;font-style:italic;">the first step.</span></h2>
+<p style="font-size:17.5px;line-height:1.6;color:#c9d2ea;max-width:520px;margin:0 0 28px;">You don't need to have it all figured out. Call us, or walk in — we'll take it from there.</p>
+<a href="tel:5054380010" style="font-family:'DM Serif Display',serif;font-size:42px;color:#f5b829;text-decoration:none;line-height:1;display:inline-block;margin-bottom:10px;">(505) 438-0010</a>
+<p style="font-size:14.5px;color:#a9b7e0;margin:0 0 24px;">For general intake questions, call our main number.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px 20px;">
+<div style="font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#2ab5a0;font-weight:700;margin-bottom:4px;">Open</div>
+<div style="font-size:17px;font-weight:700;color:#fff;">Monday–Friday · 8:00am–5:00pm</div>
+</div>
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px 20px;">
+<div style="font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#2ab5a0;font-weight:700;margin-bottom:4px;">Evenings</div>
+<div style="font-size:15px;font-weight:600;color:#fff;">Individual &amp; group therapy<br />available after 5pm</div>
+</div>
+</div>
+<p style="font-size:14.5px;color:#c9d2ea;margin:0;">In crisis? Call <a href="tel:988" style="color:#f5b829;font-weight:700;text-decoration:none;">988</a> (mental health) or <a href="tel:911" style="color:#f5b829;font-weight:700;text-decoration:none;">911</a> (medical).</p>
+</div>
+<div style="flex:1 1 380px;min-width:300px;" data-reveal>
+<div style="background:#ffffff;color:#1a2236;border-radius:18px;padding:34px 32px;box-shadow:0 30px 60px -26px rgba(0,0,0,0.6);border-top:6px solid #f5b829;">
+<div style="display:inline-flex;align-items:center;gap:8px;background:#f5b829;color:#141f4d;font-size:11.5px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:7px 13px;border-radius:999px;margin-bottom:18px;">New Clients · Treat First</div>
+<h3 style="font-family:'DM Serif Display',serif;font-size:34px;line-height:1.15;margin:0 0 6px;font-weight:400;color:#141f4d;">Walk-in hours</h3>
+<p style="font-size:15.5px;color:#5b647a;margin:0 0 20px;">You can stop by:</p>
+<div style="display:flex;flex-direction:column;border-top:1px solid #e4ebf4;">
+{walkin.map((w, w_i) => (<Fragment>
+<div style="display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid #e4ebf4;">
+<span style={`font-size:16px;font-weight:700;color:${w.dayColor};`}>{w.day}</span>
+<span style={`font-size:16px;font-weight:700;text-align:right;color:${w.timeColor};`}>{w.time}</span>
+</div>
+</Fragment>))}
+</div>
+<p style="font-size:17px;font-weight:700;color:#1d8575;margin:22px 0 4px;">No appointment needed, just come as you are.</p>
+<p style="font-size:15px;color:#3a4256;margin:0 0 16px;">First come, first served.</p>
+<p style="font-size:13.5px;color:#5b647a;margin:0;line-height:1.5;">Treat First onboarding is available at the Saint Michael's Building (2000 St. Michael's Drive) and the Las Alas Building (1331 Declovina Street).</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="locations" style="background:#f4f7fb;scroll-margin-top:120px;">
+<div style="max-width:1200px;margin:0 auto;padding:76px 24px;">
+<div style="max-width:640px;margin-bottom:40px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">The Life Link Locations</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,44px);margin:0;color:#141f4d;font-weight:400;">Where to find us.</h2>
+</div>
+<div style="display:grid;gap:20px;" class="r-locCols">
+{locations.map((l, l_i) => (<Fragment>
+<div data-reveal style="background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(30,50,120,0.35);display:flex;flex-direction:column;">
+<div style={`background:${l.c};color:#ffffff;padding:22px 24px;display:flex;gap:14px;align-items:flex-start;`}>
+<span style="width:42px;height:42px;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={l.ink} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.4-4-7-7-7-10a7 7 0 1114 0c0 3-2.6 6-7 10zM12 8.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"></path></svg>
+</span>
+<div>
+<h3 style={`font-size:18px;line-height:1.3;margin:0 0 4px;font-weight:700;color:${l.ink};`}>{l.name}</h3>
+<div style={`font-size:14px;font-weight:500;color:${l.ink};`}>{l.addr}</div>
+</div>
+</div>
+<ul style={`list-style:none;padding:20px 24px 24px;margin:0;display:flex;flex-direction:column;gap:10px;background:${l.tint};flex:1;`}>
+{l.services.map((s, s_i) => (<Fragment>
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;color:#1a2236;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="11" fill={l.dot}></circle><path d="M17 8.5L10.5 15 7 11.5" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span>{s}</span>
+</li>
+</Fragment>))}
+</ul>
+</div>
+</Fragment>))}
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</div>
+
+</Base>
+<script>
+  const f = document.getElementById('contact-form') as HTMLFormElement | null;
+  const st = document.getElementById('cf-status');
+  if (f && st) f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = f.querySelector('button[type=submit]') as HTMLButtonElement;
+    btn.disabled = true; st.textContent = 'Sending...';
+    try {
+      const r = await fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } });
+      if (r.ok) { f.reset(); st.textContent = 'Thank you. We got your message and will reply soon.'; }
+      else { st.textContent = 'Sorry, that did not send. Please call (505) 438-0010.'; btn.disabled = false; }
+    } catch { st.textContent = 'Sorry, that did not send. Please call (505) 438-0010.'; btn.disabled = false; }
+  });
+</script>
+<style is:global>
+.r-locCols{grid-template-columns:repeat(1,minmax(0,1fr))}
+@media (min-width:640px){.r-locCols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1100px){.r-locCols{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>

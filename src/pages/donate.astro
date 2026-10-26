@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import data from '../data/donate.json';
+const { tiers, moreWays } = data;
+---
+<Base image="/assets/og/donate.jpg" title="Ways to Give | The Life Link" description="Give care, give hope. Support behavioral health, housing, and anti-trafficking services at The Life Link in Santa Fe." path="/donate">
+
+<div style="font-family:'Inter',sans-serif;color:#1a2236;background:#ffffff;overflow-x:hidden;">
+<Header active="give" />
+<main id="main">
+
+<section style="max-width:1200px;margin:0 auto;padding:72px 24px 60px;display:flex;flex-wrap:wrap;gap:56px;align-items:center;">
+<div style="flex:1 1 440px;min-width:320px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:20px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">Donate</span>
+</div>
+<h1 style="font-family:'DM Serif Display',serif;font-size:clamp(42px,5.5vw,68px);line-height:1.04;margin:0 0 22px;color:#141f4d;font-weight:400;">Give care. <span style="background-image:linear-gradient(transparent 62%, rgba(245,184,41,0.55) 62%);">Give hope.</span></h1>
+<p style="font-size:19px;line-height:1.6;color:#5b647a;max-width:520px;margin:0 0 32px;">Your gift opens a new door.</p>
+<a href="#tiers" style="background:#f5b829;color:#141f4d;font-weight:700;font-size:16px;text-decoration:none;padding:15px 28px;border-radius:4px;display:inline-block;">Choose your impact</a>
+</div>
+<div style="flex:1 1 360px;min-width:300px;" data-reveal>
+<img src="/assets/photos/10_clubhouse_art_activity.jpg" alt="A smiling Clubhouse member painting" style="display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 35%;border-radius:18px;box-shadow:0 30px 60px -22px rgba(30,50,120,0.45);" />
+</div>
+</section>
+
+<section id="tiers" style="background:#f4f7fb;scroll-margin-top:120px;">
+<div style="max-width:1200px;margin:0 auto;padding:76px 24px;">
+<div style="text-align:center;max-width:640px;margin:0 auto 44px;" data-reveal>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,44px);margin:0 0 12px;color:#141f4d;font-weight:400;">Every gift is a lifeline.</h2>
+<p style="font-size:16.5px;color:#5b647a;margin:0;">Choose the impact that's right for you.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;align-items:stretch;">
+{tiers.map((t, t_i) => (<Fragment>
+<div data-reveal style={`background:#fff;border-radius:16px;padding:34px 28px;display:flex;flex-direction:column;border:${t.border};box-shadow:${t.shadow};position:relative;`}>
+{t.featured ? (<Fragment>
+<div style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#f5b829;color:#141f4d;font-size:11.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap;">Most impact</div>
+</Fragment>) : null}
+<div style="font-family:'DM Serif Display',serif;font-size:54px;color:#1e3278;line-height:1;margin-bottom:14px;">{t.amount}</div>
+<p style="font-size:16px;line-height:1.55;color:#3a4256;margin:0 0 26px;flex:1;">{t.impact}</p>
+<a href="https://givebutter.com/9SyJHR" target="_blank" rel="noopener" style={`text-align:center;background:${t.btnBg};color:${t.btnColor};font-weight:700;font-size:15.5px;text-decoration:none;padding:14px 20px;border-radius:4px;`}>Give {t.amount}</a>
+</div>
+</Fragment>))}
+</div>
+<p style="text-align:center;font-size:14px;color:#667189;margin:28px 0 0;">Prefer another amount? <a href="https://givebutter.com/9SyJHR" target="_blank" rel="noopener" style="color:#1e3278;font-weight:600;text-decoration:none;">Give any amount →</a></p>
+</div>
+</section>
+
+<section style="max-width:1200px;margin:0 auto;padding:76px 24px;">
+<div style="text-align:center;margin-bottom:44px;" data-reveal>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(28px,3.6vw,40px);margin:0;color:#141f4d;font-weight:400;">More ways to give.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+{moreWays.map((m, m_i) => (<Fragment>
+<div data-reveal style="border:1px solid #e4ebf4;border-radius:14px;padding:26px 24px;">
+<div style={`width:46px;height:46px;border-radius:11px;background:${m.tint};display:flex;align-items:center;justify-content:center;margin-bottom:16px;`}>
+<svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke={m.color} stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d={m.iconPath}></path></svg>
+</div>
+<h3 style="font-size:17px;margin:0 0 8px;color:#141f4d;font-weight:700;">{m.title}</h3>
+<p style="font-size:14px;line-height:1.55;color:#5b647a;margin:0;">{m.body}</p>
+</div>
+</Fragment>))}
+</div>
+</section>
+</main>
+<Footer />
+</div>
+
+</Base>
+<style is:global>
+
+</style>

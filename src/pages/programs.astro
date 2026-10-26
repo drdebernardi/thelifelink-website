@@ -1,0 +1,199 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import data from '../data/programs.json';
+const { groups, walkin, locations, numbers } = data;
+---
+<Base image="/assets/og/programs.jpg" title="Programs & Services | The Life Link" description="Mental health care, housing, employment, outreach, the clubhouse, and human trafficking services at The Life Link in Santa Fe, NM. Find out how to get started." path="/programs">
+
+<div style="font-family:'Inter',sans-serif;color:#1a2236;background:#ffffff;overflow-x:hidden;">
+<Header active="programs" />
+<main id="main">
+
+<section style="background:#141f4d;color:#fff;position:relative;overflow:hidden;">
+<svg width="760" height="760" viewBox="0 0 760 760" fill="none" aria-hidden="true" style="position:absolute;right:-220px;top:-160px;opacity:0.06;pointer-events:none;"><circle cx="380" cy="380" r="340" stroke="#fff" stroke-width="40"></circle><circle cx="380" cy="380" r="200" stroke="#fff" stroke-width="40"></circle></svg>
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;display:flex;flex-wrap:wrap;gap:56px;align-items:center;position:relative;">
+<div style="flex:1 1 440px;min-width:300px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:20px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#a9b7e0;font-weight:700;">Services &amp; Programs</span>
+</div>
+<h1 style="font-family:'DM Serif Display',serif;font-size:clamp(42px,5.5vw,66px);line-height:1.05;margin:0 0 24px;font-weight:400;">Connected Care.<br /><span style="color:#f5b829;font-style:italic;">Complete Support.</span></h1>
+<p style="font-size:17.5px;line-height:1.7;color:#c9d2ea;max-width:520px;margin:0 0 34px;">The Life Link is committed to improving individual and community health through breaking cycles of chronic homelessness, mental illness, trauma, exploitation, and addiction.</p>
+<div style="display:flex;flex-wrap:wrap;gap:13px;">
+<a href="#g1" style="background:#2ab5a0;color:#141f4d;font-weight:600;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:4px;">Explore programs</a>
+<a href="#get-help" style="background:transparent;color:#fff;font-weight:600;font-size:16px;text-decoration:none;padding:14px 26px;border-radius:4px;border:1px solid rgba(255,255,255,0.35);">New client walk-in hours</a>
+</div>
+</div>
+<div style="flex:1 1 400px;min-width:300px;display:flex;flex-direction:column;gap:14px;" data-reveal>
+{groups.map((g, g_i) => (<Fragment>
+<a href={g.anchor} style="display:flex;align-items:center;gap:18px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 22px;text-decoration:none;color:#fff;" class="h1">
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true" style="flex-shrink:0;"><circle cx="22" cy="22" r="19" stroke={g.color} stroke-width="3.5"></circle><circle cx="22" cy="22" r="8" fill={g.color} opacity="0.3"></circle></svg>
+<div style="flex:1;">
+<div style={`font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:${g.colorOnDark};margin-bottom:4px;`}>{g.tag}</div>
+<div style="font-family:'DM Serif Display',serif;font-size:22px;line-height:1.2;">{g.title}</div>
+</div>
+<div style="text-align:right;flex-shrink:0;">
+<div style={`font-family:'DM Serif Display',serif;font-size:34px;line-height:1;color:${g.color};`}>{g.count}</div>
+<div style="font-size:11px;color:#a9b7e0;letter-spacing:0.08em;text-transform:uppercase;">services</div>
+</div>
+</a>
+</Fragment>))}
+</div>
+</div>
+</section>
+
+{groups.map((g, g_i) => (<Fragment>
+<section id={g.id} style={`background:${g.bg};scroll-margin-top:120px;`}>
+<div style="max-width:1200px;margin:0 auto;padding:84px 24px;">
+<div style="display:flex;flex-wrap:wrap;gap:20px 40px;align-items:flex-end;justify-content:space-between;margin-bottom:44px;" data-reveal>
+<div style="display:flex;gap:22px;align-items:flex-start;max-width:720px;">
+<div style={`font-family:'DM Serif Display',serif;font-size:clamp(56px,7vw,84px);line-height:0.85;color:${g.colorOnLight};flex-shrink:0;`}>{g.num}</div>
+<div>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:12px;">
+<span style={`width:22px;height:3px;background:${g.color};border-radius:2px;`}></span>
+<span style={`font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:${g.sub};font-weight:700;`}>{g.tag}</span>
+</div>
+<h2 style={`font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,46px);line-height:1.1;margin:0 0 12px;color:${g.head};font-weight:400;`}>{g.title}</h2>
+<p style={`font-size:17px;line-height:1.6;color:${g.sub};margin:0;`}>{g.intro}</p>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:22px;">
+{g.items.map((p, p_i) => (<Fragment>
+<article id={p.anchorId} data-reveal style={`scroll-margin-top:140px;background:#ffffff;border:1px solid #e4ebf4;border-top:4px solid ${g.color};border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 40px -30px rgba(30,50,120,0.45);`}>
+<div role="img" aria-label={p.alt} style={`width:100%;aspect-ratio:16/10;background-color:#eef2f8;background-image:${p.bgImg};background-size:cover;background-position:center 30%;`}></div>
+<div style="padding:24px 24px 28px;position:relative;">
+<svg width="46" height="46" viewBox="0 0 44 44" fill="none" aria-hidden="true" style="position:absolute;top:-23px;right:22px;"><circle cx="22" cy="22" r="20" fill="#ffffff"></circle><circle cx="22" cy="22" r="15" stroke={g.color} stroke-width="3.5"></circle><circle cx="22" cy="22" r="5" fill={g.color}></circle></svg>
+<h3 style="font-family:'DM Serif Display',serif;font-size:23px;line-height:1.2;margin:0 0 12px;color:#141f4d;font-weight:400;padding-right:40px;">{p.title}</h3>
+<p style="font-size:14.5px;line-height:1.65;color:#5b647a;margin:0;">{p.body}</p>
+</div>
+</article>
+</Fragment>))}
+</div>
+{g.rentHelp ? (<Fragment>
+<div data-reveal style="margin-top:22px;background:#141f4d;color:#fff;border-radius:16px;padding:32px 34px;display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between;position:relative;overflow:hidden;">
+<svg width="280" height="280" viewBox="0 0 280 280" fill="none" aria-hidden="true" style="position:absolute;right:-80px;top:-90px;opacity:0.08;"><circle cx="140" cy="140" r="120" stroke="#f5b829" stroke-width="26"></circle><circle cx="140" cy="140" r="56" stroke="#f5b829" stroke-width="26"></circle></svg>
+<div style="flex:1 1 360px;position:relative;">
+<div style="font-family:'DM Serif Display',serif;font-size:28px;color:#fff;line-height:1.2;margin-bottom:10px;">Behind on rent or utilities?<br /><span style="color:#f5b829;font-style:italic;">Need help with a deposit?</span></div>
+<p style="font-size:15px;color:#c9d2ea;margin:0 0 4px;line-height:1.55;">Short-term assistance may be available. Call The Life Link Housing Department at (505) 395-2531 to get screened.</p>
+<p style="font-size:12.5px;color:#a9b7e0;margin:0;">Help depends on available funding and eligibility.</p>
+</div>
+<a href="tel:5053952531" style="position:relative;background:#f5b829;color:#141f4d;font-weight:700;font-size:15px;text-decoration:none;padding:14px 24px;border-radius:4px;white-space:nowrap;">Call (505) 395-2531</a>
+</div>
+</Fragment>) : null}
+</div>
+</section>
+</Fragment>))}
+
+<section style="background:#1e3278;color:#fff;position:relative;overflow:hidden;">
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" aria-hidden="true" style="position:absolute;left:-220px;bottom:-280px;opacity:0.07;pointer-events:none;"><circle cx="320" cy="320" r="280" stroke="#fff" stroke-width="40"></circle><circle cx="320" cy="320" r="150" stroke="#fff" stroke-width="40"></circle></svg>
+<div style="max-width:960px;margin:0 auto;padding:84px 24px;text-align:center;position:relative;" data-reveal>
+<div style="font-family:'DM Serif Display',serif;font-size:110px;line-height:0.5;color:#f5b829;height:44px;">“</div>
+<p style="font-family:'DM Serif Display',serif;font-size:clamp(28px,3.6vw,42px);line-height:1.3;margin:0 0 20px;font-weight:400;">The Life Link has helped me learn to love myself and <span style="color:#f5b829;font-style:italic;">live my life without fear.</span></p>
+<div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#a9b7e0;font-weight:700;">— The Life Link client</div>
+</div>
+</section>
+
+<section id="locations" style="max-width:1200px;margin:0 auto;padding:84px 24px;scroll-margin-top:120px;">
+<div style="text-align:center;max-width:680px;margin:0 auto 48px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;justify-content:center;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">Locations</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,46px);line-height:1.1;margin:0;color:#141f4d;font-weight:400;">Where to find us.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px;">
+{locations.map((l, l_i) => (<Fragment>
+<div data-reveal style={`background:#fff;border:1px solid #e4ebf4;border-top:4px solid ${l.c};border-radius:14px;padding:28px 24px;`}>
+<svg width="40" height="40" viewBox="0 0 44 44" fill="none" aria-hidden="true" style="display:block;margin-bottom:16px;"><circle cx="22" cy="22" r="19" stroke={l.c} stroke-width="3.5"></circle><circle cx="22" cy="22" r="8" fill={l.c} opacity="0.3"></circle></svg>
+<h3 style="font-family:'DM Serif Display',serif;font-size:22px;line-height:1.2;margin:0 0 4px;color:#141f4d;font-weight:400;">{l.name}</h3>
+<div style="font-size:14px;color:#5b647a;margin-bottom:18px;font-weight:600;">{l.addr}</div>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;border-top:1px solid #eef2f8;padding-top:16px;">
+{l.services.map((s, s_i) => (<Fragment>
+<li style="display:flex;gap:9px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:#3a4256;">
+<span style={`flex-shrink:0;width:7px;height:7px;border-radius:50%;background:${l.c};margin-top:6px;`}></span>
+<span>{s}</span>
+</li>
+</Fragment>))}
+</ul>
+</div>
+</Fragment>))}
+</div>
+</section>
+
+<section style="background:#f4f7fb;">
+<div style="max-width:1200px;margin:0 auto;padding:84px 24px;">
+<div style="text-align:center;max-width:720px;margin:0 auto 44px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;justify-content:center;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b647a;font-weight:700;">Contact Numbers</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,46px);line-height:1.1;margin:0 0 14px;color:#141f4d;font-weight:400;">Reach the right team.</h2>
+<p style="font-size:16px;line-height:1.65;color:#5b647a;margin:0 0 10px;">The Life Link is a Licensed Community Mental Health Center and Core Service Agency. Buildings meet Americans with Disabilities Act (ADA) requirements.</p>
+<p style="font-size:16px;font-weight:700;color:#1b7e6f;margin:0;">Spanish services available. Se Habla Español.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;">
+{numbers.map((n, n_i) => (<Fragment>
+<a href={n.href} data-reveal style={`display:block;text-decoration:none;background:${n.bg};border:1px solid ${n.border};border-radius:14px;padding:22px 22px;`}>
+<div style={`font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;color:${n.labelColor};margin-bottom:8px;`}>{n.label}</div>
+<div style={`font-family:'DM Serif Display',serif;font-size:24px;line-height:1.2;color:${n.numColor};`}>{n.num}</div>
+</a>
+</Fragment>))}
+</div>
+</div>
+</section>
+
+<section id="get-help" style="background:#141f4d;color:#fff;scroll-margin-top:120px;position:relative;overflow:hidden;">
+<svg width="760" height="760" viewBox="0 0 760 760" fill="none" aria-hidden="true" style="position:absolute;left:-260px;top:-200px;opacity:0.06;pointer-events:none;"><circle cx="380" cy="380" r="340" stroke="#fff" stroke-width="40"></circle><circle cx="380" cy="380" r="200" stroke="#fff" stroke-width="40"></circle></svg>
+<div style="max-width:1200px;margin:0 auto;padding:84px 24px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;position:relative;">
+<div style="flex:1 1 440px;min-width:300px;" data-reveal>
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:20px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#a9b7e0;font-weight:700;">Get Help Now</span>
+</div>
+<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(38px,5vw,58px);line-height:1.06;margin:0 0 22px;font-weight:400;">Reaching out is <span style="color:#f5b829;font-style:italic;">the first step.</span></h2>
+<p style="font-size:17.5px;line-height:1.6;color:#c9d2ea;max-width:520px;margin:0 0 28px;">You don't need to have it all figured out. Call us, or walk in — we'll take it from there.</p>
+<a href="tel:5054380010" style="font-family:'DM Serif Display',serif;font-size:42px;color:#f5b829;text-decoration:none;line-height:1;display:inline-block;margin-bottom:10px;">(505) 438-0010</a>
+<p style="font-size:14.5px;color:#a9b7e0;margin:0 0 24px;">For general intake questions, call our main number.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px 20px;">
+<div style="font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#26a491;font-weight:700;margin-bottom:4px;">Open</div>
+<div style="font-size:17px;font-weight:700;color:#fff;">Monday–Friday · 8:00am–5:00pm</div>
+</div>
+<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px 20px;">
+<div style="font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#26a491;font-weight:700;margin-bottom:4px;">Evenings</div>
+<div style="font-size:15px;font-weight:600;color:#fff;">Individual &amp; group therapy<br />available after 5pm</div>
+</div>
+</div>
+<p style="font-size:14.5px;color:#c9d2ea;margin:0;">In crisis? Call <a href="tel:988" style="color:#f5b829;font-weight:700;text-decoration:none;">988</a> (mental health) or <a href="tel:911" style="color:#f5b829;font-weight:700;text-decoration:none;">911</a> (medical).</p>
+</div>
+<div style="flex:1 1 380px;min-width:300px;" data-reveal>
+<div style="background:#ffffff;color:#1a2236;border-radius:18px;padding:34px 32px;box-shadow:0 30px 60px -26px rgba(0,0,0,0.6);border-top:6px solid #f5b829;">
+<div style="display:inline-flex;align-items:center;gap:8px;background:#f5b829;color:#141f4d;font-size:11.5px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:7px 13px;border-radius:999px;margin-bottom:18px;">New Clients · Treat First</div>
+<h3 style="font-family:'DM Serif Display',serif;font-size:34px;line-height:1.15;margin:0 0 6px;font-weight:400;color:#141f4d;">Walk-in hours</h3>
+<p style="font-size:15.5px;color:#5b647a;margin:0 0 20px;">You can stop by:</p>
+<div style="display:flex;flex-direction:column;border-top:1px solid #e4ebf4;">
+{walkin.map((w, w_i) => (<Fragment>
+<div style="display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid #e4ebf4;">
+<span style={`font-size:16px;font-weight:700;color:${w.dayColor};`}>{w.day}</span>
+<span style={`font-size:16px;font-weight:700;text-align:right;color:${w.timeColor};`}>{w.time}</span>
+</div>
+</Fragment>))}
+</div>
+<p style="font-size:17px;font-weight:700;color:#1d8575;margin:22px 0 4px;">No appointment needed, just come as you are.</p>
+<p style="font-size:15px;color:#3a4256;margin:0 0 16px;">First come, first served.</p>
+<p style="font-size:13.5px;color:#5b647a;margin:0;line-height:1.5;">Treat First onboarding is available at the Saint Michael's Building (2000 St. Michael's Drive) and the Las Alas Building (1331 Declovina Street).</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</div>
+
+</Base>
+<style is:global>
+.h1:hover{display:flex !important;align-items:center !important;gap:18px !important;background:rgba(255,255,255,0.1) !important;border:1px solid rgba(255,255,255,0.22) !important;border-radius:14px !important;padding:20px 22px !important;text-decoration:none !important;color:#fff !important}
+</style>

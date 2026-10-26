@@ -1,0 +1,245 @@
+{
+  "events": [
+    {
+      "month": "Sep",
+      "day": "18",
+      "bg": "linear-gradient(150deg,#1e3278,#3a8fd4)",
+      "title": "Community Wellness Day",
+      "detail": "Free screenings, resources, and connection for all.",
+      "where": "La Luz Building · 10am–2pm"
+    },
+    {
+      "month": "Oct",
+      "day": "09",
+      "bg": "linear-gradient(150deg,#177a6b,#2ab5a0)",
+      "title": "Volunteer Orientation",
+      "detail": "Learn how to get involved and lend a hand.",
+      "where": "Online & in person · 5:30pm"
+    },
+    {
+      "month": "Nov",
+      "day": "15",
+      "bg": "linear-gradient(150deg,#b8860b,#f5b829)",
+      "title": "Expanding Hope Benefit",
+      "detail": "An evening supporting our new building campaign.",
+      "where": "Downtown Santa Fe · 6pm"
+    }
+  ],
+  "execs": [
+    {
+      "title": "CEO",
+      "name": "Michael DeBernardi",
+      "cred": "PsyD, MS",
+      "photo": "/assets/leadership/michael-debernardi.jpg",
+      "initials": "MD",
+      "noPhoto": false,
+      "bgImg": "url('/assets/leadership/michael-debernardi.jpg')"
+    },
+    {
+      "title": "CFO",
+      "name": "Christy O’Neil",
+      "cred": "",
+      "initials": "CO",
+      "photo": "",
+      "noPhoto": true,
+      "bgImg": "none"
+    }
+  ],
+  "leaders": [
+    {
+      "title": "Director of Operations and Quality Enhancement",
+      "name": "Pamela Yus",
+      "cred": "MA, LADAC, CPRP",
+      "initials": "PY",
+      "tint": "#e9f6f3",
+      "c": "#1b7c6d"
+    },
+    {
+      "title": "Human Trafficking Aftercare Director",
+      "name": "Lynn Sanchez",
+      "cred": "MA, LPCC",
+      "initials": "LS",
+      "tint": "#eaf1fb",
+      "c": "#2b71b1"
+    },
+    {
+      "title": "Housing Program Manager",
+      "name": "Crystal Granillo",
+      "cred": "",
+      "initials": "CG",
+      "tint": "#fff4dc",
+      "c": "#966600"
+    },
+    {
+      "title": "Treatment Services Clinical Manager",
+      "name": "Krista L. Brening",
+      "cred": "LPCC, LPAT",
+      "initials": "KB",
+      "tint": "#eef7e6",
+      "c": "#477c20"
+    },
+    {
+      "title": "Outreach Services Director",
+      "name": "Janelle Bohannon",
+      "cred": "LPCC",
+      "initials": "JB",
+      "tint": "#e9f6f3",
+      "c": "#1b7c6d"
+    },
+    {
+      "title": "Comprehensive Community Support Services (CCSS) Program Manager",
+      "name": "Yvette Medina",
+      "cred": "CPSW",
+      "initials": "YM",
+      "tint": "#eaf1fb",
+      "c": "#2b71b1"
+    },
+    {
+      "title": "Clubhouse Program Manager",
+      "name": "Lucia “Lu” Rotunno",
+      "cred": "",
+      "initials": "LR",
+      "tint": "#fff4dc",
+      "c": "#966600"
+    }
+  ],
+  "stories": [
+    {
+      "q": "The Life Link has helped me move forward when I didn't think it was possible.",
+      "who": "— The Life Link client",
+      "bg": "#1e3278",
+      "ink": "#ffffff",
+      "mark": "#f5b829",
+      "cap": "#a9b7e0"
+    },
+    {
+      "q": "The Life Link has helped me learn to love myself and live my life without fear.",
+      "who": "— The Life Link client",
+      "bg": "#2ab5a0",
+      "ink": "#141f4d",
+      "mark": "#141f4d",
+      "cap": "#141f4d"
+    },
+    {
+      "q": "Once they helped me solve one problem, they stayed with me through the next.",
+      "who": "— The Life Link client",
+      "bg": "#f5b829",
+      "ink": "#141f4d",
+      "mark": "#1e3278",
+      "cap": "#3a2f0a"
+    },
+    {
+      "q": "I really appreciate this program because it made me change my life for the better and made me feel like my life matters.",
+      "who": "— A survivor in our aftercare program",
+      "bg": "#ffffff",
+      "ink": "#1e3278",
+      "mark": "#7dc242",
+      "cap": "#5b647a"
+    }
+  ],
+  "staff": [
+    {
+      "dept": "Clinical",
+      "c": "#2b71b1",
+      "photo": "linear-gradient(150deg,#1e3278,#3a8fd4)",
+      "name": "Staff Name",
+      "role": "Licensed Therapist",
+      "why": "“Why I do this work” — a sentence in their own words."
+    },
+    {
+      "dept": "Housing",
+      "c": "#c98a00",
+      "photo": "linear-gradient(150deg,#b8860b,#f5b829)",
+      "name": "Staff Name",
+      "role": "Case Manager",
+      "why": "“Why I do this work” — a sentence in their own words."
+    },
+    {
+      "dept": "Peer Support",
+      "c": "#1b7c6d",
+      "photo": "linear-gradient(150deg,#177a6b,#2ab5a0)",
+      "name": "Staff Name",
+      "role": "Certified Peer Support Specialist",
+      "why": "“Why I do this work” — a sentence in their own words."
+    },
+    {
+      "dept": "Outreach",
+      "c": "#5a9a2c",
+      "photo": "linear-gradient(150deg,#4a7d2c,#7dc242)",
+      "name": "Staff Name",
+      "role": "Outreach Specialist",
+      "why": "“Why I do this work” — a sentence in their own words."
+    }
+  ],
+  "board": [
+    {
+      "name": "Craig O’Hare",
+      "role": "Board Chair",
+      "img": "/assets/board/craig-ohare.jpg",
+      "pos": "center 30%",
+      "c": "#3a8fd4",
+      "roleColor": "#2b71b1",
+      "bio": [
+        "Craig retired from a career in environmental sustainability and resource management for local and state government in 2016, most recently as Santa Fe County’s Sustainability Manager. Prior to that, Craig was Governor Bill Richardson’s Special Assistant for Renewable Energy in the NM Energy, Minerals and Natural Resources Department.",
+        "In the behavioral health arena, Craig is a 25-year survivor of depression and, in retirement, hopes to help others who struggle with mental illnesses and substance use disorders. Craig is a Certified Peer Support Worker (CPSW)– a training and certification for those in recovery from mental illness and/or addictions. He also serves on the Board of the National Alliance on Mental Illness, Santa Fe Chapter."
+      ],
+      "bgImg": "url('/assets/board/craig-ohare.jpg')"
+    },
+    {
+      "name": "Joanna Prukop",
+      "role": "Board Member",
+      "img": "/assets/board/joanna-prukop.jpg",
+      "pos": "center 25%",
+      "c": "#1e3278",
+      "roleColor": "#1e3278",
+      "bio": [
+        "Joanna brings more than four decades of leadership and public service to The Life Link, with a lifelong commitment to conservation, natural resources, and community stewardship. She served as Cabinet Secretary of the New Mexico Department of Energy, Minerals and Natural Resources under Governor Bill Richardson from 2003 to 2009, leading initiatives in environmental enforcement and compliance in energy and minerals development, land conservation, forest restoration, state parks, energy conservation, and renewable energy.",
+        "Earlier in her career, Joanna spent 26 years with the New Mexico Department of Game and Fish, where she became the agency’s first female regional supervisor and division chief.",
+        "She holds degrees in Wildlife Biology from Texas A&M University, where she graduated summa cum laude, and Wildlife Science from Colorado State University.",
+        "Joanna serves on The Life Link Board of Directors and remains actively engaged with conservation, professional, and community organizations at the local, state, and national levels."
+      ],
+      "bgImg": "url('/assets/board/joanna-prukop.jpg')"
+    },
+    {
+      "name": "Laura Feldberg",
+      "role": "Board Member",
+      "img": "/assets/board/laura-feldberg.jpg",
+      "pos": "center 20%",
+      "c": "#2ab5a0",
+      "roleColor": "#1b7c6d",
+      "bio": [
+        "Laura Feldberg brings over three decades of dedicated service in education, holistic wellness, and community mental health to the Board of Directors at The Life Link. She holds a Bachelor’s degree from Cornell University and a Master’s degree from the University of Rochester.",
+        "Laura spent 12 years as an English teacher in underserved communities, followed by eight years living and working in a yoga center, deepening her commitment to whole-person care. Her connection to The Life Link as a staff member spans 22 years of hands-on impact, where she served in diverse roles ranging from SAMHSA clinical trial and grant administration to facilitating groups at The Clubhouse, the organization’s psychosocial drop-in center. Laura is honored to serve on The Life Link Board of Directors as the Board helps guide The Life Link’s mission and future growth."
+      ],
+      "bgImg": "url('/assets/board/laura-feldberg.jpg')"
+    },
+    {
+      "name": "Carmen Contreras",
+      "role": "Treasurer",
+      "img": "/assets/board/carmen-contreras.jpg",
+      "pos": "center 35%",
+      "c": "#f5b829",
+      "roleColor": "#966600",
+      "bio": [
+        "Carmen Contreras is a lifelong Santa Fe resident who brings a deep commitment to creativity, community engagement, and service to The Life Link Board of Directors. Her involvement with The Life Link began in 2009, first as a client and later as a dedicated volunteer, teaching therapeutic beading classes at The Clubhouse for eight years.",
+        "A self-taught artist, Carmen works in jewelry making, gourd art, and leather art. She is passionate about sharing her creativity with others and finds great fulfillment in contributing to the Santa Fe community.",
+        "Carmen has served as Treasurer of The Life Link Board of Directors for the past three and a half years, bringing her personal experience, creative spirit, and dedication to supporting the organization's mission."
+      ],
+      "bgImg": "url('/assets/board/carmen-contreras.jpg')"
+    },
+    {
+      "name": "Maria Sanchez-Gagne",
+      "role": "Board Member",
+      "img": "/assets/board/maria-sanchez-gagne.jpg",
+      "pos": "center 20%",
+      "c": "#7dc242",
+      "roleColor": "#477c20",
+      "bio": [
+        "Maria Sanchez-Gagne brings more than 24 years of legal experience in criminal and civil litigation, public service, and advocacy to The Life Link Board of Directors. Elected in 2018, she serves as a District Court Judge in New Mexico's First Judicial District, where she presides over a variety of civil cases.",
+        "Previously, Maria served as an Assistant Attorney General and Director of the Border Violence Division for the New Mexico Attorney General's Office. Her work focused on human trafficking, international extraditions, money laundering, and cross-border criminal justice issues. She played an instrumental role in drafting New Mexico's human trafficking law and developed training programs for law enforcement, social workers, and prosecutors throughout New Mexico and Mexico.",
+        "Maria earned her law degree from the University of Denver School of Law and has served on several state and regional boards addressing public safety and criminal justice. She brings extensive legal expertise and a longstanding commitment to protecting vulnerable populations to her service on The Life Link Board of Directors."
+      ],
+      "bgImg": "url('/assets/board/maria-sanchez-gagne.jpg')"
+    }
+  ]
+}

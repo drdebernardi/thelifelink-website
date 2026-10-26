@@ -1,0 +1,219 @@
+{
+  "_help": "Job postings. To add a job, copy a whole job from { to } and change the words. To hide a job, set active to false. To remove it, delete it. applyUrl is the link for the Apply button: use the link to that one job on Indeed (not the company page). If applyUrl is empty, the button says 'Ask about this job' and opens an email to the HR address in site.ts. Every posting shows 'Questions about this job? Email ...' using that address.",
+  "emptyMessage": "We do not have open positions listed right now. Please check back soon, or call (505) 438-0010.",
+  "wellbeing": {
+    "title": "A Workplace That Values",
+    "accent": "Your Well-Being",
+    "text": "At The Life Link, we believe taking care of yourself helps you take better care of others. That's why our full-time employees work 36 hours per week but are paid for 40, with 10% of scheduled hours dedicated to self-care. We also offer complimentary weekly yoga during paid work time."
+  },
+  "legal": [
+    "The Life Link is an equal opportunity employer and makes employment decisions based on current need and merit. The Life Link does not discriminate against or tolerate harassment by anyone on the basis of race (including hair that is part of the cultural identification of an ethnic group or that is a physical characteristic of an ethnic group, such as braids, locks, or twists), color, religion, sex (including pregnancy and pregnancy-related conditions, sexual orientation, and gender identity), national origin, age, military status, mental or physical disability, genetic information (including family medical history), or any other characteristic protected by federal, state, or local law.",
+    "By submitting my resume/Indeed application, I certify that the information I have provided is true and complete to the best of my knowledge. I understand that any offer of employment may be contingent upon successful completion of applicable pre-employment requirements."
+  ],
+  "jobs": [
+    {
+      "id": "community-support-worker",
+      "active": true,
+      "title": "Community Support Worker (CSW) / Certified Peer Support Worker (CPSW)",
+      "note": "*CPSW certification not required to apply. Many of our team starts as a CSW and if they choose to get certified, can promote to a CPSW.",
+      "applyUrl": "",
+      "tags": [
+        "$19.00–$22.00 / hour",
+        "Full-time · 36 hrs paid as 40",
+        "Community Support (CCSS)",
+        "In person · Santa Fe, NM"
+      ],
+      "showWellbeing": true,
+      "columns": [
+        [
+          {
+            "heading": "About The Life Link",
+            "paragraphs": [
+              "The Life Link is a nonprofit organization serving individuals and families in Santa Fe who are experiencing housing instability, poverty, substance use, mental health challenges, and other barriers to self-sufficiency.",
+              "Through housing, employment, supportive services, and behavioral health programs, we help people build stability and move toward their goals. Our commitment to quality care has also been recognized by the Santa Fe Reporter, which named The Life Link the #1 Mental Health Provider."
+            ]
+          },
+          {
+            "heading": "About the Position",
+            "paragraphs": [
+              "The Community Support Worker (CSW)/Certified Peer Support Worker (CPSW) provides client-centered, community-based services that support individuals in working toward recovery, stability, and self-sufficiency. Under the supervision of the Community Support Supervisor, the CSW/CPSW works directly with clients and their families to identify goals, develop and maintain service plans, connect with community resources, and build skills that support successful community living.",
+              "This is a highly community-based position, with at least 60% of Comprehensive Community Support Services (CCSS) provided face-to-face or in vivo, where the client is. The CSW may work with clients around housing, mental health, substance use, medical needs, employment, education, family and social relationships, legal concerns, and other identified needs."
+            ]
+          },
+          {
+            "heading": "Compensation",
+            "paragraphs": [
+              "$19.00-$22.00 per hour, based on experience.",
+              "Work-related mileage is reimbursed for eligible miles submitted in accordance with Agency policy."
+            ]
+          },
+          {
+            "heading": "What We Offer",
+            "bullets": [
+              "36-hour workweek paid as 40 hours",
+              "10% of paid hours designated for self-care",
+              "Weekly complimentary yoga during paid work time",
+              "401(k) with employer matching",
+              "Health insurance",
+              "Dental insurance",
+              "Vision insurance",
+              "Life insurance",
+              "Employee assistance program",
+              "Paid time off",
+              "Mileage reimbursement",
+              "Professional development assistance"
+            ],
+            "dot": "gold"
+          }
+        ],
+        [
+          {
+            "heading": "What You'll Do",
+            "bullets": [
+              "Create, update, and review client service plans and advance directives in accordance with agency policy.",
+              "Build trusting, supportive relationships with clients and help them work toward their identified goals.",
+              "Identify formal and informal support systems and connect clients with community resources.",
+              "Help clients access and maintain medical, housing, vocational, financial, social, entitlement, behavioral health, and other necessary services.",
+              "Help identify early signs of crisis or relapse and use crisis prevention, intervention, de-escalation, and natural support to address concerns.",
+              "Support medication adherence and illness self-management as directed by the clinical team.",
+              "Build interpersonal, community coping, and functional skills related to daily living, communication, housing, money management, self-care, social relationships, employment, education, and other areas as needed.",
+              "Help clients identify and minimize symptoms that interfere with daily living and support relapse prevention and self-monitoring skills.",
+              "Support clients in maintaining employment and school participation.",
+              "Build and maintain relationships with family members, friends, neighbors, landlords, employers, educators, and other natural support.",
+              "Provide follow-up to determine whether accessed services have adequately met the client's service plan goals.",
+              "Transport clients in a personal vehicle to and from appointments and other necessary services.",
+              "Provide at least 60% of CCSS in the community, face-to-face or in vivo, where the client is.",
+              "Maintain strict confidentiality of client Protected Health Information (PHI) and substance use disorder treatment records in accordance with HIPAA and 42 CFR Part 2.",
+              "Attend agency staff meetings and required training and perform other duties as assigned."
+            ],
+            "dot": "teal"
+          }
+        ],
+        [
+          {
+            "heading": "What We're Looking For — Required",
+            "bullets": [
+              {
+                "t": "At least 18 years of age.",
+                "sub": false
+              },
+              {
+                "t": "Must meet ONE of these:",
+                "sub": false
+              },
+              {
+                "t": "A bachelor's degree in a human services field plus 1 year of relevant experience.",
+                "sub": true
+              },
+              {
+                "t": "An associate's degree plus 2 years of experience working with the target population.",
+                "sub": true
+              },
+              {
+                "t": "An associate's degree in an approved behavioral health coaching curriculum, with no experience needed.",
+                "sub": true
+              },
+              {
+                "t": "A high school diploma or GED plus 3 years of experience working with the target population.",
+                "sub": true
+              },
+              {
+                "t": "Commitment to working with people experiencing severe and persistent mental illness, substance use disorders, and co-occurring diagnoses.",
+                "sub": false
+              },
+              {
+                "t": "Strong written, verbal, and interpersonal communication skills.",
+                "sub": false
+              },
+              {
+                "t": "Ability to work with sensitivity to trauma, gender, ethnicity, culture, and other factors that affect the people we serve.",
+                "sub": false
+              },
+              {
+                "t": "Ability to assist clients with service planning, recovery/resiliency planning, crisis management, and transition planning as needed.",
+                "sub": false
+              },
+              {
+                "t": "Skills in crisis prevention and intervention and the ability to de-escalate crisis situations.",
+                "sub": false
+              },
+              {
+                "t": "Familiarity with psychosocial rehabilitation and strengths-based recovery practices.",
+                "sub": false
+              },
+              {
+                "t": "Ability to access and coordinate medical, vocational, financial, social, housing, entitlement, and other community resources.",
+                "sub": false
+              },
+              {
+                "t": "Familiarity with medical conditions, medications, symptom management, and illness self-management skills education.",
+                "sub": false
+              },
+              {
+                "t": "Ability to develop and sustain natural supports in clients' lives.",
+                "sub": false
+              },
+              {
+                "t": "Basic word processing, spreadsheet, database, and internet skills.",
+                "sub": false
+              },
+              {
+                "t": "CPR and First Aid certification.",
+                "sub": false
+              },
+              {
+                "t": "Ability to drive as an essential function of the position, including transporting clients and traveling to appointments and home visits. Requires a valid New Mexico driver's license, reliable access to a personal vehicle, and current auto insurance. The position may also require walking longer distances to residences and climbing stairs when necessary.",
+                "sub": false
+              },
+              {
+                "t": "Schedule flexibility and availability by phone in case of a client or agency emergency.",
+                "sub": false
+              },
+              {
+                "t": "Successful completion of a criminal background check and drug screen.",
+                "sub": false
+              }
+            ],
+            "dot": "navy"
+          }
+        ],
+        [
+          {
+            "heading": "Preferred",
+            "bullets": [
+              "Certification as a Peer or Family Specialist.",
+              "Spanish bilingual/fluency in English and Spanish.",
+              "Knowledge of case management practices.",
+              "Experience working in the mental health field.",
+              "Experience working with people with severe and persistent mental illness, substance use disorders, or co-occurring diagnoses."
+            ],
+            "dot": "blue"
+          },
+          {
+            "heading": "Additional Requirements",
+            "paragraphs": [
+              "Employment is contingent upon successful completion of a criminal background check and drug screening. The Life Link requires original source verification of education and professional licensure or certification, as applicable, before hire.",
+              "**Expected hours:** 40.0 per week · **Work Location:** In person, Santa Fe, New Mexico",
+              "**License/Certification:** Certified Peer Support Worker (CPSW) Certification (Preferred)",
+              {
+                "text": "People with a criminal record are encouraged to apply.",
+                "kind": "highlight"
+              }
+            ]
+          }
+        ]
+      ],
+      "questions": {
+        "heading": "Application Question(s)",
+        "items": [
+          "Have you ever received services from The Life Link, or are you currently receiving services from The Life Link?",
+          {
+            "text": "Please note: Prior or current receipt of services from The Life Link does not automatically disqualify you from employment. This information will be reviewed to determine whether any potential conflict of interest or other employment consideration exists.",
+            "kind": "note"
+          },
+          "Do you currently work for The Life Link, or have you worked for The Life Link in the past?"
+        ]
+      }
+    }
+  ]
+}
