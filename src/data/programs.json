@@ -260,15 +260,6 @@
       "numColor": "#1e3278"
     },
     {
-      "label": "Sojourners Advocacy Cafe",
-      "num": "(505) 983-4182",
-      "href": "tel:5059834182",
-      "bg": "#ffffff",
-      "border": "#e4ebf4",
-      "labelColor": "#5b647a",
-      "numColor": "#1e3278"
-    },
-    {
       "label": "The Clubhouse",
       "num": "(505) 395-2503",
       "href": "tel:5053952503",
@@ -281,6 +272,15 @@
       "label": "Outreach Services",
       "num": "(505) 279-0880",
       "href": "tel:5052790880",
+      "bg": "#ffffff",
+      "border": "#e4ebf4",
+      "labelColor": "#5b647a",
+      "numColor": "#1e3278"
+    },
+    {
+      "label": "Sojourners Advocacy Cafe",
+      "num": "(505) 983-4182",
+      "href": "tel:5059834182",
       "bg": "#ffffff",
       "border": "#e4ebf4",
       "labelColor": "#5b647a",

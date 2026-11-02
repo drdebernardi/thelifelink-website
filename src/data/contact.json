@@ -113,13 +113,6 @@
       "tint": "#e9f6f3"
     },
     {
-      "label": "Sojourners Advocacy Cafe",
-      "num": "(505) 983-4182",
-      "href": "tel:5059834182",
-      "c": "#5fa02f",
-      "tint": "#eef7e6"
-    },
-    {
       "label": "The Clubhouse",
       "num": "(505) 395-2503",
       "href": "tel:5053952503",
@@ -127,11 +120,11 @@
       "tint": "#eef3fb"
     },
     {
-      "label": "Outreach Services",
-      "num": "(505) 279-0880",
-      "href": "tel:5052790880",
-      "c": "#2ab5a0",
-      "tint": "#e6f7f4"
+      "label": "Sojourners Advocacy Cafe",
+      "num": "(505) 983-4182",
+      "href": "tel:5059834182",
+      "c": "#5fa02f",
+      "tint": "#eef7e6"
     },
     {
       "label": "Human Trafficking Hotline",
@@ -139,6 +132,13 @@
       "href": "tel:5054383733",
       "c": "#b8452a",
       "tint": "#fdeee8"
+    },
+    {
+      "label": "Outreach Services",
+      "num": "(505) 279-0880",
+      "href": "tel:5052790880",
+      "c": "#2ab5a0",
+      "tint": "#e6f7f4"
     }
   ]
 }
