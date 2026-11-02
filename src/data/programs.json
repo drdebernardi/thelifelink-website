@@ -278,6 +278,15 @@
       "numColor": "#1e3278"
     },
     {
+      "label": "Outreach Services",
+      "num": "(505) 279-0880",
+      "href": "tel:5052790880",
+      "bg": "#ffffff",
+      "border": "#e4ebf4",
+      "labelColor": "#5b647a",
+      "numColor": "#1e3278"
+    },
+    {
       "label": "Human Trafficking Hotline",
       "num": "(505) GET-FREE / (505) 438-3733",
       "href": "tel:5054383733",
