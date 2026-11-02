@@ -41,9 +41,17 @@ This is The Life Link's website (Astro static site, deployed on Vercel from GitH
 ## Where things live
 
 - `src/data/site.ts`: address, phone, donate link, social links, contact form address, main menu.
-- `src/data/*.json`: page content. `jobs.json`, `news.json`, `newsletter.json`, `home.json`, `about.json`, `programs.json`, `impact.json`, `events.json` (stories, staff, board), `getinvolved.json`, `contact.json`, `donate.json`.
+- `src/data/*.json`: page content. `program-pages.json` (the six program pages), `jobs.json`, `news.json`, `newsletter.json`, `home.json`, `about.json`, `programs.json`, `impact.json`, `events.json` (stories, staff, board), `getinvolved.json`, `contact.json`, `donate.json`.
 - `src/pages/*.astro`: page layout. `src/components/`: header and footer.
 - `public/assets/`: photos and images. `public/assets/og/`: link-preview images (1200x630, one per page; regenerate if page titles change).
+
+## Program pages
+
+- Six pages: `/programs/housing`, `/programs/ccss`, `/programs/treatment`, `/programs/outreach`, `/programs/clubhouse`, `/programs/human-trafficking`. One layout (`src/pages/programs/[slug].astro`), words in `src/data/program-pages.json`.
+- Overview cards on `/programs` link to them through the `page` field in `src/data/programs.json`. Employment has no page by design (overview only).
+- Keep them donor-friendly: 2-3 stats per page, no staff names, no safe-house locations or other details that could put survivors at risk.
+- Off switch: `programPages` in `src/data/site.ts`. `false` stops building the pages, removes the Learn more links, and puts the old menu back.
+- Link-preview images: `public/assets/og/program-<slug>.jpg`.
 
 ## Accessibility (keep passing)
 

@@ -13,7 +13,8 @@
           "alt": "A staff member leading a wellness skills group",
           "body": "Assistance with coordinating housing, finances, healthcare, and community resources that support recovery and independent living. Services can include working with a Certified Peer Support Specialist who has been successful in their recovery and will support the person’s recovery plan.",
           "anchorId": "",
-          "bgImg": "url('/assets/photos/05_wellness_group.jpg')"
+          "bgImg": "url('/assets/photos/05_wellness_group.jpg')",
+          "page": "/programs/ccss"
         },
         {
           "title": "Individual Therapy",
@@ -21,7 +22,8 @@
           "alt": "A client smiling during a one-on-one counseling session",
           "body": "Short-term, goal oriented personalized treatment for individuals navigating mental health, substance abuse, and/or trauma concerns. Therapists utilize evidence based approaches and work collaboratively with clients to improve symptom management, communication and living skills, healthy relationships and boundaries, and much more. We offer this service in Spanish.",
           "anchorId": "",
-          "bgImg": "url('/assets/photos/08_individual_counseling.jpg')"
+          "bgImg": "url('/assets/photos/08_individual_counseling.jpg')",
+          "page": "/programs/treatment#individual-therapy"
         },
         {
           "title": "Group Therapy",
@@ -29,7 +31,8 @@
           "alt": "Clients talking together in a group therapy session",
           "body": "Our groups are designed to improve emotional wellness and connection. Engagement in a group may last 3 to 6 months. Examples of groups offered: Substance Abuse Recovery skills, Anger Management, Healing Trauma, Managing Depression, Coping Tools, Anxiety Management, and more. We offer groups in Spanish.",
           "anchorId": "",
-          "bgImg": "url('/assets/photos/02_group_session.jpg')"
+          "bgImg": "url('/assets/photos/02_group_session.jpg')",
+          "page": "/programs/treatment#group-therapy"
         },
         {
           "title": "Intensive Outpatient Program (IOP) for recovery from Substance Use",
@@ -37,7 +40,8 @@
           "alt": "A supportive recovery group",
           "body": "This group is for individuals with alcohol and/or substance use issues and mental health disorders. The group offers individualized recovery tools including: coping skills, relapse prevention planning, options for reducing impact of substances, establishing a recovery support network, symptom management, refusal skill building and more. Meets 9 hours each week up to 6 months plus one hour weekly individual therapy.",
           "anchorId": "",
-          "bgImg": "url('/assets/photos/12_group_support.jpg')"
+          "bgImg": "url('/assets/photos/12_group_support.jpg')",
+          "page": "/programs/treatment#iop"
         },
         {
           "title": "Psychiatric Services",
@@ -45,7 +49,8 @@
           "alt": "A clinician meeting with a client",
           "body": "Assessments and medication management for a variety of behavioral health needs.",
           "anchorId": "",
-          "bgImg": "url('/assets/photos/03_healthcare_support.jpg')"
+          "bgImg": "url('/assets/photos/03_healthcare_support.jpg')",
+          "page": "/programs/treatment#psychiatry"
         },
         {
           "title": "Suboxone Services",
@@ -53,7 +58,8 @@
           "alt": "A client smiling while talking with a provider",
           "body": "Comprehensive Medication Assisted Treatment program for dependence on opiates.",
           "anchorId": "",
-          "bgImg": "url('/assets/photos/01_individual_therapy.jpg')"
+          "bgImg": "url('/assets/photos/01_individual_therapy.jpg')",
+          "page": "/programs/treatment#mat"
         }
       ],
       "id": "g1",
@@ -79,7 +85,8 @@
           "alt": "A man holding up the keys to his new home",
           "body": "Services to help individuals and families who are unhoused find safe and affordable rental housing, and stay successfully housed. Income, specific disability or other guidelines apply.",
           "anchorId": "housing",
-          "bgImg": "url('/assets/photos/04_housing_success.jpg')"
+          "bgImg": "url('/assets/photos/04_housing_success.jpg')",
+          "page": "/programs/housing"
         },
         {
           "title": "Supported Employment (IPS)",
@@ -87,7 +94,8 @@
           "alt": "An employment specialist reviewing a job plan with a client",
           "body": "One-on-one assistance in choosing, finding, and keeping a regular job in the community. Job searching based on the person’s goals and interests, with personalized support every step of the way to ensure long-term success. No pre-employment tests required.",
           "anchorId": "employment",
-          "bgImg": "url('/assets/photos/07_employment_support.jpg')"
+          "bgImg": "url('/assets/photos/07_employment_support.jpg')",
+          "page": ""
         },
         {
           "title": "Outreach Services",
@@ -95,7 +103,8 @@
           "alt": "A person arriving at The Life Link with her belongings",
           "body": "Supports individuals experiencing homelessness and those transitioning from incarceration. Through R.I.S.E., street outreach, and micro-communities individuals receive housing support, case management, life skills development, and connections to essential resources. These services empower individuals to build stability, independence, and pathways to permanent housing.",
           "anchorId": "outreach",
-          "bgImg": "url('/assets/photos/11_lifelink_arrival.jpg')"
+          "bgImg": "url('/assets/photos/11_lifelink_arrival.jpg')",
+          "page": "/programs/outreach"
         }
       ],
       "id": "g2",
@@ -121,7 +130,8 @@
           "alt": "Clubhouse members sharing a meal",
           "body": "The program is aimed at building connections between members. It offers groups on wellness and life skills in a recovery and safe environment. Members are encouraged to engage in its daily operations and programming. Meals served daily.",
           "anchorId": "clubhouse",
-          "bgImg": "url('/assets/photos/06_clubhouse_meal.jpg')"
+          "bgImg": "url('/assets/photos/06_clubhouse_meal.jpg')",
+          "page": "/programs/clubhouse"
         },
         {
           "title": "Human Trafficking Outreach and Aftercare",
@@ -129,7 +139,8 @@
           "alt": "Two women with arms around each other, looking at the mountains",
           "body": "Comprehensive, rights-based, trauma-informed care to survivors of sex and labor trafficking across New Mexico. Services span crisis intervention, housing stability, legal advocacy, and trauma therapy. A dedicated trafficking hotline and close coordination with law enforcement, legal, and healthcare partners ensure survivors are met quickly and connected to a full circle of support.",
           "anchorId": "human-trafficking",
-          "bgImg": "url('/assets/photos/09_peer_support_outdoors.jpg')"
+          "bgImg": "url('/assets/photos/09_peer_support_outdoors.jpg')",
+          "page": "/programs/human-trafficking"
         }
       ],
       "id": "g3",
