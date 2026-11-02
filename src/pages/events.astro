@@ -4,7 +4,6 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import data from '../data/events.json';
 import newsData from '../data/news.json';
-import nl from '../data/newsletter.json';
 const { stories, staff, board } = data;
 const news = newsData.items;
 const colors = { navy: ['#1e3278', '#1e3278'], gold: ['#9e6c00', '#c98a00'], green: ['#4d8426', '#5a9a2c'], blue: ['#2f7abf', '#2f7abf'] };
@@ -53,51 +52,6 @@ const colors = { navy: ['#1e3278', '#1e3278'], gold: ['#9e6c00', '#c98a00'], gre
 </div>
 </section>
 
-{nl.show && (<Fragment>
-<section id="acmc-newsletter" style="background:#141f4d;color:#ffffff;position:relative;overflow:hidden;scroll-margin-top:120px;">
-<svg width="640" height="640" viewBox="0 0 640 640" fill="none" aria-hidden="true" style="position:absolute;left:-220px;bottom:-240px;opacity:0.06;pointer-events:none;"><circle cx="320" cy="320" r="280" stroke="#ffffff" stroke-width="40"></circle><circle cx="320" cy="320" r="150" stroke="#ffffff" stroke-width="40"></circle></svg>
-<div style="max-width:1200px;margin:0 auto;padding:76px 24px;display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center;position:relative;">
-<div style="flex:1 1 360px;min-width:0;" data-reveal>
-<div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
-<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
-<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#a9b7e0;font-weight:700;">{nl.label}</span>
-</div>
-<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 18px;font-weight:400;">{nl.headline} <span style="color:#7dc242;font-style:italic;">{nl.headlineAccent}</span></h2>
-<p style="font-size:16.5px;line-height:1.65;color:#c9d2ea;margin:0 0 14px;">{nl.paragraphs[0]}</p>
-<p style="font-size:16.5px;line-height:1.65;color:#c9d2ea;margin:0 0 26px;">{nl.paragraphs[1]}</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-<button data-nl-open="front" style="background:#f5b829;color:#141f4d;font-family:inherit;font-weight:700;font-size:15px;border:none;cursor:pointer;padding:13px 22px;border-radius:4px;">{nl.button}</button>
-<a href={nl.front.file} download={nl.front.download} style="background:none;border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-weight:600;font-size:14.5px;text-decoration:none;padding:12px 18px;border-radius:4px;">Download front</a>
-<a href={nl.back.file} download={nl.back.download} style="background:none;border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-weight:600;font-size:14.5px;text-decoration:none;padding:12px 18px;border-radius:4px;">Download back</a>
-</div>
-</div>
-<div style="flex:1 1 460px;min-width:0;display:flex;gap:18px;" data-reveal>
-<button data-nl-open="front" aria-label="Enlarge newsletter front page" style="flex:1 1 0;min-width:0;padding:0;border:none;background:none;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;align-items:stretch;">
-<img src={nl.front.file} alt={nl.front.alt} style="display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 24px 48px -18px rgba(0,0,0,0.6);transform:rotate(-1.5deg);" />
-<span style="font-size:12.5px;color:#a9b7e0;font-weight:600;font-family:'Inter',sans-serif;">Front · click to enlarge</span>
-</button>
-<button data-nl-open="back" aria-label="Enlarge newsletter back page" style="flex:1 1 0;min-width:0;padding:0;border:none;background:none;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;align-items:stretch;margin-top:28px;">
-<img src={nl.back.file} alt={nl.back.alt} style="display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 24px 48px -18px rgba(0,0,0,0.6);transform:rotate(1.5deg);" />
-<span style="font-size:12.5px;color:#a9b7e0;font-weight:600;font-family:'Inter',sans-serif;">Back · click to enlarge</span>
-</button>
-</div>
-</div>
-</section>
-<div id="nl-zoom" data-nl={JSON.stringify({ front: nl.front, back: nl.back })} data-nl-close hidden style="position:fixed;inset:0;z-index:1000;background:rgba(10,16,40,0.92);overflow:auto;flex-direction:column;align-items:center;padding:20px 16px 40px;">
-<div data-nl-stop style="position:sticky;top:0;z-index:2;width:100%;max-width:1000px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:10px 0 16px;">
-<div style="display:flex;gap:8px;">
-<button type="button" class="nl-tab" data-nl-tab="front">Front</button>
-<button type="button" class="nl-tab" data-nl-tab="back">Back</button>
-</div>
-<div style="display:flex;gap:8px;">
-<a id="nl-download" href={nl.front.file} download={nl.front.download} style="background:#f5b829;color:#141f4d;font-weight:700;font-size:14px;text-decoration:none;padding:10px 16px;border-radius:4px;">Download</a>
-<button type="button" data-nl-close aria-label="Close" style="background:#ffffff;color:#141f4d;font-family:inherit;font-weight:700;font-size:14px;border:none;cursor:pointer;padding:10px 16px;border-radius:4px;">Close ✕</button>
-</div>
-</div>
-<div id="nl-page" data-nl-stop role="img" aria-label={nl.front.alt} style="width:100%;max-width:1000px;aspect-ratio:1545/2000;flex-shrink:0;background-color:#f3efe8;background-size:contain;background-repeat:no-repeat;background-position:center top;border-radius:6px;box-shadow:0 30px 60px rgba(0,0,0,0.5);"></div>
-</div>
-
-</Fragment>)}
 <section id="news" style="background:#f4f7fb;scroll-margin-top:120px;">
 <div style="max-width:1200px;margin:0 auto;padding:76px 24px;">
 <div style="margin-bottom:36px;" data-reveal>
@@ -128,34 +82,7 @@ const colors = { navy: ['#1e3278', '#1e3278'], gold: ['#9e6c00', '#c98a00'], gre
 </div>
 
 </Base>
-<script>
-  const root = document.getElementById('nl-zoom') as HTMLElement | null;
-  const page = document.getElementById('nl-page') as HTMLElement | null;
-  const dl = document.getElementById('nl-download') as HTMLAnchorElement | null;
-  const d = JSON.parse(root?.dataset.nl ?? '{"front":{},"back":{}}');
-  const info = {
-    front: { src: d.front.file, file: d.front.download, alt: d.front.alt },
-    back: { src: d.back.file, file: d.back.download, alt: d.back.alt },
-  } as const;
-  function show(which: 'front' | 'back') {
-    if (!root || !page || !dl) return;
-    const i = info[which];
-    page.style.backgroundImage = `url('${i.src}')`;
-    page.setAttribute('aria-label', i.alt);
-    dl.href = i.src; dl.setAttribute('download', i.file);
-    root.querySelectorAll<HTMLElement>('[data-nl-tab]').forEach((b) => b.classList.toggle('on', b.dataset.nlTab === which));
-    root.hidden = false; root.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-  function close() { if (!root) return; root.hidden = true; root.style.display = ''; document.body.style.overflow = ''; }
-  document.querySelectorAll<HTMLElement>('[data-nl-open]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); show(b.dataset.nlOpen as 'front' | 'back'); }));
-  root?.querySelectorAll<HTMLElement>('[data-nl-tab]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); show(b.dataset.nlTab as 'front' | 'back'); }));
-  root?.addEventListener('click', (e) => { const t = e.target as HTMLElement; if (t.closest('[data-nl-close]') && !t.closest('[data-nl-stop]') || t.closest('button[data-nl-close]')) close(); });
-  window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && root && !root.hidden) close(); });
-</script>
 <style is:global>
-.nl-tab{background:rgba(255,255,255,0.12);color:#fff;font-family:inherit;font-weight:700;font-size:14px;border:none;cursor:pointer;padding:10px 16px;border-radius:4px;}
-.nl-tab.on{background:#fff;color:#141f4d;}
 .r-newsCols{grid-template-columns:repeat(1,minmax(0,1fr))}
 @media (min-width:640px){.r-newsCols{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:1100px){.r-newsCols{grid-template-columns:repeat(4,minmax(0,1fr))}}

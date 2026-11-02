@@ -1,5 +1,5 @@
 {
-  "_help": "The newsletter section on the Events & News page. Put new newsletter page images in public/assets/newsletters/ and change the file names below. Set show to false to hide the whole section.",
+  "_help": "The newsletter section on the Outreach program page (/programs/outreach). Put new newsletter page images in public/assets/newsletters/ and change the file names below. Set show to false to hide the whole section.",
   "show": true,
   "label": "Program Newsletter · October 2026",
   "headline": "News from the",

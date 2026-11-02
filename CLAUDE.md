@@ -8,7 +8,7 @@ This is The Life Link's website (Astro static site, deployed on Vercel from GitH
 - **HR Director:** only these files.
   - `src/data/jobs.json` (job postings)
   - `src/data/news.json` (press items on the Events & News page)
-  - `src/data/newsletter.json` plus images in `public/assets/newsletters/` (the newsletter section)
+  - `src/data/newsletter.json` plus images in `public/assets/newsletters/` (the newsletter section, shown on the Outreach program page)
   - new images in `public/assets/news/`
 - If anyone asks for a change outside their files, do not make it. Say it needs Dr. DeBernardi's approval and offer to write the request for him.
 
