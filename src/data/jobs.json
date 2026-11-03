@@ -1,5 +1,5 @@
 {
-  "_help": "Job postings. To add a job, copy a whole job from { to } and change the words. To hide a job, set active to false. To remove it, delete it. applyUrl is the link for the Apply button: use the link to that one job on Indeed (not the company page). If applyUrl is empty, the button says 'Ask about this job' and opens an email to the HR address in site.ts. Every posting shows 'Questions about this job? Email ...' using that address.",
+  "_help": "Job postings. To add a job, copy a whole job from { to } and change the words. To hide a job, set active to false. To remove it, delete it. applyUrl is the link for the Apply button: use the link to that one job on Indeed (not the company page). If applyUrl is empty, the button shows the HR address from site.ts (for example 'Email hr@thelifelink.org') and opens an email to it. Every posting shows 'Questions about this job? Email ...' using that address.",
   "emptyMessage": "We do not have open positions listed right now. Please check back soon, or call (505) 438-0010.",
   "wellbeing": {
     "title": "A Workplace That Values",

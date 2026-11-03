@@ -42,7 +42,7 @@ const bold = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<strong style="color:#141f
 <p style="font-size:14px;line-height:1.5;color:#5b647a;margin:14px 0 0;">Questions about this job? Email <a href={`mailto:${SITE.hrEmail}?subject=${encodeURIComponent('Question about: ' + job.title)}`} style="color:#1e3278;font-weight:700;">{SITE.hrEmail}</a>.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;">
-<a href={job.applyUrl || `mailto:${SITE.hrEmail}?subject=${encodeURIComponent('Question about: ' + job.title)}`} {...(job.applyUrl ? { target: '_blank', rel: 'noopener' } : {})} style="background:#1e3278;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:13px 30px;border-radius:4px;text-align:center;">{job.applyUrl ? 'Apply' : 'Ask about this job'}</a>
+<a href={job.applyUrl || `mailto:${SITE.hrEmail}?subject=${encodeURIComponent('Question about: ' + job.title)}`} {...(job.applyUrl ? { target: '_blank', rel: 'noopener' } : {})} style="background:#1e3278;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:13px 30px;border-radius:4px;text-align:center;">{job.applyUrl ? 'Apply' : `Email ${SITE.hrEmail}`}</a>
 <button type="button" data-job-toggle aria-expanded="false" aria-controls={`job-${job.id}`} style="background:none;border:1px solid #d9e2ee;color:#1e3278;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;padding:11px 18px;border-radius:4px;"><span data-job-label>View full description ↓</span></button>
 </div>
 </div>
@@ -87,7 +87,7 @@ const bold = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<strong style="color:#141f
 </div>
 </div>
 <div style="padding:0 32px 32px;display:flex;flex-wrap:wrap;gap:12px;">
-<a href={job.applyUrl || `mailto:${SITE.hrEmail}?subject=${encodeURIComponent('Question about: ' + job.title)}`} {...(job.applyUrl ? { target: '_blank', rel: 'noopener' } : {})} style="background:#1e3278;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:13px 30px;border-radius:4px;">{job.applyUrl ? 'Apply' : 'Ask about this job'}</a>
+<a href={job.applyUrl || `mailto:${SITE.hrEmail}?subject=${encodeURIComponent('Question about: ' + job.title)}`} {...(job.applyUrl ? { target: '_blank', rel: 'noopener' } : {})} style="background:#1e3278;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:13px 30px;border-radius:4px;">{job.applyUrl ? 'Apply' : `Email ${SITE.hrEmail}`}</a>
 <button type="button" data-job-toggle aria-controls={`job-${job.id}`} style="background:none;border:1px solid #d9e2ee;color:#1e3278;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;padding:11px 18px;border-radius:4px;">Hide full description ↑</button>
 </div>
 </div>
