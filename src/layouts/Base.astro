@@ -35,7 +35,9 @@ const img = image.startsWith('http') ? image : SITE.url + image;
   {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
   <style is:global>
     *{box-sizing:border-box;}
-    body{margin:0;}
+    body{margin:0;text-wrap:pretty;}
+    /* Avoid a lone word on the last line: balance headings and short lines, "pretty" wrapping for body text. */
+    h1,h2,h3,h4,h5,h6,blockquote,figcaption,dt,button{text-wrap:balance;}
     .tll-skip{position:absolute;left:-9999px;top:0;z-index:1000;background:#f5b829;color:#141f4d;font-family:Inter,sans-serif;font-weight:700;padding:10px 16px;}
     .tll-skip:focus{left:8px;top:8px;}
     @keyframes tllfloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
@@ -56,6 +58,49 @@ const img = image.startsWith('http') ? image : SITE.url + image;
         entries.forEach(function (e) { if (e.isIntersecting) { e.target.style.animation = 'tllrise .7s ease both'; io.unobserve(e.target); } });
       }, { threshold: 0.08, rootMargin: '0px 0px -4% 0px' });
       els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+  <script is:inline>
+    // No lone words: keep the last two words of each text block together, and keep
+    // hyphenated words in short headings and labels whole, unless that would overflow.
+    // Off in edit mode (#edit) so edit mode sees the plain text.
+    (function () {
+      if (/edit/.test(location.hash)) return;
+      var NB = '\u00a0', WJ = '\u2060', items = [];
+      function disp(el) { return getComputedStyle(el).display; }
+      function collect() {
+        var all = document.body.querySelectorAll('*');
+        for (var i = 0; i < all.length; i++) {
+          var el = all[i];
+          if (/^(SCRIPT|STYLE|NOSCRIPT|INPUT|TEXTAREA|SELECT|OPTION|CODE|PRE)$/.test(el.tagName) || el.closest('svg')) continue;
+          var d = disp(el); if (d === 'inline' || d === 'contents' || d === 'none') continue;
+          var blockKid = false;
+          for (var k = 0; k < el.children.length; k++) { var dk = disp(el.children[k]); if (dk !== 'inline' && dk !== 'none' && dk !== 'contents') { blockKid = true; break; } }
+          if (blockKid) continue;
+          var text = el.textContent.trim();
+          if (!/\s/.test(text) && text.indexOf('-') < 0) continue;
+          var tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n, last = null, nodes = [];
+          while ((n = tw.nextNode())) { nodes.push(n); if (/\S/.test(n.nodeValue)) last = n; }
+          items.push({ el: el, last: last, hy: text.length <= 60 ? nodes : [] });
+        }
+      }
+      function setNb(it, on) {
+        var n = it.last; if (!n) return; var v = n.nodeValue;
+        var m = on ? /^([\s\S]*\S) (\S+\s*)$/.exec(v) : /^([\s\S]*\S)\u00a0(\S+\s*)$/.exec(v);
+        if (m) n.nodeValue = m[1] + (on ? NB : ' ') + m[2];
+      }
+      function setWj(it, on) {
+        it.hy.forEach(function (n) { var v = n.nodeValue, w = on ? v.replace(/(\w)-(?=\w)/g, '$1-' + WJ) : v.split(WJ).join(''); if (w !== v) n.nodeValue = w; });
+      }
+      function over(el) { return el.scrollWidth > el.clientWidth + 1; }
+      function run() {
+        items.forEach(function (it) {
+          setNb(it, true); setWj(it, true);
+          if (over(it.el)) { setWj(it, false); if (over(it.el)) { setNb(it, false); setWj(it, true); if (over(it.el)) setWj(it, false); } }
+        });
+      }
+      function start() { collect(); run(); var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { items.forEach(function (it) { setNb(it, false); setWj(it, false); }); run(); }, 150); }); }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
     })();
   </script>
   <script is:inline src="/edit-mode.js" defer></script>
