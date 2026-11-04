@@ -48,6 +48,21 @@
   ],
   "redirects": [
     {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/_files/ugd/d543a0_4e7d936a3ecc4f489c29bce47633ce13.pdf",
+      "destination": "/assets/docs/notice-of-privacy-practices-en.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/_files/ugd/d543a0_5a31da5b141c461b9aa36d5eaf315781.pdf",
+      "destination": "/assets/docs/notice-of-privacy-practices-es.pdf",
+      "permanent": true
+    },
+    {
       "source": "/about-us",
       "destination": "/about",
       "permanent": true
