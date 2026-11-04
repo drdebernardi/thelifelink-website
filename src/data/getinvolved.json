@@ -28,12 +28,24 @@
       "body": "Volunteer, attend, and stand with your neighbors at upcoming events."
     }
   ],
-  "internBullets": [
-    "Placements across counseling, case management, and housing",
-    "Supervision from licensed staff",
-    "Flexible terms for students and early-career professionals",
-    "A direct look at whole-person care"
-  ],
+  "interns": {
+    "status": "Currently accepting internship applications for Spring 2027",
+    "intro": "We offer clinical internships for counseling students. We may also have placements in housing and case management.",
+    "clinicalTitle": "Clinical internships",
+    "clinicalBullets": [
+      "For students in the **second placement** of a master's program in **counseling**",
+      "Co-facilitate our Intensive Outpatient Program (IOP): **Monday, Wednesday and Friday, 9 a.m. to 12 p.m.**",
+      "Carry a small caseload of individual clients",
+      "Supervision is by an **LPCC**, so your program must accept that credential",
+      "Join group clinical supervision: **Mondays at 3 p.m., Wednesdays at 1 p.m. and Thursdays at 1 p.m.**",
+      "**In person only.** We do not offer remote internships."
+    ],
+    "otherTitle": "Housing and case management",
+    "otherText": "Placements may be available. Ask us about current openings.",
+    "contactName": "Krista Brening",
+    "contactTitle": "Treatment Services Clinical Manager",
+    "contactEmail": "kbrening@thelifelink.org"
+  },
   "media": [
     "BBC",
     "Esquire",

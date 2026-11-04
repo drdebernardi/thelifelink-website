@@ -61,7 +61,7 @@ The site was audited to WCAG 2.1 AA with zero violations. When changing colors k
 
 - Contact form sends through Formspree. It stays hidden (call-only) until the Formspree address is pasted into `contactFormUrl` in `src/data/site.ts`. No published email by design (spam).
 - Facebook: https://www.facebook.com/thelifelinkorg is set in `src/data/site.ts`. Confirm it opens the public page when signed out.
-- Job Apply links: set `applyUrl` per job in `src/data/jobs.json` to the link for that single job on Indeed (not the company page). Empty means the button reads "Email hr@thelifelink.org" (shows the address, so it works even without a mail app) and opens an email to the HR address (`hrEmail` in site.ts, hr@thelifelink.org). Each posting also shows "Questions about this job? Email ...". This is the only published email on the site, by design.
+- Job Apply links: set `applyUrl` per job in `src/data/jobs.json` to the link for that single job on Indeed (not the company page). Empty means the button reads "Email hr@thelifelink.org" (shows the address, so it works even without a mail app) and opens an email to the HR address (`hrEmail` in site.ts, hr@thelifelink.org). Each posting also shows "Questions about this job? Email ...". Besides hr@, the only other published email is the internship contact (Krista Brening, kbrening@thelifelink.org) in `interns` in src/data/getinvolved.json, added at Michael's request. Do not add other emails without his approval.
 - Old-site URL redirects: add to `vercel.json` once the old URL list is known.
 
 ## Edit mode (typing corrections on the page)
