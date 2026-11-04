@@ -81,11 +81,11 @@
       "items": [
         {
           "title": "Housing Assistance",
-          "img": "/assets/photos/04_housing_success.jpg",
+          "img": "/assets/photos/04_housing_success_v2.jpg",
           "alt": "A man holding up the keys to his new home",
           "body": "Services to help individuals and families who are unhoused find safe and affordable rental housing, and stay successfully housed. Income, specific disability or other guidelines apply.",
           "anchorId": "housing",
-          "bgImg": "url('/assets/photos/04_housing_success.jpg')",
+          "bgImg": "url('/assets/photos/04_housing_success_v2.jpg')",
           "page": "/programs/housing"
         },
         {
