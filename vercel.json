@@ -9,19 +9,193 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/_astro/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/our-history",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/about#leadership",
+      "permanent": true
+    },
+    {
+      "source": "/community-voices",
+      "destination": "/about#testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/you-tube-videos-1/:path*",
+      "destination": "/about#testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/community-feedback",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/get-help-now",
+      "destination": "/programs#get-help",
+      "permanent": true
+    },
+    {
+      "source": "/online-resources",
+      "destination": "/programs#get-help",
+      "permanent": true
+    },
+    {
+      "source": "/guides-1/:path*",
+      "destination": "/programs",
+      "permanent": true
+    },
+    {
+      "source": "/housing-support",
+      "destination": "/programs/housing",
+      "permanent": true
+    },
+    {
+      "source": "/outreach-services",
+      "destination": "/programs/outreach",
+      "permanent": true
+    },
+    {
+      "source": "/the-clubhouse",
+      "destination": "/programs/clubhouse",
+      "permanent": true
+    },
+    {
+      "source": "/clubhouse-philosophy",
+      "destination": "/programs/clubhouse",
+      "permanent": true
+    },
+    {
+      "source": "/clubhouse-chronicles/:path*",
+      "destination": "/programs/clubhouse",
+      "permanent": true
+    },
+    {
+      "source": "/human-trafficking-aftercare",
+      "destination": "/programs/human-trafficking",
+      "permanent": true
+    },
+    {
+      "source": "/substance-abuse-support",
+      "destination": "/programs/treatment",
+      "permanent": true
+    },
+    {
+      "source": "/mental-health-support",
+      "destination": "/programs/treatment",
+      "permanent": true
+    },
+    {
+      "source": "/groups/:path*",
+      "destination": "/programs/treatment",
+      "permanent": true
+    },
+    {
+      "source": "/modalities/intensive-outpatient-program",
+      "destination": "/programs/treatment#iop",
+      "permanent": true
+    },
+    {
+      "source": "/modalities/:path*",
+      "destination": "/programs/treatment",
+      "permanent": true
+    },
+    {
+      "source": "/join-our-team",
+      "destination": "/get-involved",
+      "permanent": true
+    },
+    {
+      "source": "/internship-opportunities",
+      "destination": "/get-involved#internships",
+      "permanent": true
+    },
+    {
+      "source": "/support-our-work",
+      "destination": "/donate",
+      "permanent": true
+    },
+    {
+      "source": "/sponsorship-opportunities",
+      "destination": "/donate",
+      "permanent": true
+    },
+    {
+      "source": "/about-7",
+      "destination": "/impact",
+      "permanent": true
+    },
+    {
+      "source": "/reports/:path*",
+      "destination": "/impact",
+      "permanent": true
+    },
+    {
+      "source": "/events/:path+",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/keep-hope-alive-2025",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/to-your-health-podcasts",
+      "destination": "/events#news",
+      "permanent": true
     }
   ]
 }
