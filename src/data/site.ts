@@ -37,7 +37,7 @@ export const NAV: NavItem[] = [
   { label: 'Programs & Services', href: '/programs', key: 'programs', subs: SITE.programPages ? [
     { label: 'All Programs', href: '/programs' },
     { label: 'Housing', href: '/programs/housing' },
-    { label: 'Community Support (CCSS)', href: '/programs/ccss' },
+    { label: 'Case Management (CCSS)', href: '/programs/ccss' },
     { label: 'Treatment', href: '/programs/treatment' },
     { label: 'Outreach', href: '/programs/outreach' },
     { label: 'Clubhouse', href: '/programs/clubhouse' },

@@ -43,16 +43,16 @@
       ],
       "statement": "A stable home is the first link. Health, work and family all get easier from there.",
       "rentHelp": true,
-      "where": "Housing Department, Saint Michael's Building, 2000 St. Michael's Drive"
+      "where": "Housing Department, St. Michael's Building, 2000 St. Michael's Drive"
     },
     {
       "slug": "ccss",
       "order": 2,
       "short": "CCSS",
-      "menuLabel": "Community Support (CCSS)",
+      "menuLabel": "Case Management (CCSS)",
       "tag": "Comprehensive Community Support Services",
       "color": "#3a8fd4",
-      "title": "Community Support Services (CCSS) | The Life Link",
+      "title": "Comprehensive Community Support Services (CCSS) | The Life Link",
       "description": "Comprehensive Community Support Services (CCSS) at The Life Link: case management, skills training, benefits help and peer support delivered in homes and neighborhoods across Santa Fe.",
       "h1a": "Support that comes",
       "h1b": "to where you live.",
@@ -67,7 +67,7 @@
       "introHead": "One person, one plan, every part of life.",
       "intro": [
         "Recovery is not only about symptoms. It is about paying rent, getting to appointments, keeping benefits, and having people in your corner. CCSS brings all of that into a single plan built around the person's own goals.",
-        "Our community support workers coordinate housing, finances, health care and community resources, and many clients also work with a Certified Peer Support Worker who has walked their own road to recovery."
+        "Our case management team coordinates housing, finances, health care and community resources, and many clients also work with a Certified Peer Support Worker who has walked their own road to recovery."
       ],
       "servicesHead": "What CCSS includes",
       "services": [
@@ -86,7 +86,7 @@
       ],
       "statement": "Trauma and poverty do not happen in silos, and healing cannot happen in silos either.",
       "rentHelp": false,
-      "where": "Saint Michael's Building, 2000 St. Michael's Drive, and in the community"
+      "where": "St. Michael's Building, 2000 St. Michael's Drive, and in the community"
     },
     {
       "slug": "treatment",
@@ -96,7 +96,7 @@
       "tag": "Treatment Services",
       "color": "#3a8fd4",
       "title": "Treatment Services | The Life Link",
-      "description": "Therapy, group counseling, intensive outpatient treatment, psychiatry and Suboxone care at The Life Link, a licensed Community Mental Health Center in Santa Fe. Walk-in Treat First access, in English and Spanish.",
+      "description": "Therapy, group counseling, intensive outpatient treatment, psychiatry and Suboxone care at The Life Link, a licensed Community Mental Health Center in Santa Fe. Walk-in Treat First access (first come, first served), in English and Spanish.",
       "h1a": "Treatment that starts",
       "h1b": "the day you walk in.",
       "lead": "The Life Link is a licensed Community Mental Health Center. We treat mental illness, substance use disorders and trauma together, in English and Spanish, and we start care without long waits or red tape.",
@@ -109,7 +109,7 @@
       ],
       "introHead": "Treat first. Paperwork second.",
       "intro": [
-        "Through our Treat First model, people can walk in without an appointment and begin care the same day. The moment someone asks for help is the moment that matters most, and we do not want to lose it to a waiting list.",
+        "Through our Treat First model, people can walk in without an appointment and begin care the same day. Walk-in care is first come, first served, so arriving at the start of the walk-in window gives the best chance of being seen. The moment someone asks for help is the moment that matters most, and we do not want to lose it to a waiting list.",
         "Half of the people we treat live with mental illness and substance use at the same time. We treat both together, using approaches with strong research behind them, and coordinate with housing and case management so treatment does not stop at the clinic door."
       ],
       "servicesHead": "Our treatment services",
@@ -129,7 +129,7 @@
       ],
       "statement": "The moment someone asks for help is the moment that matters most.",
       "rentHelp": false,
-      "where": "Las Alas Building, 1331 Declovina Street (therapy and IOP), and Saint Michael's Building, 2000 St. Michael's Drive (psychiatry and Suboxone)"
+      "where": "Las Alas Building, 1331 Declovina Street (therapy and IOP), and St. Michael's Building, 2000 St. Michael's Drive (psychiatry and Suboxone)"
     },
     {
       "slug": "outreach",
@@ -266,7 +266,7 @@
         "siteLabel": "Visit 505getfree.org"
       },
       "rentHelp": false,
-      "where": "Saint Michael's Building, 2000 St. Michael's Drive, with services statewide"
+      "where": "St. Michael's Building, 2000 St. Michael's Drive, with services statewide"
     }
   ]
 }

@@ -174,7 +174,7 @@
       "c": "#2ab5a0",
       "title": "Mental Health",
       "big": "935",
-      "sub": "people enrolled in community support services",
+      "sub": "people enrolled in case management (CCSS) services",
       "items": [
         {
           "b": "310 people",
@@ -182,15 +182,11 @@
         },
         {
           "b": "247 Clubhouse members",
-          "t": "and 6,728 drop-in visits at the Clubhouse and La Luz"
+          "t": "and 6,728 visits to the Clubhouse"
         },
         {
           "b": "367 people",
           "t": "in individual therapy; 263 in group"
-        },
-        {
-          "b": "Just 1",
-          "t": "staff-initiated psychiatric hospitalization or ER visit all year"
         }
       ]
     },
@@ -236,7 +232,7 @@
         },
         {
           "b": "100%",
-          "t": "of current clients in benefits, work, or school within a year (goal: 60%)"
+          "t": "of current clients on benefits, working, or in school within a year (goal: 60%)"
         },
         {
           "b": "3.4×",
@@ -252,7 +248,7 @@
     },
     {
       "num": "2,343",
-      "txt": "individual treatment and recovery plans created or updated with clients"
+      "txt": "Service treatment goal plans created or updated with clients"
     },
     {
       "num": "998",
@@ -263,7 +259,7 @@
     {
       "label": "Services Attended · FY2026",
       "title": "Where 27,000+ visits went",
-      "body": "Community support and the Clubhouse carry the heaviest load — care that happens in daily life, not only in a therapist's office.",
+      "body": "Case management (CCSS) and the Clubhouse carry the heaviest load — care that happens in daily life, not only in a therapist's office.",
       "note": "",
       "rows": [
         {
@@ -274,7 +270,7 @@
           "c": "#2ab5a0"
         },
         {
-          "l": "Clubhouse & La Luz drop-in",
+          "l": "The Clubhouse",
           "s": "",
           "v": "6,728",
           "w": "58.2%",
@@ -339,15 +335,15 @@
       ]
     },
     {
-      "label": "Community Support · FY2026",
+      "label": "Case Management · FY2026",
       "title": "Many teams, one front door",
-      "body": "Community support workers are the connective tissue of The Life Link. Each team focuses on a different kind of need.",
-      "note": "935 unique clients across all teams — 548 of them new this year. Clients often move between teams as needs change.",
+      "body": "Case managers are the connective tissue of The Life Link. Each team focuses on a different kind of need.",
+      "note": "935 unique clients across all teams — 548 of them new this year. Clients often move between teams as needs change, so team counts may overlap.",
       "rows": [
         {
-          "l": "Comprehensive Community Support Services (CCSS)",
-          "s": "Case management & skills",
-          "v": "633",
+          "l": "Case management (CCSS) & linked housing programs",
+          "s": "Includes Linkages, Opening Doors, Sojourners and Assisted Outpatient",
+          "v": "823",
           "w": "100.0%",
           "c": "#2ab5a0"
         },
@@ -355,49 +351,14 @@
           "l": "Treat First",
           "s": "Walk-in, same day · served",
           "v": "419",
-          "w": "66.2%",
+          "w": "50.9%",
           "c": "#2ab5a0"
         },
         {
           "l": "SOAR",
           "s": "Disability benefits access",
           "v": "295",
-          "w": "46.6%",
-          "c": "#f5b829"
-        },
-        {
-          "l": "Linkages",
-          "s": "Housing for serious mental illness",
-          "v": "128",
-          "w": "20.2%",
-          "c": "#3a8fd4"
-        },
-        {
-          "l": "Opening Doors",
-          "s": "",
-          "v": "31",
-          "w": "4.9%",
-          "c": "#7dc242"
-        },
-        {
-          "l": "La Luz",
-          "s": "Supportive housing residents",
-          "v": "23",
-          "w": "3.6%",
-          "c": "#3a8fd4"
-        },
-        {
-          "l": "Sojourners Advocacy Cafe",
-          "s": "Unhoused women & families",
-          "v": "5",
-          "w": "1.5%",
-          "c": "#7dc242"
-        },
-        {
-          "l": "Assisted Outpatient",
-          "s": "Court-ordered community treatment",
-          "v": "3",
-          "w": "1.5%",
+          "w": "35.8%",
           "c": "#f5b829"
         }
       ]
@@ -405,7 +366,7 @@
   ],
   "mix": [
     {
-      "l": "Community support",
+      "l": "Case management (CCSS)",
       "note": "53% outside the office",
       "segs": [
         {
@@ -504,7 +465,7 @@
       "c": "#2ab5a0",
       "num": "70",
       "unit": "min",
-      "txt": "average community support and housing-support visit"
+      "txt": "average case management and housing-support visit"
     },
     {
       "c": "#3a8fd4",
@@ -520,11 +481,6 @@
     }
   ],
   "sat": [
-    {
-      "l": "Community Support",
-      "v": "4.61",
-      "t": "\"I like the services I received\" · out of 5"
-    },
     {
       "l": "Outpatient Therapy",
       "v": "4.61",
@@ -572,7 +528,7 @@
     {
       "c": "#2ab5a0",
       "num": "94%",
-      "txt": "of our community support and Clubhouse staff bring lived experience to the work"
+      "txt": "of our case management and Clubhouse staff bring lived experience to the work"
     },
     {
       "c": "#3a8fd4",
@@ -659,7 +615,7 @@
     {
       "n": "01",
       "b": "A permanent home of our own",
-      "t": "After more than 25 years of renting, The Life Link purchased a new main building. Community support, housing, psychiatry, and Treat First services move under one roof in September 2026."
+      "t": "After more than 25 years of renting, The Life Link purchased a new main building. Case management, housing, psychiatry, and Treat First services move under one roof in September 2026."
     },
     {
       "n": "02",
@@ -676,13 +632,13 @@
     {
       "c": "#3a8fd4",
       "num": "11,559",
-      "txt": "community support visits — more than half outside the office",
+      "txt": "case management visits — more than half outside the office",
       "link": true
     },
     {
       "c": "#2ab5a0",
       "num": "476",
-      "txt": "walk-in, same-day assessments through Treat First — no appointment, no waitlist",
+      "txt": "walk-in, same-day assessments through Treat First — no appointment, no waitlist (first come, first served; arrive early)",
       "link": true
     },
     {
