@@ -8,7 +8,7 @@ import '@fontsource/dm-serif-display/400.css';
 import '@fontsource/dm-serif-display/400-italic.css';
 import Analytics from '@vercel/analytics/astro';
 import { SITE } from '../data/site';
-const { title, description, path = '/', image = '/assets/tll-logo.png', jsonLd } = Astro.props;
+const { title, description, path = '/', image = '/assets/tll-logo.png', jsonLd, noindex = false } = Astro.props;
 const url = SITE.url + (path === '/' ? '/' : path);
 const img = image.startsWith('http') ? image : SITE.url + image;
 ---
@@ -20,6 +20,7 @@ const img = image.startsWith('http') ? image : SITE.url + image;
   <title>{title}</title>
   <meta name="description" content={description}>
   <link rel="canonical" href={url}>
+  {noindex && <meta name="robots" content="noindex, nofollow">}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Life Link">
   <meta property="og:title" content={title}>

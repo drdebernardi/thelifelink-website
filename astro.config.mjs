@@ -5,5 +5,6 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
   build: { format: 'file' },
-  integrations: [sitemap()],
+  // /clientpaperwork is a hidden page (reached only by QR code); keep it out of the sitemap.
+  integrations: [sitemap({ filter: (page) => !page.includes('/clientpaperwork') })],
 });
