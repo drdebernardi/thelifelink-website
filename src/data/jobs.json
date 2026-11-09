@@ -214,6 +214,165 @@
           "Do you currently work for The Life Link, or have you worked for The Life Link in the past?"
         ]
       }
+    },
+    {
+      "id": "front-desk-associate",
+      "active": true,
+      "title": "Front Desk Associate (Bilingual Spanish Preferred)",
+      "note": "Join our welcoming, compassionate, and client-centered team!",
+      "applyUrl": "https://www.indeed.com/job/full-time-front-desk-client-services-associate-bilingual-spanish-preferred-f6fa8f53eba50d8b",
+      "tags": [
+        "$18.00–$21.00 / hour",
+        "Full-time · 36 hrs paid as 40",
+        "Front Desk",
+        "In person · Santa Fe, NM"
+      ],
+      "showWellbeing": true,
+      "columns": [
+        [
+          {
+            "heading": "About The Life Link",
+            "paragraphs": [
+              "The Life Link is a nonprofit organization serving individuals and families in Santa Fe who are experiencing housing instability, poverty, substance use, mental health challenges, and other barriers to self-sufficiency.",
+              "Through housing, employment, supportive services, and behavioral health programs, we help people build stability and move toward their goals. Our commitment to quality care has also been recognized by the Santa Fe Reporter, which named The Life Link the #1 Mental Health Provider."
+            ]
+          },
+          {
+            "heading": "About the Position",
+            "paragraphs": [
+              "The Front Desk Associate is the first point of contact for clients, visitors, and callers at The Life Link. Under the supervision of the Medical Records/Admin Support Supervisor, the Front Desk Associate creates a welcoming, trauma-informed front desk experience by greeting and directing clients and visitors, answering and routing phone calls, scheduling appointments, and handling general office tasks. This position is based at our Saint Michaels Drive office, with occasional coverage at our Las Alas office during meal breaks and staff absences.",
+              "This position also occasionally collects client urinalysis (UA) specimens. Training is provided. It is a great fit for someone who enjoys helping people, stays calm in a busy environment, and takes privacy seriously."
+            ]
+          },
+          {
+            "heading": "Compensation",
+            "paragraphs": [
+              "$18.00-$21.00 per hour, based on experience. Bilingual English/Spanish speakers are placed higher within this range. The maximum starting rate is $21.00 per hour."
+            ]
+          },
+          {
+            "heading": "What We Offer",
+            "bullets": [
+              "36-hour workweek paid as 40 hours",
+              "10% of paid hours designated for self-care",
+              "Weekly complimentary yoga during paid work time",
+              "401(k) with employer matching",
+              "Health insurance",
+              "Dental insurance",
+              "Vision insurance",
+              "Life insurance",
+              "Employee assistance program",
+              "Paid time off"
+            ],
+            "dot": "gold"
+          }
+        ],
+        [
+          {
+            "heading": "What You'll Do",
+            "bullets": [
+              "Greet clients and visitors courteously, determine their needs, and direct them to and notify the proper person or office.",
+              "Answer all incoming phone calls promptly and courteously, and direct calls to the appropriate extension or take messages.",
+              "Schedule individual treatment appointments for clients.",
+              "Enter notes and client information into our electronic medical record system accurately and on time.",
+              "Receive, sort, and distribute incoming mail, packages, and courier deliveries.",
+              "Perform general office tasks, including typing memos, correspondence, reports, and signs; data entry; general office filing; copying; and faxing.",
+              "Open and close the assigned reception area.",
+              "Provide front desk coverage at our Las Alas office as assigned, including during meal breaks and staff absences.",
+              "Collect client urinalysis (UA) specimens as needed, and complete testing documentation accurately and on time. Training is provided.",
+              "Use trauma-informed crisis management and de-escalation skills, as needed.",
+              "Maintain strict confidentiality of client Protected Health Information (PHI) and substance use disorder treatment records in accordance with HIPAA and 42 CFR Part 2.",
+              "Attend administrative staff meetings and required training and perform other duties as assigned."
+            ],
+            "dot": "teal"
+          }
+        ],
+        [
+          {
+            "heading": "What We're Looking For — Required",
+            "bullets": [
+              {
+                "t": "At least 18 years of age.",
+                "sub": false
+              },
+              {
+                "t": "High school diploma or GED.",
+                "sub": false
+              },
+              {
+                "t": "Minimum of one year of experience in an office, reception, or customer service setting.",
+                "sub": false
+              },
+              {
+                "t": "Strong interpersonal, phone etiquette, and customer service skills.",
+                "sub": false
+              },
+              {
+                "t": "Strong communication skills, attention to detail, accuracy, and punctuality.",
+                "sub": false
+              },
+              {
+                "t": "Ability to multitask in a complex, high-volume environment while maintaining a professional, calm demeanor.",
+                "sub": false
+              },
+              {
+                "t": "Trauma-informed crisis management and de-escalation skills.",
+                "sub": false
+              },
+              {
+                "t": "Ability to work with sensitivity to trauma, gender, ethnicity, culture, and other factors that affect the people we serve.",
+                "sub": false
+              },
+              {
+                "t": "Understanding of confidentiality requirements under HIPAA and 42 CFR Part 2.",
+                "sub": false
+              },
+              {
+                "t": "Proficiency in, or ability to learn, the agency's electronic medical record system.",
+                "sub": false
+              },
+              {
+                "t": "Basic familiarity with mental health and substance use terminology, or willingness to learn. Training is provided.",
+                "sub": false
+              },
+              {
+                "t": "Basic word processing, spreadsheet, and internet skills.",
+                "sub": false
+              },
+              {
+                "t": "Ability to sit for extended periods and lift up to 20 pounds. This position may involve possible exposure to bodily fluids.",
+                "sub": false
+              },
+              {
+                "t": "Availability by phone in case of a client or agency emergency.",
+                "sub": false
+              },
+              {
+                "t": "Successful completion of a criminal background check and drug screen.",
+                "sub": false
+              }
+            ],
+            "dot": "navy"
+          }
+        ],
+        [
+          {
+            "heading": "Preferred",
+            "bullets": [
+              "Bilingual in English and Spanish (placed higher within the posted pay range).",
+              "Experience working in a health care or behavioral health setting."
+            ],
+            "dot": "blue"
+          },
+          {
+            "heading": "Additional Requirements",
+            "paragraphs": [
+              "Employment is contingent upon successful completion of a criminal background check and drug screening. The Life Link requires original source verification of education and professional licensure or certification, as applicable, before hire.",
+              "**Work Location:** In person, Santa Fe, New Mexico"
+            ]
+          }
+        ]
+      ]
     }
   ]
 }
