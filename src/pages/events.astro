@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import data from '../data/events.json';
 import newsData from '../data/news.json';
+import Newsletter from '../components/Newsletter.astro';
 const { stories, staff, board } = data;
 const news = newsData.items;
 const colors = { navy: ['#1e3278', '#1e3278'], gold: ['#9e6c00', '#c98a00'], green: ['#4d8426', '#5a9a2c'], blue: ['#2f7abf', '#2f7abf'] };
@@ -51,6 +52,8 @@ const colors = { navy: ['#1e3278', '#1e3278'], gold: ['#9e6c00', '#c98a00'], gre
 <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(30px,4vw,44px);margin:0;position:relative;">Stay tuned for <span style="color:#f5b829;font-style:italic;">upcoming events.</span></h2>
 </div>
 </section>
+
+<Newsletter source="agency" />
 
 <section id="news" style="background:#f4f7fb;scroll-margin-top:120px;">
 <div style="max-width:1200px;margin:0 auto;padding:76px 24px;">

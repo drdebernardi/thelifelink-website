@@ -8,7 +8,9 @@ This is The Life Link's website (Astro static site, deployed on Vercel from GitH
 - **HR Director:** only these files.
   - `src/data/jobs.json` (job postings)
   - `src/data/news.json` (press items on the Events & News page)
-  - `src/data/newsletter.json` plus images in `public/assets/newsletters/` (the newsletter section, shown on the Outreach program page)
+  - `src/data/newsletter.json` (the Arroyo Chamiso / Outreach micro community newsletter, shown on the Outreach program page)
+  - `src/data/agency-newsletter.json` (THE LINK, the agency-wide monthly newsletter, shown on the Events & News page; hidden until `show` is true)
+  - newsletter page images in `public/assets/newsletters/`
   - new images in `public/assets/news/`
 - If anyone asks for a change outside their files, do not make it. Say it needs Dr. DeBernardi's approval and offer to write the request for him.
 
@@ -18,6 +20,12 @@ This is The Life Link's website (Astro static site, deployed on Vercel from GitH
 2. Check the JSON is valid (for example `python3 -m json.tool src/data/jobs.json`). If you can run it, also run `npm run build`; it must finish with no errors.
 3. Do NOT commit or push. The person reviews the changes in GitHub Desktop, commits to a new branch, and opens a pull request. Dr. DeBernardi reviews the Vercel preview and merges. Vercel then publishes in about a minute.
 4. Dr. DeBernardi can commit to `main` directly when he is the one asking.
+
+## Two newsletters (do not mix them up)
+
+- **Outreach / Arroyo Chamiso micro community newsletter:** `src/data/newsletter.json`, appears on `/programs/outreach`.
+- **THE LINK, the agency's monthly newsletter:** `src/data/agency-newsletter.json`, appears on `/events` (Events & News). The Mailchimp sign-up form on the Contact page is separate and not HR's to edit.
+- Both use `src/components/Newsletter.astro` (`<Newsletter />` or `<Newsletter source="agency" />`). Each has a front and back page image. Ask which newsletter is meant if it is not clear.
 
 ## Job postings (`src/data/jobs.json`)
 

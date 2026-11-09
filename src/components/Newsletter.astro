@@ -1,10 +1,16 @@
 ---
-// Program newsletter section. Content lives in src/data/newsletter.json (set "show": false to hide it).
-// Currently used on the Outreach program page (src/pages/programs/[slug].astro).
-import nl from '../data/newsletter.json';
+// Newsletter section, used twice:
+//  - <Newsletter /> on the Outreach program page: Arroyo Chamiso micro community newsletter, content in src/data/newsletter.json
+//  - <Newsletter source="agency" /> on Events & News: the agency-wide monthly newsletter "THE LINK", content in src/data/agency-newsletter.json
+// Set "show": false in the data file to hide a section.
+import programNl from '../data/newsletter.json';
+import agencyNl from '../data/agency-newsletter.json';
+const { source = 'program' } = Astro.props;
+const nl = source === 'agency' ? agencyNl : programNl;
+const sectionId = source === 'agency' ? 'the-link-newsletter' : 'acmc-newsletter';
 ---
 {nl.show && (<Fragment>
-<section id="acmc-newsletter" style="background:#141f4d;color:#ffffff;position:relative;overflow:hidden;scroll-margin-top:120px;">
+<section id={sectionId} style="background:#141f4d;color:#ffffff;position:relative;overflow:hidden;scroll-margin-top:120px;">
 <svg width="640" height="640" viewBox="0 0 640 640" fill="none" aria-hidden="true" style="position:absolute;left:-220px;bottom:-240px;opacity:0.06;pointer-events:none;"><circle cx="320" cy="320" r="280" stroke="#ffffff" stroke-width="40"></circle><circle cx="320" cy="320" r="150" stroke="#ffffff" stroke-width="40"></circle></svg>
 <div style="max-width:1200px;margin:0 auto;padding:76px 24px;display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center;position:relative;">
 <div style="flex:1 1 360px;min-width:0;" data-reveal>

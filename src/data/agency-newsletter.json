@@ -1,0 +1,22 @@
+{
+  "_help": "The agency-wide monthly newsletter, THE LINK, shown on the Events & News page (/events). This is NOT the Arroyo Chamiso (Outreach) newsletter, which is in newsletter.json. To post a new issue: put the front and back page images in public/assets/newsletters/, then change the label, headline, paragraphs and file names below. Set show to false to hide the whole section.",
+  "show": false,
+  "label": "THE LINK \u00b7 Monthly Newsletter \u00b7 Month Year",
+  "headline": "News from",
+  "headlineAccent": "The Life Link.",
+  "paragraphs": [
+    "First short paragraph about this month's issue.",
+    "Second short paragraph about this month's issue."
+  ],
+  "button": "Read the newsletter",
+  "front": {
+    "file": "/assets/newsletters/the-link-month-year-front.jpg",
+    "alt": "THE LINK newsletter, front page",
+    "download": "THE-LINK-Month-Year-Front.jpg"
+  },
+  "back": {
+    "file": "/assets/newsletters/the-link-month-year-back.jpg",
+    "alt": "THE LINK newsletter, back page",
+    "download": "THE-LINK-Month-Year-Back.jpg"
+  }
+}
