@@ -260,10 +260,12 @@
       ],
       "statement": "A text sent in a moment of privacy can be the difference between help and continued exploitation.",
       "hotline": {
-        "head": "If you or someone you know needs help",
-        "body": "Call or text 505-GET-FREE (505-438-3733). Survivors, family members, and professionals can all reach out.",
+        "head": "505 GET FREE, New Mexico's human trafficking hotline.",
+        "body": "Free, confidential, 24/7. Call or text (505) 438-3733 to get help or report a concern. At 505getfree.org you'll also find shelters, legal aid and survivor services across the state.",
         "site": "https://505getfree.org",
-        "siteLabel": "Visit 505getfree.org"
+        "siteLabel": "Visit 505getfree.org",
+        "logo": "/assets/partners/505getfree-logo.png",
+        "logoAlt": "505 GET FREE logo: a hummingbird holding a key"
       },
       "rentHelp": false,
       "where": "St. Michael's Building, 2000 St. Michael's Drive, with services statewide"

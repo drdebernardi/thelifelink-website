@@ -125,16 +125,21 @@ const isText = p.slug === 'human-trafficking';
 </section>
 
 {p.hotline && (
-<section style="max-width:1200px;margin:0 auto;padding:72px 24px 0;">
-<div data-reveal style="background:#f5b829;color:#141f4d;border-radius:18px;padding:36px 36px;display:flex;flex-wrap:wrap;gap:20px 36px;align-items:center;justify-content:space-between;">
+<section style="max-width:1200px;margin:0 auto;padding:72px 24px 0;" aria-labelledby="hotline-head">
+<div data-reveal class="tll-hotline" style={`background:#fff;border:1px solid #e4ebf4;border-top:6px solid ${p.color};border-radius:18px;padding:36px 36px;display:flex;flex-wrap:wrap;gap:24px 44px;align-items:center;box-shadow:0 24px 50px -36px rgba(30,50,120,0.5);`}>
+{p.hotline.logo && (
+<a href={p.hotline.site} target="_blank" rel="noopener" style="flex:0 1 340px;min-width:220px;display:block;">
+<img src={p.hotline.logo} alt={p.hotline.logoAlt} width="797" height="440" loading="lazy" style="display:block;width:100%;height:auto;" />
+</a>
+)}
 <div style="flex:1 1 420px;">
-<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0 0 10px;font-weight:400;">{p.hotline.head}</h2>
-<p style="font-size:16px;line-height:1.6;margin:0;">{p.hotline.body}</p>
-</div>
+<h2 id="hotline-head" style="font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,34px);line-height:1.2;margin:0 0 12px;font-weight:400;color:#141f4d;text-wrap:balance;">{p.hotline.head}</h2>
+<p style="font-size:16px;line-height:1.65;margin:0 0 22px;color:#3a4256;text-wrap:pretty;">{p.hotline.body}</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;">
+<a href={p.hotline.site} target="_blank" rel="noopener" style="background:#f5b829;color:#141f4d;font-weight:700;font-size:15px;text-decoration:none;padding:14px 22px;border-radius:4px;">{p.hotline.siteLabel} <span aria-hidden="true">&rarr;</span></a>
 <a href={`tel:${p.phone.tel}`} style="background:#141f4d;color:#fff;font-weight:700;font-size:15px;text-decoration:none;padding:14px 22px;border-radius:4px;">Call (505) GET-FREE</a>
 <a href={`sms:${p.phone.tel}`} style="background:#141f4d;color:#fff;font-weight:700;font-size:15px;text-decoration:none;padding:14px 22px;border-radius:4px;">Text (505) GET-FREE</a>
-<a href={p.hotline.site} target="_blank" rel="noopener" style="background:transparent;color:#141f4d;font-weight:700;font-size:15px;text-decoration:none;padding:13px 22px;border-radius:4px;border:2px solid #141f4d;">{p.hotline.siteLabel}</a>
+</div>
 </div>
 </div>
 </section>
