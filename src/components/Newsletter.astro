@@ -2,12 +2,21 @@
 // Newsletter section, used twice:
 //  - <Newsletter /> on the Outreach program page: Arroyo Chamiso micro community newsletter, content in src/data/newsletter.json
 //  - <Newsletter source="agency" /> on Events & News: the agency-wide monthly newsletter "THE LINK", content in src/data/agency-newsletter.json
-// Set "show": false in the data file to hide a section.
+// The featured (newest) issue is the top-level fields; older issues live in the "archive" list and show as a "Past issues" strip below.
+// Set "show": false in the data file to hide a section (the archive hides with it).
 import programNl from '../data/newsletter.json';
 import agencyNl from '../data/agency-newsletter.json';
 const { source = 'program' } = Astro.props;
-const nl = source === 'agency' ? agencyNl : programNl;
+const nl: any = source === 'agency' ? agencyNl : programNl;
 const sectionId = source === 'agency' ? 'the-link-newsletter' : 'acmc-newsletter';
+const archiveId = source === 'agency' ? 'the-link-archive' : 'acmc-archive';
+const archive: any[] = (nl.archive ?? []).filter((i: any) => i && i.front && i.back);
+// issues[0] is the featured issue; issues[1..] are the archive, newest first
+const issues = [{ label: nl.issueLabel ?? '', front: nl.front, back: nl.back, pdf: nl.pdf ?? '' }, ...archive];
+const SHOWN = 6;
+const recent = archive.slice(0, SHOWN);
+const older = archive.slice(SHOWN);
+---
 ---
 {nl.show && (<Fragment>
 <section id={sectionId} style="background:#141f4d;color:#ffffff;position:relative;overflow:hidden;scroll-margin-top:120px;">
@@ -22,31 +31,83 @@ const sectionId = source === 'agency' ? 'the-link-newsletter' : 'acmc-newsletter
 <p style="font-size:16.5px;line-height:1.65;color:#c9d2ea;margin:0 0 14px;">{nl.paragraphs[0]}</p>
 <p style="font-size:16.5px;line-height:1.65;color:#c9d2ea;margin:0 0 26px;">{nl.paragraphs[1]}</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;">
-<button data-nl-open="front" style="background:#f5b829;color:#141f4d;font-family:inherit;font-weight:700;font-size:15px;border:none;cursor:pointer;padding:13px 22px;border-radius:4px;">{nl.button}</button>
+<button data-nl-open="front" data-nl-issue="0" style="background:#f5b829;color:#141f4d;font-family:inherit;font-weight:700;font-size:15px;border:none;cursor:pointer;padding:13px 22px;border-radius:4px;">{nl.button}</button>
 <a href={nl.front.file} download={nl.front.download} style="background:none;border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-weight:600;font-size:14.5px;text-decoration:none;padding:12px 18px;border-radius:4px;">Download front</a>
 <a href={nl.back.file} download={nl.back.download} style="background:none;border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-weight:600;font-size:14.5px;text-decoration:none;padding:12px 18px;border-radius:4px;">Download back</a>
+{nl.pdf && <a href={nl.pdf} download style="background:none;border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-weight:600;font-size:14.5px;text-decoration:none;padding:12px 18px;border-radius:4px;">Download PDF</a>}
+{archive.length > 0 && <a href={`#${archiveId}`} style="background:none;border:none;color:#f5b829;font-weight:700;font-size:14.5px;text-decoration:underline;text-underline-offset:3px;padding:12px 6px;">Past issues &darr;</a>}
 </div>
 </div>
 <div style="flex:1 1 460px;min-width:0;display:flex;gap:18px;" data-reveal>
-<button data-nl-open="front" aria-label="Enlarge newsletter front page" style="flex:1 1 0;min-width:0;padding:0;border:none;background:none;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;align-items:stretch;">
+<button data-nl-open="front" data-nl-issue="0" aria-label="Enlarge newsletter front page" style="flex:1 1 0;min-width:0;padding:0;border:none;background:none;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;align-items:stretch;">
 <img src={nl.front.file} alt={nl.front.alt} style="display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 24px 48px -18px rgba(0,0,0,0.6);transform:rotate(-1.5deg);" />
 <span style="font-size:12.5px;color:#a9b7e0;font-weight:600;font-family:'Inter',sans-serif;">Front · click to enlarge</span>
 </button>
-<button data-nl-open="back" aria-label="Enlarge newsletter back page" style="flex:1 1 0;min-width:0;padding:0;border:none;background:none;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;align-items:stretch;margin-top:28px;">
+<button data-nl-open="back" data-nl-issue="0" aria-label="Enlarge newsletter back page" style="flex:1 1 0;min-width:0;padding:0;border:none;background:none;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;align-items:stretch;margin-top:28px;">
 <img src={nl.back.file} alt={nl.back.alt} style="display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 24px 48px -18px rgba(0,0,0,0.6);transform:rotate(1.5deg);" />
 <span style="font-size:12.5px;color:#a9b7e0;font-weight:600;font-family:'Inter',sans-serif;">Back · click to enlarge</span>
 </button>
 </div>
 </div>
 </section>
-<div id="nl-zoom" data-nl={JSON.stringify({ front: nl.front, back: nl.back })} data-nl-close hidden style="position:fixed;inset:0;z-index:1000;background:rgba(10,16,40,0.92);overflow:auto;flex-direction:column;align-items:center;padding:20px 16px 40px;">
+{archive.length > 0 && (
+<section id={archiveId} aria-labelledby="nl-archive-title" style="background:#f4f7fb;scroll-margin-top:120px;">
+<div style="max-width:1200px;margin:0 auto;padding:56px 24px 64px;">
+<div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;">
+<span style="width:22px;height:3px;background:#f5b829;border-radius:2px;"></span>
+<span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#4a5a86;font-weight:700;">Newsletter archive</span>
+</div>
+<h2 id="nl-archive-title" style="font-family:'DM Serif Display',serif;font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0 0 26px;font-weight:400;color:#141f4d;">Past issues</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:20px;" data-reveal>
+{recent.map((i, n) => { const idx = n + 1; return (
+<article style="background:#ffffff;border:1px solid #dde4f0;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;">
+<button type="button" data-nl-open="front" data-nl-issue={String(idx)} aria-label={`View the ${i.label} newsletter`} style="padding:0;border:none;background:#e9edf5;cursor:zoom-in;display:block;">
+<img src={i.thumb || i.front.file} alt={i.front.alt} loading="lazy" decoding="async" width="400" height="518" style="display:block;width:100%;height:auto;" />
+</button>
+<div style="padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px;">
+<h3 style="margin:0;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;color:#141f4d;">{i.label}</h3>
+<div style="display:flex;flex-wrap:wrap;gap:8px;">
+<button type="button" data-nl-open="front" data-nl-issue={String(idx)} style="background:#141f4d;color:#ffffff;font-family:inherit;font-weight:600;font-size:13.5px;border:none;cursor:pointer;padding:8px 14px;border-radius:4px;">View</button>
+{i.pdf && <a href={i.pdf} download style="border:1px solid #c5cee3;color:#141f4d;font-weight:600;font-size:13.5px;text-decoration:none;padding:7px 13px;border-radius:4px;">PDF</a>}
+</div>
+</div>
+</article>
+); })}
+</div>
+{older.length > 0 && (
+<details style="margin-top:24px;">
+<summary style="cursor:pointer;font-weight:700;color:#141f4d;font-size:15px;padding:8px 0;">Older issues ({older.length})</summary>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:20px;margin-top:16px;">
+{older.map((i, n) => { const idx = n + SHOWN + 1; return (
+<article style="background:#ffffff;border:1px solid #dde4f0;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;">
+<button type="button" data-nl-open="front" data-nl-issue={String(idx)} aria-label={`View the ${i.label} newsletter`} style="padding:0;border:none;background:#e9edf5;cursor:zoom-in;display:block;">
+<img src={i.thumb || i.front.file} alt={i.front.alt} loading="lazy" decoding="async" width="400" height="518" style="display:block;width:100%;height:auto;" />
+</button>
+<div style="padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px;">
+<h3 style="margin:0;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;color:#141f4d;">{i.label}</h3>
+<div style="display:flex;flex-wrap:wrap;gap:8px;">
+<button type="button" data-nl-open="front" data-nl-issue={String(idx)} style="background:#141f4d;color:#ffffff;font-family:inherit;font-weight:600;font-size:13.5px;border:none;cursor:pointer;padding:8px 14px;border-radius:4px;">View</button>
+{i.pdf && <a href={i.pdf} download style="border:1px solid #c5cee3;color:#141f4d;font-weight:600;font-size:13.5px;text-decoration:none;padding:7px 13px;border-radius:4px;">PDF</a>}
+</div>
+</div>
+</article>
+); })}
+</div>
+</details>
+)}
+</div>
+</section>
+)}
+<div id="nl-zoom" data-nl={JSON.stringify(issues)} data-nl-close hidden style="position:fixed;inset:0;z-index:1000;background:rgba(10,16,40,0.92);overflow:auto;flex-direction:column;align-items:center;padding:20px 16px 40px;">
 <div data-nl-stop style="position:sticky;top:0;z-index:2;width:100%;max-width:1000px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:10px 0 16px;">
 <div style="display:flex;gap:8px;">
 <button type="button" class="nl-tab" data-nl-tab="front">Front</button>
 <button type="button" class="nl-tab" data-nl-tab="back">Back</button>
+<span id="nl-title" style="align-self:center;color:#c9d2ea;font-size:14px;font-weight:600;margin-left:6px;"></span>
 </div>
 <div style="display:flex;gap:8px;">
 <a id="nl-download" href={nl.front.file} download={nl.front.download} style="background:#f5b829;color:#141f4d;font-weight:700;font-size:14px;text-decoration:none;padding:10px 16px;border-radius:4px;">Download</a>
+<a id="nl-pdf" href="#" download hidden style="background:#ffffff;color:#141f4d;font-weight:700;font-size:14px;text-decoration:none;padding:10px 16px;border-radius:4px;">PDF</a>
 <button type="button" data-nl-close aria-label="Close" style="background:#ffffff;color:#141f4d;font-family:inherit;font-weight:700;font-size:14px;border:none;cursor:pointer;padding:10px 16px;border-radius:4px;">Close ✕</button>
 </div>
 </div>
@@ -57,24 +118,25 @@ const sectionId = source === 'agency' ? 'the-link-newsletter' : 'acmc-newsletter
   const root = document.getElementById('nl-zoom') as HTMLElement | null;
   const page = document.getElementById('nl-page') as HTMLElement | null;
   const dl = document.getElementById('nl-download') as HTMLAnchorElement | null;
-  const d = JSON.parse(root?.dataset.nl ?? '{"front":{},"back":{}}');
-  const info = {
-    front: { src: d.front.file, file: d.front.download, alt: d.front.alt },
-    back: { src: d.back.file, file: d.back.download, alt: d.back.alt },
-  } as const;
-  function show(which: 'front' | 'back') {
-    if (!root || !page || !dl) return;
-    const i = info[which];
-    page.style.backgroundImage = `url('${i.src}')`;
+  const pdf = document.getElementById('nl-pdf') as HTMLAnchorElement | null;
+  const title = document.getElementById('nl-title') as HTMLElement | null;
+  const issues: any[] = JSON.parse(root?.dataset.nl ?? '[]');
+  function show(n: number, which: 'front' | 'back') {
+    if (!root || !page || !dl || !issues[n]) return;
+    const iss = issues[n];
+    const i = iss[which];
+    page.style.backgroundImage = `url('${i.file}')`;
     page.setAttribute('aria-label', i.alt);
-    dl.href = i.src; dl.setAttribute('download', i.file);
-    root.querySelectorAll<HTMLElement>('[data-nl-tab]').forEach((b) => b.classList.toggle('on', b.dataset.nlTab === which));
+    dl.href = i.file; dl.setAttribute('download', i.download);
+    if (pdf) { if (iss.pdf) { pdf.href = iss.pdf; pdf.hidden = false; } else { pdf.hidden = true; } }
+    if (title) title.textContent = iss.label || '';
+    root.querySelectorAll<HTMLElement>('[data-nl-tab]').forEach((b) => { b.classList.toggle('on', b.dataset.nlTab === which); b.dataset.nlIssue = String(n); });
     root.hidden = false; root.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
   function close() { if (!root) return; root.hidden = true; root.style.display = ''; document.body.style.overflow = ''; }
-  document.querySelectorAll<HTMLElement>('[data-nl-open]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); show(b.dataset.nlOpen as 'front' | 'back'); }));
-  root?.querySelectorAll<HTMLElement>('[data-nl-tab]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); show(b.dataset.nlTab as 'front' | 'back'); }));
+  document.querySelectorAll<HTMLElement>('[data-nl-open]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); show(Number(b.dataset.nlIssue ?? 0), b.dataset.nlOpen as 'front' | 'back'); }));
+  root?.querySelectorAll<HTMLElement>('[data-nl-tab]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); show(Number(b.dataset.nlIssue ?? 0), b.dataset.nlTab as 'front' | 'back'); }));
   root?.addEventListener('click', (e) => { const t = e.target as HTMLElement; if (t.closest('[data-nl-close]') && !t.closest('[data-nl-stop]') || t.closest('button[data-nl-close]')) close(); });
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && root && !root.hidden) close(); });
 </script>

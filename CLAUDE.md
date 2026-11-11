@@ -26,6 +26,7 @@ This is The Life Link's website (Astro static site, deployed on Vercel from GitH
 - **Outreach / Arroyo Chamiso micro community newsletter:** `src/data/newsletter.json`, appears on `/programs/outreach`.
 - **THE LINK, the agency's monthly newsletter:** `src/data/agency-newsletter.json`, appears on `/events` (Events & News). The Mailchimp sign-up form on the Contact page is separate and not HR's to edit.
 - Both use `src/components/Newsletter.astro` (`<Newsletter />` or `<Newsletter source="agency" />`). Each has a front and back page image. Ask which newsletter is meant if it is not clear.
+- **Archive:** each file has an `archive` list (newest first) that shows as a "Past issues" strip under the newsletter. To post a new issue: add its front and back JPGs, a ~400 px wide thumbnail JPG and a PDF to `public/assets/newsletters/`; copy the current issue's `label` (month and year only), `thumb`, `front`, `back` and `pdf` to the TOP of `archive`; then replace the newest-issue fields (`issueLabel`, `label`, `paragraphs`, `front`, `back`, `pdf`). Never delete old issues from `archive` unless Dr. DeBernardi says so. The first six show as thumbnails; older ones fold under "Older issues".
 
 ## Job postings (`src/data/jobs.json`)
 

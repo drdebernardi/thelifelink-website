@@ -1,22 +1,41 @@
 {
-  "_help": "The newsletter section on the Outreach program page (/programs/outreach). Put new newsletter page images in public/assets/newsletters/ and change the file names below. Set show to false to hide the whole section.",
+  "_help": "The newsletter section on the Outreach program page (/programs/outreach). The newest issue is the fields below (issueLabel, label, headline, paragraphs, front, back, pdf). Older issues go in the \"archive\" list and appear under \"Past issues\". TO POST A NEW ISSUE: (1) put the new front and back JPGs, a small thumbnail JPG (about 400 px wide) and the PDF in public/assets/newsletters/; (2) copy the current issue's label, front, back, thumb and pdf as a new entry at the TOP of \"archive\" (use just the month and year as the label); (3) replace the newest-issue fields with the new issue. Newest first, always. Set show to false to hide the whole section, archive included.",
   "show": true,
-  "label": "Program Newsletter · October 2026",
+  "issueLabel": "November 2026",
+  "label": "Program Newsletter · November 2026",
   "headline": "News from the",
   "headlineAccent": "Arroyo Chamiso Micro Community.",
   "paragraphs": [
-    "Arroyo Chamiso is Santa Fe's first non-congregate transitional housing village, run in partnership with The Life Link. Since April 2024 it has given 59 residents a locked door of their own, and 22 have moved on to permanent housing.",
-    "This month's issue covers the village's story, resident artwork, a field trip, partner programs, and how to donate."
+    "Arroyo Chamiso is Santa Fe's first non-congregate transitional housing village, run in partnership with The Life Link. Every resident has a locked door of their own.",
+    "This month's issue thanks the Eldorado Knitters for handmade quilts, caps and scarves, introduces our partner the Street Homeless Animal Project, recaps an archery outing with the City of Santa Fe Parks, and shares a poem from a resident. Donation needs are on the back."
   ],
   "button": "Read the newsletter",
   "front": {
-    "file": "/assets/newsletters/acmc-oct-2026-front.jpg",
-    "alt": "ACMC newsletter, October 2026, front page",
-    "download": "ACMC-Newsletter-Oct-2026-Front.jpg"
+    "file": "/assets/newsletters/acmc-nov-2026-front.jpg",
+    "alt": "ACMC newsletter, November 2026, front page",
+    "download": "ACMC-Newsletter-Nov-2026-Front.jpg"
   },
   "back": {
-    "file": "/assets/newsletters/acmc-oct-2026-back.jpg",
-    "alt": "ACMC newsletter, October 2026, back page",
-    "download": "ACMC-Newsletter-Oct-2026-Back.jpg"
-  }
+    "file": "/assets/newsletters/acmc-nov-2026-back.jpg",
+    "alt": "ACMC newsletter, November 2026, back page",
+    "download": "ACMC-Newsletter-Nov-2026-Back.jpg"
+  },
+  "pdf": "/assets/newsletters/acmc-nov-2026.pdf",
+  "archive": [
+    {
+      "label": "October 2026",
+      "thumb": "/assets/newsletters/acmc-oct-2026-thumb.jpg",
+      "front": {
+        "file": "/assets/newsletters/acmc-oct-2026-front.jpg",
+        "alt": "ACMC newsletter, October 2026, front page",
+        "download": "ACMC-Newsletter-Oct-2026-Front.jpg"
+      },
+      "back": {
+        "file": "/assets/newsletters/acmc-oct-2026-back.jpg",
+        "alt": "ACMC newsletter, October 2026, back page",
+        "download": "ACMC-Newsletter-Oct-2026-Back.jpg"
+      },
+      "pdf": "/assets/newsletters/acmc-oct-2026.pdf"
+    }
+  ]
 }

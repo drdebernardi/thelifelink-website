@@ -1,7 +1,8 @@
 {
-  "_help": "The agency-wide monthly newsletter, THE LINK, shown on the Events & News page (/events). This is NOT the Arroyo Chamiso (Outreach) newsletter, which is in newsletter.json. To post a new issue: put the front and back page images in public/assets/newsletters/, then change the label, headline, paragraphs and file names below. Set show to false to hide the whole section.",
+  "_help": "The agency-wide monthly newsletter, THE LINK, shown on the Events & News page (/events). This is NOT the Arroyo Chamiso (Outreach) newsletter, which is in newsletter.json. To post a new issue: put the front and back page images in public/assets/newsletters/, then change the label, headline, paragraphs and file names below. Older issues go in the \"archive\" list (same fields as the Outreach newsletter: label, thumb, front, back, pdf; newest first) and appear under \"Past issues\" — see the _help line in newsletter.json for the steps. Set show to false to hide the whole section.",
   "show": false,
-  "label": "THE LINK \u00b7 Monthly Newsletter \u00b7 Month Year",
+  "issueLabel": "Month Year",
+  "label": "THE LINK · Monthly Newsletter · Month Year",
   "headline": "News from",
   "headlineAccent": "The Life Link.",
   "paragraphs": [
@@ -18,5 +19,7 @@
     "file": "/assets/newsletters/the-link-month-year-back.jpg",
     "alt": "THE LINK newsletter, back page",
     "download": "THE-LINK-Month-Year-Back.jpg"
-  }
+  },
+  "pdf": "/assets/newsletters/the-link-month-year.pdf",
+  "archive": []
 }
