@@ -216,15 +216,15 @@
       }
     },
     {
-      "id": "front-desk-associate",
+      "id": "outreach-specialist",
       "active": true,
-      "title": "Front Desk Associate (Bilingual Spanish Preferred)",
-      "note": "Join our welcoming, compassionate, and client-centered team!",
-      "applyUrl": "https://www.indeed.com/job/full-time-front-desk-client-services-associate-bilingual-spanish-preferred-f6fa8f53eba50d8b",
+      "title": "Outreach Specialist",
+      "note": "Join our compassionate, client-centered street outreach team!",
+      "applyUrl": "https://www.indeed.com/viewjob?jk=ebffc7302aae6b7d",
       "tags": [
-        "$18.00–$21.00 / hour",
+        "$19.00–$22.00 / hour",
         "Full-time · 36 hrs paid as 40",
-        "Front Desk",
+        "Street Outreach",
         "In person · Santa Fe, NM"
       ],
       "showWellbeing": true,
@@ -240,14 +240,14 @@
           {
             "heading": "About the Position",
             "paragraphs": [
-              "The Front Desk Associate is the first point of contact for clients, visitors, and callers at The Life Link. Under the supervision of the Medical Records/Admin Support Supervisor, the Front Desk Associate creates a welcoming, trauma-informed front desk experience by greeting and directing clients and visitors, answering and routing phone calls, scheduling appointments, and handling general office tasks. This position is based at our Saint Michaels Drive office, with occasional coverage at our Las Alas office during meal breaks and staff absences.",
-              "This position also occasionally collects client urinalysis (UA) specimens. Training is provided. It is a great fit for someone who enjoys helping people, stays calm in a busy environment, and takes privacy seriously."
+              "The Outreach Specialist meets people experiencing homelessness where they are, through street outreach and site-based in-reach, and helps them gain housing, jobs, and a social support network. Under the supervision of the Street Outreach Program Manager, the Outreach Specialist provides engagement and case management services using a positive, client-driven, strength-based approach. This position is based at our Outreach Office in Santa Fe and involves extensive local travel and field work in the community.",
+              "It is a great fit for someone who builds trust with people, stays calm in unpredictable situations, and believes in meeting people where they are."
             ]
           },
           {
             "heading": "Compensation",
             "paragraphs": [
-              "$18.00-$21.00 per hour, based on experience. Bilingual English/Spanish speakers are placed higher within this range. The maximum starting rate is $21.00 per hour."
+              "$19.00-$22.00 per hour."
             ]
           },
           {
@@ -261,6 +261,7 @@
               "Dental insurance",
               "Vision insurance",
               "Life insurance",
+              "Mileage reimbursement for use of a personal vehicle for work",
               "Employee assistance program",
               "Paid time off"
             ],
@@ -271,18 +272,17 @@
           {
             "heading": "What You'll Do",
             "bullets": [
-              "Greet clients and visitors courteously, determine their needs, and direct them to and notify the proper person or office.",
-              "Answer all incoming phone calls promptly and courteously, and direct calls to the appropriate extension or take messages.",
-              "Schedule individual treatment appointments for clients.",
-              "Enter notes and client information into our electronic medical record system accurately and on time.",
-              "Receive, sort, and distribute incoming mail, packages, and courier deliveries.",
-              "Perform general office tasks, including typing memos, correspondence, reports, and signs; data entry; general office filing; copying; and faxing.",
-              "Open and close the assigned reception area.",
-              "Provide front desk coverage at our Las Alas office as assigned, including during meal breaks and staff absences.",
-              "Collect client urinalysis (UA) specimens as needed, and complete testing documentation accurately and on time. Training is provided.",
-              "Use trauma-informed crisis management and de-escalation skills, as needed.",
+              "Engage people experiencing homelessness through street outreach and site-based in-reach, building trust and offering alternatives to their current living situation.",
+              "Provide assessment, referral, and follow-up services, adjusting the scope and intensity of case management to each client's needs.",
+              "Help clients obtain safe, affordable, and permanent housing; access treatment services; identify educational and employment options; and build a social support network.",
+              "Connect clients to federal, state, and local programs and community resources for housing, vocational rehabilitation, health care, Medicaid, social services, and financial assistance.",
+              "Provide crisis assistance, life skills training, and ongoing emotional support and follow-up.",
+              "Accompany clients to appointments and advocate on their behalf, following agency client transport policies.",
+              "Build a professional network for referrals and coordinated care, and provide community education about working with people experiencing homelessness.",
+              "Maintain accurate client records and data, and submit required client and activity reports accurately and on time.",
+              "Follow safety protocols and use de-escalation techniques at all times, keeping your supervisor or office staff informed of your location while in the field.",
               "Maintain strict confidentiality of client Protected Health Information (PHI) and substance use disorder treatment records in accordance with HIPAA and 42 CFR Part 2.",
-              "Attend administrative staff meetings and required training and perform other duties as assigned."
+              "Attend community, outside agency, and staff meetings and required training, and perform other duties as assigned."
             ],
             "dot": "teal"
           }
@@ -300,23 +300,19 @@
                 "sub": false
               },
               {
-                "t": "Minimum of one year of experience in an office, reception, or customer service setting.",
+                "t": "Minimum of two years of experience in case management or community outreach, preferably with people experiencing homelessness.",
                 "sub": false
               },
               {
-                "t": "Strong interpersonal, phone etiquette, and customer service skills.",
+                "t": "Community outreach, networking, crisis management, and case management skills.",
                 "sub": false
               },
               {
-                "t": "Strong communication skills, attention to detail, accuracy, and punctuality.",
+                "t": "Strong interpersonal, interviewing, and listening skills.",
                 "sub": false
               },
               {
-                "t": "Ability to multitask in a complex, high-volume environment while maintaining a professional, calm demeanor.",
-                "sub": false
-              },
-              {
-                "t": "Trauma-informed crisis management and de-escalation skills.",
+                "t": "Commitment to professional standards, including confidentiality and maintaining professional boundaries.",
                 "sub": false
               },
               {
@@ -324,27 +320,27 @@
                 "sub": false
               },
               {
-                "t": "Understanding of confidentiality requirements under HIPAA and 42 CFR Part 2.",
+                "t": "Commitment to working with people living with severe and persistent mental illness, substance use disorders, and co-occurring disorders.",
                 "sub": false
               },
               {
-                "t": "Proficiency in, or ability to learn, the agency's electronic medical record system.",
+                "t": "Knowledge of Santa Fe County area resources, including employment, human services, health care, transportation, housing, social, and educational resources.",
                 "sub": false
               },
               {
-                "t": "Basic familiarity with mental health and substance use terminology, or willingness to learn. Training is provided.",
+                "t": "Basic word processing and internet skills.",
                 "sub": false
               },
               {
-                "t": "Basic word processing, spreadsheet, and internet skills.",
+                "t": "Valid New Mexico driver's license and current vehicle insurance.",
                 "sub": false
               },
               {
-                "t": "Ability to sit for extended periods and lift up to 20 pounds. This position may involve possible exposure to bodily fluids.",
+                "t": "Ability to travel extensively within the local area and work a flexible schedule.",
                 "sub": false
               },
               {
-                "t": "Availability by phone in case of a client or agency emergency.",
+                "t": "Ability to walk and stand for extended periods, work outdoors in varying weather conditions, and lift up to 20 pounds. This position may involve possible exposure to bodily fluids and discarded sharps.",
                 "sub": false
               },
               {
@@ -359,8 +355,7 @@
           {
             "heading": "Preferred",
             "bullets": [
-              "Bilingual in English and Spanish (placed higher within the posted pay range).",
-              "Experience working in a health care or behavioral health setting."
+              "Certified Peer Support Worker (CPSW) certification."
             ],
             "dot": "blue"
           },
